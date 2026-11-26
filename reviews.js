@@ -53,7 +53,7 @@
     return time;
   }
 
-  function normalize(rows) {
+  function normalize(rows, provider = 'yandex') {
     if (!Array.isArray(rows)) throw new Error('Нужен массив отзывов или объект с полем reviews.');
     return rows.map((original, index) => {
       if (!original || typeof original !== 'object') throw new Error(`Отзыв ${index + 1}: неверный формат.`);
@@ -69,8 +69,9 @@
       let safeUrl = '';
       if (url) {
         const parsed = new URL(url);
-        if (parsed.protocol !== 'https:' || !['yandex.ru', 'www.yandex.ru'].includes(parsed.hostname)) {
-          throw new Error(`Отзыв ${index + 1}: ссылка должна вести на Яндекс Карты.`);
+        const allowed = provider === '2gis' ? ['2gis.ru', 'www.2gis.ru'] : ['yandex.ru', 'www.yandex.ru'];
+        if (parsed.protocol !== 'https:' || !allowed.includes(parsed.hostname)) {
+          throw new Error(`Отзыв ${index + 1}: ссылка не соответствует источнику.`);
         }
         safeUrl = parsed.href;
       }
@@ -80,17 +81,29 @@
 
   function render() {
     const order = sortInput.value;
-    const sorted = [...reviews].sort((a, b) => {
+    const sorted = sortReviews(reviews, order);
+    const total = sorted.length;
+    count.textContent = reviewCount(total);
+    renderList(list, sorted, 'Яндекс Картах');
+  }
+
+  function sortReviews(items, order) {
+    return [...items].sort((a, b) => {
       if (order === 'oldest') return a.date - b.date || a.index - b.index;
       if (order === 'highest') return b.rating - a.rating || b.date - a.date || a.index - b.index;
       if (order === 'lowest') return a.rating - b.rating || b.date - a.date || a.index - b.index;
       return b.date - a.date || a.index - b.index;
     });
-    const total = sorted.length;
+  }
+
+  function reviewCount(total) {
     const ending = total % 10 === 1 && total % 100 !== 11 ? 'отзыв' : total % 10 >= 2 && total % 10 <= 4 && (total % 100 < 12 || total % 100 > 14) ? 'отзыва' : 'отзывов';
-    count.textContent = `${total} ${ending}`;
+    return `${total} ${ending}`;
+  }
+
+  function renderList(target, items, sourceName) {
     const fragment = document.createDocumentFragment();
-    sorted.forEach(review => {
+    items.forEach(review => {
       const item = document.createElement('article');
       item.className = 'review-item';
       const head = document.createElement('div');
@@ -112,12 +125,12 @@
         link.href = review.url;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.textContent = 'Источник в Яндекс Картах';
+        link.textContent = `Источник в ${sourceName}`;
         item.append(link);
       }
       fragment.append(item);
     });
-    list.replaceChildren(fragment);
+    target.replaceChildren(fragment);
   }
 
   function show(rows) {
@@ -144,6 +157,7 @@
     }
   });
   sortInput.addEventListener('change', render);
+  window.reviewToolkit = { csvRows, normalize, sortReviews, reviewCount, renderList };
   fetch('reviews-data.json').then(response => response.ok ? response.json() : null).then(data => {
     if (data?.reviews?.length) show(data.reviews);
   }).catch(() => {});
