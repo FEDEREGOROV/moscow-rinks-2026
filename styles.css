@@ -48,3 +48,20 @@ dialog{border:1px solid #dbe5e9;border-radius:7px;max-width:620px;width:calc(100
 .market-detail-row .tariff-scroll table{font-size:13px}
 .table-note{font-size:13px}
 @media(max-width:900px){.market-tariffs{grid-template-columns:1fr}}
+
+.map-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#fff;border:1px solid #dfe6ea;padding:12px;border-radius:6px;margin-bottom:14px}
+.map-tools .searchbox{flex:1 1 290px}
+.map-tools>span{margin-left:auto;font-size:13px;color:#526a78}
+.map-layout{display:grid;grid-template-columns:minmax(0,1fr) 315px;border:1px solid #dfe6ea;border-radius:5px;overflow:hidden;background:#fff}
+#rink-map{height:min(72vh,720px);min-height:490px;background:#e8eef0;z-index:0}
+.map-list{height:min(72vh,720px);min-height:490px;overflow:auto;border-left:1px solid #dfe6ea}
+.map-item{display:block;width:100%;padding:13px 15px;border:0;border-bottom:1px solid #e8edef;background:#fff;text-align:left;color:#182a36}
+.map-item:hover,.map-item:focus-visible{background:#eef5f6}
+.map-item strong{display:block;font-size:14px;line-height:1.35;margin-bottom:4px}
+.map-item span{display:block;font-size:12px;line-height:1.4;color:#667985;margin-top:3px}
+.map-popup strong,.map-popup span{display:block;margin-bottom:5px}
+.map-popup{min-width:190px;font-size:13px;line-height:1.4}
+.map-popup a{display:inline-block;margin-top:4px}
+.map-note{margin-bottom:28px}
+@media(max-width:800px){.map-layout{grid-template-columns:1fr}.map-list{height:260px;min-height:0;border-left:0;border-top:1px solid #dfe6ea}#rink-map{height:55vh;min-height:360px}}
+@media(max-width:620px){.topbar .site-title span{display:none}.topbar nav{gap:10px}.topbar nav a{font-size:12px}.map-tools .searchbox{flex-basis:100%}.map-tools>span{margin-left:0}}

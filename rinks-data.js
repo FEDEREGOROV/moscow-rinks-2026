@@ -129,7 +129,9 @@ const rinks = [
     address:'Парк «Кузьминки»',facts:['Официальные городские правила включали площадку в сезон 2025/26','Дата и тариф 2026/27 не опубликованы']
   }),
   rink('Каток стадиона «Огонёк»','ЮАО','https://tsaritsyno-museum.ru/events/special/p/katok-na-stadione-ogonyok/',{
-    address:'Музей-заповедник «Царицыно», Спортивная улица',facts:['Всепогодный искусственный лёд','Дата и тариф 2026/27 на странице катка не опубликованы'],socials:[['ВКонтакте','https://vk.com/tsaritsynomuseum'],['Telegram','https://t.me/tsaritsyno_museum'],['MAX','https://max.ru/tsaritsyno_museum']],
+    address:'Спортивная улица, вл. 2, стадион «Огонёк»',status:'Открытие 27 ноября',statusType:'upcoming',rental:'Есть; цена 2026/27 не опубликована',
+    hours:'Пн 16:00–21:00; вт–вс 10:00–21:00 с перерывами; пт, сб и праздники также 22:00–00:00.',
+    facts:['Сезон 2026/27: открытие 27 ноября','Искусственный лёд, полезная площадь 1 456 м²','Прокат и заточка коньков, раздевалка, кафе','Опубликованный PDF-прейскурант помечен 2025 годом; тариф 2026/27 не подтверждён'],socials:[['ВКонтакте','https://vk.com/tsaritsynomuseum'],['Telegram','https://t.me/tsaritsyno_museum'],['MAX','https://max.ru/tsaritsyno_museum']],
     photo:'https://tsaritsyno-museum.ru/uploads/2023/12/katok-ogonek-banner-1.jpg',photoSource:'https://tsaritsyno-museum.ru/events/special/p/katok-na-stadione-ogonyok/',photoNote:'Фото музея, прежний сезон'
   }),
   rink('Каток на Болотной площади','ЦАО',CITY_RULES_2025,{
