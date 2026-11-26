@@ -120,8 +120,5 @@ if (cards) {
   cards.addEventListener('click',e=>{const button=e.target.closest('[data-index]');if(button)showDetails(rinks[Number(button.dataset.index)]);});
   document.querySelector('#close-dialog').addEventListener('click',()=>dialog.close());
   dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
-  document.querySelector('#count-all').textContent=rinks.length;
-  document.querySelector('#count-open').textContent=rinks.filter(r=>r.open).length;
-  document.querySelector('#count-photos').textContent=rinks.filter(r=>r.photo).length;
   render();
 }
