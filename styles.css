@@ -11,3 +11,40 @@ dialog{border:1px solid #dbe5e9;border-radius:7px;max-width:620px;width:calc(100
 .facts-list,.tariffs{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:14px 0}.facts-list>div,.tariffs>div{border-top:1px solid #e4ebee;padding:9px 8px 9px 0}.facts-list dt,.tariffs dt{font-size:11px;color:#71858f;margin-bottom:4px}.facts-list dd,.tariffs dd{font-size:13px;line-height:1.45;margin:0}.dialog-detail ul{margin:4px 0;padding-left:18px}.dialog-detail li{margin-bottom:5px}.tariff-period{border:1px solid #dce5e9;margin:8px 0;border-radius:4px;padding:10px}.tariff-period summary{cursor:pointer;font-weight:700;color:#263f4d}.tariff-period>a{display:inline-block;margin-top:8px;font-size:12px}.tariff-scroll{overflow:auto;margin-top:10px}.tariff-scroll table{border-collapse:collapse;min-width:690px;width:100%;font-size:11px}.tariff-scroll th,.tariff-scroll td{padding:7px;border-bottom:1px solid #e8edef;text-align:left;vertical-align:top}.tariff-scroll thead th{background:#eef3f5}.tariff-scroll tbody th{font-weight:400;min-width:255px}.photo-source a{font-size:inherit}.card-visual img{object-position:center}.dialog-photo{object-position:center}
 @media(max-width:620px){.facts-list,.tariffs{grid-template-columns:1fr}.card-visual{height:165px}}
 .card-visual.missing-photo{height:auto;min-height:36px;padding:7px}
+
+/* Сравнение: тарифы и первоисточники доступны непосредственно из таблицы. */
+.market-table{min-width:1640px;font-size:14px;line-height:1.45}
+.market-table th,.market-table td{padding:14px 12px}
+.market-table thead th{font-size:13px}
+.market-table tbody th{min-width:175px}
+.market-table tbody th small{font-size:13px}
+.market-table td:nth-child(3){min-width:125px}
+.market-table td:nth-child(6){min-width:280px;max-width:330px}
+.market-table td:nth-child(7){min-width:175px}
+.market-table td:nth-child(8){min-width:170px}
+.market-table td:nth-child(9){min-width:145px}
+.market-table td.num{white-space:normal}
+.tariff-preview-line{border-bottom:1px solid #edf1f3;padding:0 0 8px;margin-bottom:8px}
+.tariff-preview-line strong,.tariff-preview-line span{display:block}
+.tariff-preview-line strong{font-size:13px;margin-bottom:3px}
+.tariff-preview-line span{font-size:13px}
+.muted{color:#667985;font-size:13px}
+.detail-toggle{display:block;margin-top:8px;border:0;background:none;padding:0;color:#126188;text-align:left;text-decoration:underline;font-size:13px}
+.source-cell a{display:block;font-size:13px;overflow-wrap:anywhere}
+.market-table .market-detail-row:hover{background:transparent}
+.market-detail-row[hidden]{display:none}
+.market-detail-row td{background:#f1f5f6;padding:22px 24px}
+.market-detail-grid{max-width:1000px}
+.market-detail-grid section+section{margin-top:20px}
+.market-detail-row h3{font-size:15px;margin:0 0 12px}
+.market-detail-row p{margin:0;color:#526a77}
+.market-detail-row ul{margin:0;padding-left:19px}
+.market-detail-row li{margin:0 0 7px}
+.market-tariffs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;margin:0}
+.market-tariffs>div{border-top:1px solid #dce6e9;padding:9px 0}
+.market-tariffs dt{font-weight:700;font-size:13px;margin:0 0 4px}
+.market-tariffs dd{margin:0;font-size:14px}
+.market-detail-row .dialog-detail{margin-top:18px;max-width:1000px;font-size:14px}
+.market-detail-row .tariff-scroll table{font-size:13px}
+.table-note{font-size:13px}
+@media(max-width:900px){.market-tariffs{grid-template-columns:1fr}}
