@@ -1,0 +1,150 @@
+// Состояние источников: 26 ноября 2026 года. Цены прошлых сезонов не переносятся на 2026/27.
+const CITY_RULES_2025 = 'https://www.mos.ru/upload/shared/projects/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0_%D0%BF%D0%BE%D1%81%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BA%D0%B0%D1%82%D0%BA%D0%BE%D0%B2_%D0%97%D0%B8%D0%BC%D0%B0_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5.pdf';
+const VDNRULES = 'https://s3.vdnh.ru/vdnhru/2026/10/06/841c00b886fbcf603c7ca6d7dcb4c21d831124be.pdf';
+const rink = (name, area, source, extra = {}) => ({
+  name, area, source, address:'Не указан на странице катка', status:'Сезон 2026/27 не объявлен', statusType:'pending',
+  adult:'Не опубликовано', child:'Не опубликовано', rental:'Не опубликовано', hours:'Не опубликовано',
+  facts:[], tariffs:[], socials:[], photo:null, photoSource:null, priceSort:null, ...extra
+});
+const rinks = [
+  rink('Каток на ВДНХ','СВАО','https://vdnh.ru/katok/',{
+    address:'Проспект Мира, 119', status:'Открыт с 24 ноября', statusType:'open', adult:'500–1 200 ₽', child:'300–800 ₽', rental:'Коньки — 800 ₽', priceSort:500,
+    hours:'Вт–пт 11:00–23:00; сб–вс и праздники 10:00–23:00. Понедельник — технический день.',
+    facts:['Сезон: 24.11.2026–28.02.2027','Шесть павильонов проката','Перерывы: будни 15:00–17:00; выходные 13:00–14:30 и 17:30–19:00'],
+    tariffs:[['Взрослый, вт–чт','11:00–15:00 — 500 ₽; 17:00–23:00 — 800 ₽'],['Взрослый, пятница','11:00–15:00 — 600 ₽; 17:00–23:00 — 1 000 ₽'],['Взрослый, выходные','10:00–13:00 — 750 ₽; 14:30–17:30 — 850 ₽; 19:00–23:00 — 1 000 ₽'],['Взрослый, новогодние каникулы','Утро — 1 100 ₽; день и вечер — 1 200 ₽'],['Детский, будни','Утро — 300 ₽; вечер — 400 ₽'],['Детский, выходные','Утро — 300 ₽; день — 350 ₽; вечер — 400 ₽'],['Детский, новогодние каникулы','Утро — 700 ₽; день и вечер — 800 ₽'],['Дополнительные услуги','Прокат коньков — 800 ₽; защита — 400 ₽; заточка — 500 ₽']],
+    socials:[['ВКонтакте','https://vk.com/vdnh'],['MAX','https://max.ru/vdnh_moscow']],
+    photo:'https://s3.vdnh.ru/vdnhru/cache/2026/11/21/ef91efebfb32836b7b90ea50a5b267ff6416a244.jpg/f2003a2dd8021489b6223a77300ab6ce.webp',photoSource:'https://vdnh.ru/news/530901/'
+  }),
+  rink('Каток в парке «Останкино»','СВАО',VDNRULES,{
+    address:'Парк «Останкино», территория ВДНХ',status:'Открыт с 24 ноября',statusType:'open',adult:'Бесплатно',child:'Бесплатно',rental:'400–700 ₽',priceSort:0,
+    hours:'Вт 10:00–21:45; ср–пт 10:00–21:45; сб–вс 13:00–21:45, с перерывами. Понедельник — технический день.',
+    facts:['Сезон: 24.11.2026–28.02.2027','Вход на массовое катание бесплатный','Прокат требует обеспечительного платежа 3 000 ₽'],
+    tariffs:[['Вход','Бесплатно на массовое катание'],['Прокат коньков','1 час — 400 ₽; 2 часа — 500 ₽; 3 часа (19:00–21:45) — 700 ₽'],['Камера хранения','Малая — 100 ₽; средняя — 150 ₽; большая — 200 ₽ за сеанс'],['Обеспечительный платёж','3 000 ₽ за пару коньков']],
+    socials:[['ВКонтакте','https://vk.com/vdnh'],['MAX','https://max.ru/vdnh_moscow']],
+    photo:'https://s3.vdnh.ru/vdnhru/cache/2026/01/02/fb70fd4b501cdbeb66a5b377368a97e1181cd5ea.jpg/509d25bd3e4f1781134348b2a73c1ee4.webp',photoSource:'https://vdnh.ru/news/4649/',photoNote:'Фото организатора, предыдущий сезон'
+  }),
+  rink('Каток Северного речного вокзала','САО','https://i.transport.mos.ru/katoksrv',{
+    address:'Ленинградское шоссе, 51',status:'Открыт с 20 ноября',statusType:'open',
+    hours:'Вт–чт 10:00–15:00, 17:00–22:00; пт–вс 10:00–15:00, 17:00–23:00.',
+    facts:['Сезон: 20.11.2026–28.02.2027','Контакт-центр: 3210; +7 (495) 539-54-54','Билеты оформляются на официальной странице'],
+    socials:[['Telegram транспорта Москвы','https://t.me/s/DtRoad']]
+  }),
+  rink('Каток «Лужники»','ЦАО','https://katok.luzhniki.ru/',{
+    address:'Улица Лужники, 24, Центральная площадь',status:'Открытие 27 ноября',statusType:'upcoming',adult:'Стандарт от 300 ₽',child:'7–13 лет от 200 ₽; 3–6 лет бесплатно',rental:'Есть; цена не опубликована',priceSort:300,
+    hours:'Сеансы опубликованы при выборе билета. Открытие — 27.11.2026.',
+    facts:['Стандарт: павильоны 1, 2, 4','Комфорт: павильон 3','Бизнес: отдельный павильон и выход на лёд','Телефон: +7 (495) 780-08-08'],
+    tariffs:[['Стандарт','Взрослый 14+ — от 300 ₽; детский 7–13 — от 200 ₽; 3–6 лет — бесплатно'],['Комфорт','Взрослый 14+ — от 700 ₽; детский 7–13 — от 600 ₽; 3–6 лет — бесплатно'],['Бизнес','Взрослый 7+ — от 2 500 ₽; 3–6 лет — бесплатно'],['Социальный','Бесплатно для категорий из официального перечня'],['Прокат и заточка','Услуги есть; стоимость показана при покупке сеанса']],
+    socials:[['ВКонтакте','https://vk.com/luznikiofficial'],['Telegram','https://t.me/luzhniki_life']],
+    photo:'https://www.luzhniki.ru/media/images/Otdykh5760_3840_2-com.2e16d0ba.fill-1200x630.format-jpeg.jpg',photoSource:'https://www.luzhniki.ru/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/'
+  }),
+  rink('ГУМ-каток','ЦАО','https://gum-katok.ru/',{
+    address:'Красная площадь',status:'Открытие 29 ноября',statusType:'upcoming',adult:'Будни утром бесплатно; далее 900–1 100 ₽',child:'7–12 лет: 0–550 ₽',rental:'Взрослые 700–750 ₽; дети 300–400 ₽',priceSort:0,
+    hours:'Ежедневно 10:00–22:00. Сезон 29.11.2026–28.02.2027.',
+    facts:['Тарифы: будни до 14:30 / будни после 15:00 / выходные и праздники','Прокат оплачивается в кассе','Справочная: +7 (495) 620-32-27; info.katok@gum.ru'],
+    tariffs:[['29.11–25.12 и 11.01–28.02 · взрослый','Будни до 14:30 — бесплатно; после 15:00 — 900 ₽; выходные/праздники — 1 000 ₽'],['29.11–25.12 и 11.01–28.02 · дети 7–12','Будни до 14:30 — бесплатно; после 15:00 — 350 ₽; выходные/праздники — 450 ₽'],['26.12–10.01 · взрослый','Будни до 14:30 — 800 ₽; после 15:00 — 1 100 ₽; выходные/праздники — 1 100 ₽'],['26.12–10.01 · дети 7–12','Будни до 14:30 — 450 ₽; после 15:00 — 500 ₽; выходные/праздники — 550 ₽'],['Прокат 29.11–25.12 и 11.01–28.02','Взрослый — 700 ₽; дети 7–12 — 300 ₽; льготные категории — 350 ₽'],['Прокат 26.12–10.01','Взрослый — 750 ₽; дети 7–12 — 400 ₽; льготные категории — 400 ₽'],['Дополнительные услуги','Помощник фигуриста — 500/700 ₽; заточка — 1 000 ₽; залог за коньки — 2 000 ₽'],['Полная тарифная сетка','Все категории и комплексные билеты — по ссылкам на официальные таблицы ниже']],
+    moreSources:[['Тарифы 29.11–25.12','https://gum-katok.ru/api/?date=25.12.2026'],['Тарифы 26.12–10.01','https://gum-katok.ru/api/?date=10.01.2027'],['Тарифы 11.01–28.02','https://gum-katok.ru/api/?date=28.02.2027']],
+    photo:'https://gumrussia.com/upload/iblock/5c1/1400x1400.jpg',photoSource:'https://gumrussia.com/news/35136897/30.11.2023/',photoNote:'Фото ГУМа, предыдущий сезон'
+  }),
+  rink('Каток Парка Горького','ЦАО','https://parkgorkogo.ru/rinks/',{
+    address:'Крымский Вал, 9',status:'Сезон 2026/27 объявлен',statusType:'announced',rental:'Коньки — 800 ₽',
+    hours:'Ежедневно: 10:00–15:00 и 17:00–23:00.',
+    facts:['Площадь льда более 18 000 м²; дорожки 2,3 км','Билет включает вход на сеанс и ячейку','Размеры прокатных коньков 25–48; залог не нужен','Телефон: +7 (495) 995-00-20'],
+    tariffs:[['Вход','Цена сезона 2026/27 на странице катка не указана; показывается при онлайн-покупке'],['Прокат коньков','800 ₽ за сеанс; оформляется онлайн'],['Павильон №3','Билет включает прокат, защиту и ячейку; цена при покупке'],['Льготы','Детям 3–17 лет — скидка 30% до 15:00 в будни; другие категории и условия указаны на странице катка']],
+    socials:[['ВКонтакте','https://vk.com/gorkypark'],['Telegram','https://t.me/gorkyparkmsk'],['MAX','https://max.ru/gorkypark']],
+    photo:'https://parkgorkogo.ru/wp-content/uploads/2024/06/6N6A1511-scaled-800x533.jpg',photoSource:'https://parkgorkogo.ru/galleries/katok-kultury-i-otdyha-2023-2024/',photoNote:'Фото пресс-службы парка, сезон 2023/24'
+  }),
+  rink('Каток «Лёд» в Сокольниках','ВАО','https://parksokolniki.mos.ru/r/_content/c64bc5e29cc68bfbf10fa9ee75da8d29/prilozhenie-katok-led-2025.pdf',{
+    address:'Фестивальная площадь, 5-й Лучевой просек',facts:['Искусственный лёд','Прокат и заточка коньков','Официальный опубликованный прейскурант относится к 2025/26; тариф 2026/27 не найден'],
+    photo:null
+  }),
+  rink('Каток «Серебряный лёд»','ВАО','https://www.izmailovsky-park.ru/skhema-parka/155-obj32',{
+    address:'Измайловский парк, Аллея Большого Круга',facts:['Искусственный и естественный лёд','Прокат фигурных и хоккейных коньков'],socials:[['ВКонтакте','https://vk.com/izm.park'],['Telegram','https://t.me/izmailovskypark'],['MAX','https://max.ru/izm_park']]
+  }),
+  rink('Каток на Царской набережной','ЮАО','https://www.mgomz.ru/ru/pages/zima',{
+    address:'Музей-заповедник «Коломенское», Царская набережная',facts:['В сезоне 2025/26 маршрут составлял 1,7 км','Тариф и дата 2026/27 на странице не опубликованы'],socials:[['ВКонтакте','https://vk.com/mgomz'],['Telegram','https://t.me/kolomenskoe_moscow']]
+  }),
+  rink('Каток сада «Эрмитаж»','ЦАО','https://www.mosgorsad.ru/events/?ELEMENT_ID=84056',{
+    address:'Каретный Ряд, 3',status:'На сайте: сезон завершён',facts:['Прокат коньков, ячейки хранения и помощник фигуриста','Опубликованные тарифы относятся к завершённому сезону'],socials:[['ВКонтакте','https://vk.com/mosgorsad'],['Telegram','https://t.me/mosgorsad']],
+    photo:'https://www.mosgorsad.ru/upload/iblock/8df/5esziyu3uwztz4m3g8dkgt0jro19k66p.jpg',photoSource:'https://www.mosgorsad.ru/events/?ELEMENT_ID=84056',photoNote:'Фото организатора, предыдущий сезон'
+  }),
+  rink('Каток сада имени Баумана','ЦАО','https://sadbaumana.ru/outdoor-ice-rink',{
+    address:'Старая Басманная, 15А',facts:['Искусственный лёд, площадь 1 000 м²','Прокат, заточка, помощники фигуристов','На странице указан сезон 2025/26; тариф 2026/27 не опубликован'],socials:[['ВКонтакте','https://vk.com/sbaumana'],['Telegram','https://t.me/sadbaumana']],
+    photo:'https://sadbaumana.ru/images/live%20in%20the%20park/rink/ice_main.jpg',photoSource:'https://sadbaumana.ru/outdoor-ice-rink',photoNote:'Фото организатора, прежний сезон'
+  }),
+  rink('Каток парка «Красная Пресня»','ЦАО','https://p-kp.ru/leisure/katok/',{
+    address:'Мантулинская, 5, стр. 4',facts:['Искусственный лёд','На странице указан сезон 2025/26; тариф 2026/27 не опубликован'],socials:[['ВКонтакте','https://vk.com/pkio_krasnayapresnya'],['Telegram','https://t.me/redpresnya']],
+    photo:'https://p-kp.ru/leisure/katok/%D0%9A%D0%B0%D1%82%D0%BE%D0%BA2.jpeg',photoSource:'https://p-kp.ru/leisure/katok/',photoNote:'Фото организатора, прежний сезон'
+  }),
+  rink('Каток парка 50-летия Октября','ЗАО','https://parkfili.ru/katok_50let',{
+    address:'Удальцова, 22',status:'На сайте: сезон завершён',facts:['Искусственный лёд','На официальной странице тариф 2026/27 не опубликован'],
+    photo:'https://thb.tildacdn.com/tild6331-3263-4131-a335-333738613764/-/resize/504x/_DSC3379_.jpg',photoSource:'https://parkfili.ru/katok_50let',photoNote:'Фото организатора, прежний сезон'
+  }),
+  rink('Каток «Полярный» в парке «Фили»','ЗАО','https://parkfili.ru/katok_polyarnyi',{
+    address:'Большая Филёвская, 22, вход с Новозаводской улицы',status:'На сайте: сезон завершён',facts:['Искусственный лёд','На официальной странице тариф 2026/27 не опубликован'],
+    photo:'https://thb.tildacdn.com/tild3339-6135-4235-a437-316533383465/-/resize/504x/DJI_0030.jpg',photoSource:'https://parkfili.ru/katok_polyarnyi',photoNote:'Фото организатора, прежний сезон'
+  }),
+  rink('Каток на Таганке','ЦАО',CITY_RULES_2025,{address:'Таганская улица, 40–42',facts:['Каток Таганского парка указан в официальных правилах зимнего сезона 2025/26','Дата и тариф 2026/27 не опубликованы']}),
+  rink('Live!Каток в усадьбе Воронцово','ЮЗАО','https://usadba-vorontsovo.ru/live-katok/',{
+    address:'Воронцовский парк, со стороны улицы Архитектора Власова',status:'Открытие ожидается',statusType:'upcoming',facts:['Искусственный лёд, около 800 м²','Оператор сообщает: откроется в ближайшее время','Температура выше 0 °C может влиять на работу'],
+    socials:[['ВКонтакте','https://vk.com/usadba.vorontsovo'],['Telegram','https://t.me/usadba_vorontsovo'],['MAX','https://max.ru/usadba_vorontsovo']],
+    photo:'https://www.usadba-vorontsovo.ru/upload/medialibrary/b76/sd1japn9kg2023hif2m41gv45jd1vkpv/Foto_258_resized.jpg',photoSource:'https://usadba-vorontsovo.ru/live-katok/',photoNote:'Фото организатора, прежний сезон'
+  }),
+  rink('Каток «Усадебный»','ЮЗАО','https://usadba-vorontsovo.ru/katok-usadebnyy/',{
+    address:'Усадьба Воронцово, центральная часть парка',status:'Открытие ожидается',statusType:'upcoming',facts:['Естественный лёд','Оператор сообщает: откроется в ближайшее время','Работа зависит от температуры'],socials:[['ВКонтакте','https://vk.com/usadba.vorontsovo'],['Telegram','https://t.me/usadba_vorontsovo']]
+  }),
+  rink('Каток «ИЛ» на Ходынском поле','САО','https://www.parkhodynka.ru/view-p.php?id=114',{
+    address:'Ходынский бульвар, 10Б',facts:['Ледовое покрытие 3 300 м²','Четыре сеанса указаны на странице без обозначения сезона; тариф 2026/27 не опубликован','Контакты: +7 (495) 139-60-88'],
+    socials:[['ВКонтакте','https://vk.com/parkkhodynka'],['Telegram','https://t.me/hodynkapark']],
+    photo:'https://www.parkhodynka.ru/assets/images/katok_IL.jpg',photoSource:'https://www.parkhodynka.ru/view-p.php?id=114',photoNote:'Фото организатора'
+  }),
+  rink('Каток «Льдинка» в Митине','СЗАО','https://mitino.bapark.ru/dosug-i-razvlechenie/katok-ldinka/',{
+    address:'Парк «Митино», вход с Пенягинской улицы, 16',facts:['Искусственный лёд, 4 000 м²','Прокат коньков','Тариф и дата 2026/27 не опубликованы'],socials:[['ВКонтакте','https://vk.com/parkmitino'],['Telegram','https://t.me/lp_mitino'],['MAX','https://max.ru/park_mitino']]
+  }),
+  rink('Каток «Северное сияние»','СЗАО','https://mitino.bapark.ru/dosug-i-razvlechenie/sport/hokkejnaya-korobka-severnoe-siyanie/',{
+    address:'Ландшафтный парк «Митино»',status:'На сайте: закрыт до сезона',facts:['Хоккейная коробка','На официальной странице новый тариф и дата не указаны'],socials:[['ВКонтакте','https://vk.com/parkmitino'],['Telegram','https://t.me/lp_mitino']]
+  }),
+  rink('Каток в Лианозовском парке','СВАО','https://www.liapark.ru/lianozovskij-park/news/view/1675',{
+    address:'Угличская, 13',facts:['Искусственный лёд','Подробный прейскурант оператора относится к сезону 2025/26','Дата и тариф 2026/27 не опубликованы'],socials:[['ВКонтакте','https://vk.com/liapark'],['Telegram','https://t.me/parklianozovo'],['MAX','https://max.ru/liapark']]
+  }),
+  rink('Каток парка «Ангарские пруды»','САО','https://www.liapark.ru/park-angarskie-prudy',{
+    address:'Ангарская улица, 53',facts:['Парковая ледовая площадка','Дата и тариф 2026/27 не опубликованы'],socials:[['ВКонтакте','https://vk.com/liapark'],['Telegram','https://t.me/parklianozovo']]
+  }),
+  rink('Каток парка «Дубки»','САО','https://www.liapark.ru/dubki',{
+    address:'Улица Дубки, 6',facts:['Парковая ледовая площадка','Дата и тариф 2026/27 не опубликованы'],socials:[['ВКонтакте','https://vk.com/liapark'],['Telegram','https://t.me/parklianozovo']]
+  }),
+  rink('Каток «Метелица»','СВАО',CITY_RULES_2025,{
+    address:'Бабушкинский парк, улица Менжинского, 6',facts:['Официальные городские правила включали площадку в сезон 2025/26','Дата и тариф 2026/27 не опубликованы']
+  }),
+  rink('Каток парка имени Юрия Лужкова','ЮАО',CITY_RULES_2025,{
+    address:'Парк имени Юрия Лужкова, проспект Андропова',facts:['Официальные городские правила включали площадку в сезон 2025/26','Дата и тариф 2026/27 не опубликованы']
+  }),
+  rink('Каток парка «Кузьминки»','ЮВАО',CITY_RULES_2025,{
+    address:'Парк «Кузьминки»',facts:['Официальные городские правила включали площадку в сезон 2025/26','Дата и тариф 2026/27 не опубликованы']
+  }),
+  rink('Каток стадиона «Огонёк»','ЮАО','https://tsaritsyno-museum.ru/events/special/p/katok-na-stadione-ogonyok/',{
+    address:'Музей-заповедник «Царицыно», Спортивная улица',facts:['Всепогодный искусственный лёд','Дата и тариф 2026/27 на странице катка не опубликованы'],socials:[['ВКонтакте','https://vk.com/tsaritsynomuseum'],['Telegram','https://t.me/tsaritsyno_museum'],['MAX','https://max.ru/tsaritsyno_museum']],
+    photo:'https://tsaritsyno-museum.ru/uploads/2023/12/katok-ogonek-banner-1.jpg',photoSource:'https://tsaritsyno-museum.ru/events/special/p/katok-na-stadione-ogonyok/',photoNote:'Фото музея, прежний сезон'
+  }),
+  rink('Каток на Болотной площади','ЦАО',CITY_RULES_2025,{
+    address:'Болотная площадь',facts:['В сезоне 2025/26 вход был бесплатным по электронному билету','Дата и условия сезона 2026/27 не опубликованы'],
+    photo:'https://live.mosmolodezh.ru/b/d/a35Vp9Tgu4ci9owR-pJHzB4WQ1otX69BK_YJonruioQoEnwoJvUA9yRzQamFU9yVcBI1koktVj1EqSLHfklJbFwowQiFJg%3D8jZeBh7f0lZFv7W2DsEtGg.jpg',photoSource:'https://live.mosmolodezh.ru/news/1522',photoNote:'Фото городского ресурса, прежний сезон'
+  }),
+  rink('Каток парка «Яуза»: Лазоревый проезд','СВАО','https://park-yauza.info/novosti/otkrytie-dvukh-katkov/',{
+    address:'Лазоревый проезд, напротив дома 16',facts:['Искусственный лёд','В предыдущем сезоне парк сообщал о бесплатном входе','Дата и условия 2026/27 не опубликованы'],socials:[['ВКонтакте','https://vk.com/public194070141'],['Telegram','https://t.me/parkyauza_news']]
+  }),
+  rink('Каток парка «Яуза»: Юрловский проезд','СВАО','https://park-yauza.info/novosti/otkrytie-dvukh-katkov/',{
+    address:'Юрловский проезд, 10',facts:['Искусственный лёд','В предыдущем сезоне парк сообщал о бесплатном входе','Дата и условия 2026/27 не опубликованы'],socials:[['ВКонтакте','https://vk.com/public194070141'],['Telegram','https://t.me/parkyauza_news']]
+  }),
+  rink('Каток парка «Яуза»: Певческое поле','СВАО','https://park-yauza.info/novosti/otkrytie-dvukh-katkov/',{
+    address:'Заповедная улица, 28',facts:['Искусственный лёд','В предыдущем сезоне парк сообщал о бесплатном входе','Дата и условия 2026/27 не опубликованы'],socials:[['ВКонтакте','https://vk.com/public194070141'],['Telegram','https://t.me/parkyauza_news']]
+  }),
+  rink('Каток в кинопарке «Москино»','ТиНАО',CITY_RULES_2025,{
+    address:'Кинопарк «Москино»',facts:['Площадка перечислена в официальных городских правилах сезона 2025/26','Дата и тариф 2026/27 не опубликованы']
+  }),
+  rink('Каток на Воробьёвых горах','ЗАО',CITY_RULES_2025,{
+    address:'Воробьёвы горы',facts:['Площадка перечислена в официальных городских правилах сезона 2025/26','Дата и тариф 2026/27 не опубликованы']
+  }),
+  rink('Каток в деловом центре «Москва-Сити»','ЦАО',CITY_RULES_2025,{
+    address:'Пешеходная зона делового центра «Москва-Сити»',facts:['Площадка перечислена в официальных городских правилах сезона 2025/26','Дата и тариф 2026/27 не опубликованы']
+  })
+];

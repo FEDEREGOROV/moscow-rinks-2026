@@ -4,28 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f7f8">
-  <meta name="description" content="Сравнение 27 катков Москвы: взрослый и детский вход, прокат, минимальный чек, даты открытия и источники. Данные на 26 ноября 2026 года.">
-  <title>Сравнение цен катков Москвы 2026/27</title>
+  <meta name="description" content="Сравнительная таблица официальных тарифов, проката, адресов и статусов организованных катков Москвы в сезоне 2026/27.">
+  <title>Сравнение катков Москвы — тарифы 2026/27</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="rinks-data.js" defer></script>
+  <script src="gum-tariffs.js" defer></script>
   <script src="script.js" defer></script>
   <script src="analysis.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#table">Перейти к сравнительной таблице</a>
-  <header class="topbar wrap">
-    <span class="site-title">Катки Москвы <span>2026/27</span></span>
-    <nav aria-label="Основная навигация"><a href="index.html">Каталог</a><a href="analysis.html" aria-current="page">Сравнение</a></nav>
-  </header>
+  <a class="skip" href="#table">К таблице</a>
+  <header class="topbar wrap"><span class="site-title">Катки Москвы <span>2026/27</span></span><nav aria-label="Разделы"><a href="index.html">Каталог</a><a href="analysis.html" aria-current="page">Сравнение</a></nav></header>
   <main class="wrap" id="table">
-    <div class="page-heading"><div><h1>Сравнение цен</h1><p>27 площадок · данные на 26 ноября 2026 года</p></div><span>Все цены в ₽</span></div>
-    <section class="table-section" aria-label="Сравнительная таблица катков">
-      <div class="table-tools">
-        <label class="searchbox"><span class="sr-only">Поиск площадки в таблице</span><input id="analysis-search" type="search" placeholder="Найти площадку"></label>
-        <label class="sort-label">Сегмент <select id="segment"><option value="all">Все катки</option><option value="direct">Крупные конкуренты</option><option value="local">Районные площадки</option><option value="pending">Неуточнённые тарифы</option></select></label>
-        <span id="table-count" aria-live="polite"></span>
-      </div>
-      <div class="table-scroll"><table class="market-table"><caption class="sr-only">Сравнение катков Москвы на 26 ноября 2026 года</caption><thead><tr><th scope="col">Каток / сегмент</th><th scope="col">Взрослый вход</th><th scope="col">Детский</th><th scope="col">Прокат</th><th scope="col">Мин. чек с коньками</th><th scope="col">Открытие</th><th scope="col">Отличие</th><th scope="col">Источник</th></tr></thead><tbody id="market-rows"></tbody></table></div>
-      <p class="table-note">Н/д — цена не опубликована. Мин. чек рассчитан как сумма минимальных тарифов на вход и прокат; они могут относиться к разным сеансам. Цены из обзора сезона выделены ссылкой на источник.</p>
+    <div class="page-heading"><div><h1>Сравнение катков</h1><p>Официальные тарифы и условия · 26 ноября 2026</p></div><span id="heading-count"></span></div>
+    <section class="table-section" aria-label="Сравнительная таблица катков"><div class="table-tools"><label class="searchbox"><span class="sr-only">Поиск в таблице</span><input id="analysis-search" type="search" placeholder="Найти каток"></label><label class="sort-label">Тариф <select id="segment"><option value="all">Все площадки</option><option value="published">Цена опубликована</option><option value="pending">Цена не опубликована</option><option value="free">Есть бесплатный вход</option></select></label><span id="table-count" aria-live="polite"></span></div>
+      <div class="table-scroll"><table class="market-table"><caption class="sr-only">Катки Москвы, данные из официальных источников на 26 ноября 2026 года</caption><thead><tr><th scope="col">Каток</th><th scope="col">Статус</th><th scope="col">Взрослый вход</th><th scope="col">Детский билет</th><th scope="col">Прокат</th><th scope="col">Часы сезона</th><th scope="col">Адрес</th><th scope="col">Источник</th></tr></thead><tbody id="market-rows"></tbody></table></div>
+      <p class="table-note">«Не опубликовано» означает отсутствие подтверждённого тарифа 2026/27 в указанном официальном источнике. Подробная сетка цен и ссылки на социальные сети — в карточках каталога.</p>
     </section>
   </main>
 </body>

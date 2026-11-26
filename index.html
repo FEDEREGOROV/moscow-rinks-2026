@@ -4,28 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f7f8">
-  <meta name="description" content="Катки Москвы 2026/27: фото, цены, даты открытия, прокат и источники. Данные на 26 ноября 2026 года.">
-  <title>Каталог катков Москвы 2026/27</title>
+  <meta name="description" content="Каталог организованных катков Москвы: адреса, официальные фото, тарифы сезона 2026/27, прокат и социальные сети организаторов.">
+  <title>Катки Москвы — каталог и цены 2026/27</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="rinks-data.js" defer></script>
+  <script src="gum-tariffs.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#catalog">Перейти к каталогу</a>
-  <header class="topbar wrap">
-    <span class="site-title">Катки Москвы <span>2026/27</span></span>
-    <nav aria-label="Основная навигация"><a href="index.html" aria-current="page">Каталог</a><a href="analysis.html">Сравнение</a></nav>
-  </header>
+  <a class="skip" href="#catalog">К каталогу</a>
+  <header class="topbar wrap"><span class="site-title">Катки Москвы <span>2026/27</span></span><nav aria-label="Разделы"><a href="index.html" aria-current="page">Каталог</a><a href="analysis.html">Сравнение</a></nav></header>
   <main class="wrap" id="catalog">
-    <div class="page-heading"><div><h1>Каталог катков</h1><p>Площадки Москвы · данные на 26 ноября 2026 года</p></div><span>27 площадок</span></div>
-    <section class="catalog" aria-label="Фильтры и список катков">
-      <div class="filters">
-        <label class="searchbox"><span class="sr-only">Поиск по названию и району</span><input id="search" type="search" placeholder="Название, район или метро"></label>
-        <div class="chips" role="group" aria-label="Фильтр по типу"><button class="chip active" data-filter="all" aria-pressed="true">Все</button><button class="chip" data-filter="open" aria-pressed="false">Открыты</button><button class="chip" data-filter="free" aria-pressed="false">Бесплатные</button><button class="chip" data-filter="upcoming" aria-pressed="false">Ожидаются</button></div>
-        <label class="sort-label">Сортировка <select id="sort"><option value="featured">По подборке</option><option value="price">По цене</option><option value="name">По названию</option></select></label>
-      </div>
-      <div class="catalog-meta"><span id="result-count" aria-live="polite"></span><span>Цена — минимальный взрослый вход</span></div>
-      <div class="cards" id="cards"></div>
-      <p class="empty" id="empty" hidden>Ничего не найдено.</p>
+    <div class="page-heading"><div><h1>Каталог катков</h1><p>Организованные площадки с официальными источниками · 26 ноября 2026</p></div><span id="heading-count"></span></div>
+    <section class="catalog" aria-label="Список катков">
+      <div class="filters"><label class="searchbox"><span class="sr-only">Поиск</span><input id="search" type="search" placeholder="Название, округ или адрес"></label><div class="chips" role="group" aria-label="Фильтр"><button class="chip active" data-filter="all" aria-pressed="true">Все</button><button class="chip" data-filter="open" aria-pressed="false">Открыты</button><button class="chip" data-filter="free" aria-pressed="false">Есть бесплатный вход</button><button class="chip" data-filter="pending" aria-pressed="false">Не открыты / нет данных</button></div><label class="sort-label">Порядок <select id="sort"><option value="featured">По каталогу</option><option value="price">По цене входа</option><option value="name">По названию</option></select></label></div>
+      <div class="catalog-meta"><span id="result-count" aria-live="polite"></span><span>Цены только за сезон 2026/27</span></div>
+      <div class="cards" id="cards"></div><p class="empty" id="empty" hidden>Ничего не найдено.</p>
     </section>
   </main>
   <dialog id="details"><button class="close" id="close-dialog" aria-label="Закрыть">×</button><div id="details-content"></div></dialog>
