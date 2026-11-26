@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b2b">
+  <meta name="description" content="Катки Москвы 2026/27: фотографии площадок, цены, прокат, даты открытия и источники. Каталог для анализа рынка катков Лужников. Проверено 26 ноября 2026 года.">
+  <title>На лёд — катки Москвы 2026/27</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#catalog">Перейти к каталогу</a>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="На лёд, начало страницы"><span class="brand-icon">✳</span> НА ЛЁД<span class="brand-dot">.</span></a>
+    <nav aria-label="Основная навигация"><a href="index.html" aria-current="page">Каталог катков</a><a href="analysis.html">Конкурентный анализ</a></nav>
+    <span class="top-season">МОСКВА · ЗИМА 26/27</span>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> ОБЗОР РЫНКА ДЛЯ ЛУЖНИКОВ · 26 НОЯБРЯ 2026</p>
+        <h1>Москва<br><em>выходит на лёд</em><span class="period">.</span></h1>
+        <p class="hero-lead">Фотокаталог ледовых площадок Москвы: география, входные цены, прокат, даты открытия и первоисточники в одном обзоре.</p>
+        <div class="hero-actions"><a class="button primary" href="#catalog">Смотреть катки</a><a class="button ghost" href="analysis.html">Открыть анализ цен</a></div>
+        <p class="hero-note">Билеты и расписание меняются. Перед поездкой проверяйте официальный сайт площадки.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="moon"></div><div class="rink rink-back"></div><div class="rink rink-front"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span class="spark s1">✳</span><span class="spark s2">✦</span><span class="spark s3">✳</span><span class="art-caption">ГОРОД В ДВИЖЕНИИ / 55.75° N</span></div>
+    </section>
+
+    <section class="snapshot wrap" aria-label="Сводка по каталогу"><div><strong id="count-all">—</strong><span>площадок в подборке</span></div><div><strong id="count-open">—</strong><span>уже открыты 26 ноября</span></div><div><strong id="count-photos">—</strong><span>архивных фото площадок</span></div><div class="snapshot-info"><span class="asterisk">*</span><span>Открытие и цены не всех площадок подтверждены оператором</span></div></section>
+
+    <section class="intro wrap" id="catalog"><div><p class="section-kicker">ВКЛАДКА 01 / КАТАЛОГ ПЛОЩАДОК</p><h2>Катки Москвы</h2></div><p>27 площадок, 25 архивных фотографий, статус сезона и источники. Для двух площадок проверенные снимки не найдены. Цена в карточке — минимальный взрослый вход; прокат может оплачиваться отдельно.</p></section>
+
+    <section class="catalog wrap" aria-label="Фильтры и список катков">
+      <div class="filters"><label class="searchbox"><span class="sr-only">Поиск по названию и району</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="Название, район или метро"></label><div class="chips" role="group" aria-label="Фильтр по типу"><button class="chip active" data-filter="all" aria-pressed="true">Все</button><button class="chip" data-filter="open" aria-pressed="false">Уже открыты</button><button class="chip" data-filter="free" aria-pressed="false">Есть бесплатно</button><button class="chip" data-filter="upcoming" aria-pressed="false">Скоро</button></div><label class="sort-label">Сортировать <select id="sort"><option value="featured">По подборке</option><option value="price">По цене</option><option value="name">По названию</option></select></label></div>
+      <div class="catalog-meta"><span id="result-count" aria-live="polite"></span><span>цены в рублях за вход · сезон 2026/27</span></div>
+      <div class="cards" id="cards"></div><p class="empty" id="empty" hidden>По запросу ничего не найдено. Измените поиск или фильтр.</p>
+    </section>
+
+    <section class="method wrap" id="method"><div><p class="section-kicker">МЕТОДИКА / ДАННЫЕ И ФОТО</p><h2>Честно о ценах<br>и статусах<span class="period">.</span></h2></div><div class="method-copy"><p>Здесь собраны крупные и районные катки, о которых опубликованы сведения на сезон 2026/27. Полного реестра всех дворовых и временных площадок пока нет: состав и условия меняются в течение зимы.</p><ul><li><b>Подтверждено оператором</b> — сведения с официального сайта площадки.</li><li><b>По обзору сезона</b> — сведения из городского обзора; тариф требует проверки при бронировании.</li><li><b>Архивное фото</b> — изображение показывает площадку в прошлый сезон и не подтверждает её оформление или работу сейчас.</li><li><b>Нет проверенного фото</b> — для такой площадки показана графическая заглушка, а не снимок другой локации.</li></ul><p class="source-line">Источники тарифов: <a href="https://katok.luzhniki.ru/" target="_blank" rel="noopener noreferrer">Лужники</a>, <a href="https://vdnh.ru/katok/" target="_blank" rel="noopener noreferrer">ВДНХ</a>, <a href="https://parkgorkogo.ru/rinks/" target="_blank" rel="noopener noreferrer">Парк Горького</a>, <a href="https://i.transport.mos.ru/katoksrv" target="_blank" rel="noopener noreferrer">Северный речной вокзал</a>, <a href="https://gum-katok.ru/" target="_blank" rel="noopener noreferrer">ГУМ-каток</a>, <a href="https://www.sravni.ru/novost/2026/11/24/gde-katatsya-na-konkah-v-moskve-zimoj-2026-27/" target="_blank" rel="noopener noreferrer">обзор Сравни</a>. Ссылки на источники фотографий указаны в карточках.</p></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="brand" href="#top"><span class="brand-icon">✳</span> НА ЛЁД<span class="brand-dot">.</span></a><span>Обзор рынка для руководства Лужников · 2026/27</span><a href="analysis.html">Конкурентный анализ</a></div></footer>
+  <dialog id="details"><button class="close" id="close-dialog" aria-label="Закрыть">×</button><div id="details-content"></div></dialog>
+</body>
+</html>
