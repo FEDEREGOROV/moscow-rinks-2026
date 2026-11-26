@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f7f8">
   <meta name="description" content="Отзывы о катке «Лужники» на Центральной площади из официального виджета Яндекс Карт.">
   <title>Отзывы о катке «Лужники» — Яндекс Карты</title>
-  <link rel="stylesheet" href="styles.css?v=64">
+  <link rel="stylesheet" href="styles.css?v=65">
 </head>
 <body>
   <a class="skip" href="#reviews">К отзывам</a>
@@ -14,9 +14,19 @@
   <main class="wrap" id="reviews">
     <div class="page-heading"><div><h1>Отзывы о катке «Лужники»</h1><p>Центральная площадь · Яндекс Карты</p></div></div>
     <div class="reviews-layout">
-      <div class="reviews-toolbar"><span>Сортировка полного списка — в Яндекс Картах</span><a href="https://yandex.ru/maps/org/katok_luzhniki/213700526687/reviews/" target="_blank" rel="noopener noreferrer">Сортировать отзывы ↗</a></div>
-      <iframe class="reviews-widget" title="Отзывы о катке Лужники в Яндекс Картах" src="https://yandex.ru/maps-reviews-widget/213700526687?comments" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="reviews-import">
+        <label for="reviews-file">Файл отзывов (JSON или CSV)</label>
+        <input id="reviews-file" type="file" accept=".json,.csv,application/json,text/csv">
+        <span>Файл открывается только в вашем браузере</span>
+      </div>
+      <p id="reviews-error" class="reviews-error" role="alert" hidden></p>
+      <div id="reviews-data-view" hidden>
+        <div class="reviews-toolbar"><label for="reviews-sort">Сортировка <select id="reviews-sort"><option value="newest">Сначала новые</option><option value="oldest">Сначала старые</option><option value="highest">Сначала положительные</option><option value="lowest">Сначала отрицательные</option></select></label><span id="reviews-count"></span></div>
+        <div id="reviews-list" class="reviews-list"></div>
+      </div>
+      <div id="reviews-widget-view"><p class="reviews-note">Официальный виджет Яндекса показывает до пяти отзывов.</p><iframe class="reviews-widget" title="Отзывы о катке Лужники в Яндекс Картах" src="https://yandex.ru/maps-reviews-widget/213700526687?comments" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
     </div>
   </main>
+  <script src="reviews.js?v=1" defer></script>
 </body>
 </html>
