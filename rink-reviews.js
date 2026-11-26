@@ -16,6 +16,8 @@
   const modalSort = document.getElementById('rink-reviews-sort');
   const modalCount = document.getElementById('rink-reviews-count');
   const modalList = document.getElementById('rink-reviews-items');
+  const modalWidget = document.getElementById('rink-reviews-widget-view');
+  const modalWidgetSlot = document.getElementById('rink-reviews-widget-slot');
   const luzhnikiFile = document.getElementById('luzhniki-2gis-file');
   const luzhnikiError = document.getElementById('luzhniki-2gis-error');
   const luzhnikiEmpty = document.getElementById('luzhniki-2gis-empty');
@@ -65,7 +67,22 @@
     });
     const source = activeProvider === '2gis' ? '2ГИС' : 'Яндекс Карт';
     modalEmpty.textContent = `Данные отзывов ${source} для этой площадки не загружены.`;
-    draw(modalView, modalEmpty, modalCount, modalList, modalSort, stored.get(key(activeRink.name, activeProvider)), activeProvider);
+    const items = stored.get(key(activeRink.name, activeProvider));
+    draw(modalView, modalEmpty, modalCount, modalList, modalSort, items, activeProvider);
+    const yandexId = activeProvider === 'yandex' && !items?.length ? YANDEX_REVIEW_WIDGET_IDS[activeRink.name] : null;
+    modalWidget.hidden = !yandexId;
+    modalEmpty.hidden = Boolean(yandexId) || Boolean(items?.length);
+    if (yandexId) {
+      const iframe = document.createElement('iframe');
+      iframe.className = 'reviews-widget';
+      iframe.title = `Отзывы о катке ${activeRink.name} в Яндекс Картах`;
+      iframe.src = `https://yandex.ru/maps-reviews-widget/${yandexId}?comments`;
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      modalWidgetSlot.replaceChildren(iframe);
+    } else {
+      modalWidgetSlot.replaceChildren();
+    }
   }
 
   function renderDirectory() {
@@ -112,6 +129,7 @@
     renderModal();
   }));
   document.getElementById('rink-reviews-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', () => modalWidgetSlot.replaceChildren());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
   modalSort.addEventListener('change', renderModal);
   luzhnikiSort.addEventListener('change', renderLuzhniki2Gis);
