@@ -65,3 +65,19 @@ dialog{border:1px solid #dbe5e9;border-radius:7px;max-width:620px;width:calc(100
 .map-note{margin-bottom:28px}
 @media(max-width:800px){.map-layout{grid-template-columns:1fr}.map-list{height:260px;min-height:0;border-left:0;border-top:1px solid #dfe6ea}#rink-map{height:55vh;min-height:360px}}
 @media(max-width:620px){.topbar .site-title span{display:none}.topbar nav{gap:10px}.topbar nav a{font-size:12px}.map-tools .searchbox{flex-basis:100%}.map-tools>span{margin-left:0}}
+
+.promo-table{border-collapse:collapse;width:100%;min-width:1100px;background:#fff;font-size:13px;line-height:1.45}
+.promo-table th,.promo-table td{text-align:left;vertical-align:top;padding:13px 12px;border-bottom:1px solid #e7ecef}
+.promo-table thead th{background:#e9eef1;color:#455d6a;font-size:12px;white-space:nowrap}
+.promo-table tbody tr:hover{background:#f4f8fa}
+.promo-table tbody th{min-width:155px;width:170px}
+.promo-table td:nth-child(2){min-width:145px;width:175px}
+.promo-table td:nth-child(3){min-width:145px;width:165px}
+.promo-table td:nth-child(4){min-width:165px;width:190px}
+.promo-table td:nth-child(5){min-width:300px}
+.promo-table td:nth-child(6){min-width:130px;width:150px}
+.promo-table small{display:block;margin-top:5px;color:#738691;font-weight:400;font-size:11px}
+.promo-table a{overflow-wrap:anywhere}
+.promo-benefit{font-weight:700}
+.promo-table[hidden],#promo-empty[hidden]{display:none}
+@media(max-width:620px){.topbar{height:auto;min-height:60px;flex-wrap:wrap;gap:0;padding-top:9px}.topbar .site-title{width:100%}.topbar nav{width:100%;height:39px;overflow-x:auto;gap:17px}.topbar nav a{white-space:nowrap;flex:none}}
