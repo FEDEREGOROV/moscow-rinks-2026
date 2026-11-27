@@ -1,1 +1,30 @@
-.metrica-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px;margin-bottom:16px;background:#fff;border:1px solid #dfe6ea;border-radius:5px}.metrica-controls label{display:flex;align-items:center;gap:8px;font-size:14px}.metrica-controls select,.metrica-controls button{height:38px;border:1px solid #cbdce4;border-radius:4px;background:#fff;color:#253f4e;padding:0 12px}.metrica-controls button{font-weight:700}.metrica-controls button:disabled{opacity:.6}.metrica-controls span{margin-left:auto;color:#647884;font-size:13px}.metrica-status{font-size:14px;color:#526a78}.metrica-status[hidden],#metrica-results[hidden],.metrica-note[hidden]{display:none}.metrica-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 22px}.metrica-totals div{padding:18px;background:#fff;border:1px solid #dfe6ea;border-radius:5px}.metrica-totals dt{font-size:14px;color:#647884}.metrica-totals dd{margin:7px 0 0;font-size:28px;font-weight:700}.metrica-note{font-size:13px;color:#647884}.metrica-table{border-collapse:collapse;width:100%;font-size:14px;background:#fff}.metrica-table caption{text-align:left;font-size:18px;font-weight:700;padding:0 0 12px;background:#f6f7f8}.metrica-table th,.metrica-table td{padding:11px 15px;border-bottom:1px solid #e4ebee;text-align:right}.metrica-table th:first-child,.metrica-table td:first-child{text-align:left}.metrica-table thead th{background:#e9eef1;color:#455d6a}.metrica-table tbody tr:last-child td{border-bottom:0}@media(max-width:620px){.metrica-totals{grid-template-columns:1fr}.metrica-controls span{width:100%;margin-left:0}.metrica-table{min-width:470px}}
+.metrica-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px;margin-bottom:16px;background:#fff;border:1px solid #dfe6ea;border-radius:5px}
+.metrica-controls label,.metrica-chart-heading label{display:flex;align-items:center;gap:8px;font-size:14px}
+.metrica-controls select,.metrica-controls button,.metrica-chart-heading select{height:38px;border:1px solid #cbdce4;border-radius:4px;background:#fff;color:#253f4e;padding:0 12px}
+.metrica-controls button{font-weight:700}
+.metrica-controls button:disabled{opacity:.6}
+.metrica-controls span{margin-left:auto;color:#647884;font-size:13px}
+.metrica-status{font-size:14px;color:#526a78}
+.metrica-status[hidden],#metrica-results[hidden],.metrica-note[hidden]{display:none}
+.metrica-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 8px}
+.metrica-totals div{padding:18px;background:#fff;border:1px solid #dfe6ea;border-radius:5px}
+.metrica-totals dt{font-size:14px;color:#647884}
+.metrica-totals dd{margin:7px 0 0;font-size:28px;font-weight:700}
+.metrica-totals p{margin:12px 0 0;color:#526a78;font-size:14px;line-height:1.45}
+.metrica-definitions-source{margin:0 0 20px;color:#647884;font-size:14px}
+.metrica-note{font-size:13px;color:#647884}
+.metrica-chart-panel{padding:18px;margin-bottom:24px;background:#fff;border:1px solid #dfe6ea;border-radius:5px;overflow-x:auto}
+.metrica-chart-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.metrica-chart-heading h2{font-size:18px;line-height:1.3;margin:0}
+.metrica-chart{display:block;width:100%;height:auto;min-height:190px;margin-top:12px;overflow:visible}
+.chart-grid{stroke:#e3eaed;stroke-width:1}
+.chart-label,.chart-empty{fill:#647884;font-size:14px;font-family:inherit}
+.chart-line{fill:none;stroke:#087f91;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.chart-point{fill:#087f91;stroke:#fff;stroke-width:2}
+.metrica-table{border-collapse:collapse;width:100%;font-size:14px;background:#fff}
+.metrica-table caption{text-align:left;font-size:18px;font-weight:700;padding:0 0 12px;background:#f6f7f8}
+.metrica-table th,.metrica-table td{padding:11px 15px;border-bottom:1px solid #e4ebee;text-align:right}
+.metrica-table th:first-child,.metrica-table td:first-child{text-align:left}
+.metrica-table thead th{background:#e9eef1;color:#455d6a}
+.metrica-table tbody tr:last-child td{border-bottom:0}
+@media(max-width:620px){.metrica-totals{grid-template-columns:1fr}.metrica-controls span{width:100%;margin-left:0}.metrica-table{min-width:470px}.metrica-chart-panel{padding:12px}.metrica-chart-heading label{width:100%;justify-content:space-between}.metrica-chart{width:760px;max-width:none}}

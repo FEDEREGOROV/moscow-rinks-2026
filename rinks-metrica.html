@@ -9,8 +9,8 @@
   <script src="access.js?v=5"></script>
   <script src="section-nav.js?v=5" defer></script>
   <link rel="stylesheet" href="styles.css?v=73">
-  <link rel="stylesheet" href="rinks-metrica.css?v=1">
-  <script src="rinks-metrica.js?v=1" defer></script>
+  <link rel="stylesheet" href="rinks-metrica.css?v=2">
+  <script src="rinks-metrica.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip" href="#metrica">К аналитике</a>
@@ -20,8 +20,13 @@
     <div class="metrica-controls"><label for="metrica-period">Период <select id="metrica-period"><option value="7">7 дней</option><option value="30" selected>30 дней</option><option value="90">90 дней</option></select></label><button type="button" id="metrica-refresh">Обновить</button><span id="metrica-updated"></span></div>
     <p id="metrica-status" class="metrica-status" role="status" aria-live="polite">Загрузка данных…</p>
     <section id="metrica-results" hidden aria-label="Показатели сайта катка">
-      <dl class="metrica-totals"><div><dt>Визиты</dt><dd id="metrica-visits"></dd></div><div><dt>Посетители</dt><dd id="metrica-users"></dd></div><div><dt>Просмотры</dt><dd id="metrica-pageviews"></dd></div></dl>
+      <dl class="metrica-totals"><div><dt>Визиты</dt><dd id="metrica-visits"></dd><p>Сеансы посещения сайта. Один человек может совершить несколько визитов.</p></div><div><dt>Посетители</dt><dd id="metrica-users"></dd><p>Уникальные посетители сайта за выбранный период.</p></div><div><dt>Просмотры</dt><dd id="metrica-pageviews"></dd><p>Загрузки страниц сайта. За один визит может быть несколько просмотров.</p></div></dl>
+      <p class="metrica-definitions-source">Определения: <a href="https://yandex.ru/support/metrica/ru/general/glossary" target="_blank" rel="noopener noreferrer">справка Яндекс Метрики</a>.</p>
       <p id="metrica-sampling" class="metrica-note" hidden></p>
+      <section class="metrica-chart-panel" aria-labelledby="metrica-chart-heading">
+        <div class="metrica-chart-heading"><h2 id="metrica-chart-heading">Динамика по дням</h2><label for="metrica-metric">Показатель <select id="metrica-metric"><option value="visits">Визиты</option><option value="users">Посетители</option><option value="pageviews">Просмотры</option></select></label></div>
+        <svg id="metrica-chart" class="metrica-chart" viewBox="0 0 900 260" role="img" aria-label="График показателей по дням"></svg>
+      </section>
       <div class="table-scroll"><table class="metrica-table"><caption>Показатели по дням</caption><thead><tr><th scope="col">Дата</th><th scope="col">Визиты</th><th scope="col">Посетители</th><th scope="col">Просмотры</th></tr></thead><tbody id="metrica-rows"></tbody></table></div>
     </section>
   </main>
