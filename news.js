@@ -87,6 +87,19 @@
     if (!candidates.length) throw Error('Нет доступной ленты');
     return candidates.sort((a,b) => Date.parse(b.updatedAt || 0)-Date.parse(a.updatedAt || 0))[0];
   };
+  const waitForFullSync = async since => {
+    for (let attempt = 0; attempt < 12; attempt++) {
+      await new Promise(resolve => setTimeout(resolve, 15000));
+      try {
+        const snapshot = await getJson(`news-data.json?t=${Date.now()}`);
+        if (Date.parse(snapshot.updatedAt) <= Date.parse(since)) continue;
+        setData(snapshot);
+        updated.textContent = `Полная выгрузка опубликована: ${formatDate(snapshot.updatedAt)}.`;
+        return;
+      } catch { /* Продолжаем ждать публикацию. */ }
+    }
+    updated.textContent += ' Сбор ещё выполняется; новая выгрузка появится автоматически.';
+  };
   const load = async (manual = false) => {
     if (loading) return;
     loading = true;
@@ -102,7 +115,9 @@
       const checkedAt = timeFormat.format(new Date());
       const checked = Array.isArray(snapshot.sources) ? snapshot.sources.filter(item => item.ok).length : null;
       const failed = Array.isArray(snapshot.sources) ? snapshot.sources.filter(item => !item.ok).map(item => item.name) : [];
-      updated.textContent = `${manual ? (newCount ? `Новых публикаций: ${newCount}. ` : 'Новых публикаций нет. ') : ''}${checked === null ? '' : `Доступно источников: ${checked} из ${snapshot.sources.length}. `}${failed.length ? `Недоступны: ${failed.join(', ')}. ` : ''}Сбор: ${formatDate(lastSnapshotAt)} · открыто в ${checkedAt}`;
+      const fullSyncMessage = ['started','pending'].includes(snapshot.fullSync) ? ' Полная проверка запущена в GitHub Actions; ожидаю новую выгрузку.' : '';
+      updated.textContent = `${manual ? (newCount ? `Новых публикаций: ${newCount}. ` : 'Новых публикаций нет. ') : ''}${checked === null ? '' : `Доступно источников: ${checked} из ${snapshot.sources.length}. `}${failed.length ? `Недоступны: ${failed.join(', ')}. ` : ''}Сбор: ${formatDate(lastSnapshotAt)} · открыто в ${checkedAt}.${fullSyncMessage}`;
+      if (manual && fullSyncMessage) void waitForFullSync(snapshot.updatedAt);
     }
     catch {
       if (!hadData) {updated.textContent = 'Не удалось загрузить новости.';render()}
