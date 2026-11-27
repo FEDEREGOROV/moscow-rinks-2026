@@ -9,25 +9,35 @@
   <script src="access.js?v=6"></script>
   <script src="section-nav.js?v=6" defer></script>
   <link rel="stylesheet" href="styles.css?v=77">
-  <link rel="stylesheet" href="rinks-metrica.css?v=2">
-  <script src="rinks-metrica.js?v=2" defer></script>
+  <link rel="stylesheet" href="rinks-metrica.css?v=3">
+  <script src="rinks-metrica.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip" href="#metrica">К аналитике</a>
   <header class="topbar wrap"><span class="site-title">Катки Москвы <span>2026/27</span></span><nav aria-label="Разделы"><a href="index.html">Каталог</a><a href="analysis.html">Сравнение</a><a href="map.html">На карте</a><a href="promotions.html">Акции</a><a href="reviews.html">Отзывы</a><a href="rinks-metrica.html" aria-current="page">Аналитика</a></nav></header>
   <main class="wrap" id="metrica">
-    <div class="page-heading"><div><h1>Аналитика катка «Лужники»</h1><p>Яндекс Метрика · счётчик 114182652</p></div></div>
+    <div class="page-heading"><div><h1>Аналитика катка «Лужники»</h1><p>Посещаемость, поведение и органический поиск · Яндекс Метрика</p></div><span class="metrica-counter">Счётчик 114182652</span></div>
     <div class="metrica-controls"><label for="metrica-period">Период <select id="metrica-period"><option value="7">7 дней</option><option value="30" selected>30 дней</option><option value="90">90 дней</option></select></label><button type="button" id="metrica-refresh">Обновить</button><span id="metrica-updated"></span></div>
     <p id="metrica-status" class="metrica-status" role="status" aria-live="polite">Загрузка данных…</p>
     <section id="metrica-results" hidden aria-label="Показатели сайта катка">
-      <dl class="metrica-totals"><div><dt>Визиты</dt><dd id="metrica-visits"></dd><p>Сеансы посещения сайта. Один человек может совершить несколько визитов.</p></div><div><dt>Посетители</dt><dd id="metrica-users"></dd><p>Уникальные посетители сайта за выбранный период.</p></div><div><dt>Просмотры</dt><dd id="metrica-pageviews"></dd><p>Загрузки страниц сайта. За один визит может быть несколько просмотров.</p></div></dl>
-      <p class="metrica-definitions-source">Определения: <a href="https://yandex.ru/support/metrica/ru/general/glossary" target="_blank" rel="noopener noreferrer">справка Яндекс Метрики</a>.</p>
+      <dl class="metrica-totals">
+        <div><dt>Визиты</dt><dd id="metrica-visits"></dd><p>Сеансы посещения</p></div>
+        <div><dt>Посетители</dt><dd id="metrica-users"></dd><p>Уникальные люди</p></div>
+        <div><dt>Просмотры</dt><dd id="metrica-pageviews"></dd><p>Загрузки страниц</p></div>
+        <div><dt>Время на сайте</dt><dd id="metrica-duration"></dd><p>В среднем за визит</p></div>
+        <div><dt>Отказы</dt><dd id="metrica-bounce"></dd><p>Доля коротких визитов</p></div>
+        <div><dt>Глубина просмотра</dt><dd id="metrica-depth"></dd><p>Страниц за визит</p></div>
+      </dl>
+      <details class="metrica-definitions"><summary>Как считаются показатели</summary><div><p><strong>Визиты</strong> — сеансы посещения; один человек может совершить несколько визитов. <strong>Посетители</strong> — уникальные посетители за период. <strong>Просмотры</strong> — просмотры страниц.</p><p><strong>Время на сайте</strong> — средняя длительность визита. <strong>Отказы</strong> — доля визитов с одним просмотром короче 15 секунд. <strong>Глубина</strong> — среднее число просмотренных страниц за визит. <a href="https://yandex.ru/dev/metrika/ru/stat/attrandmetr/dim_all" target="_blank" rel="noopener noreferrer">Определения Яндекс Метрики</a>.</p></div></details>
       <p id="metrica-sampling" class="metrica-note" hidden></p>
       <section class="metrica-chart-panel" aria-labelledby="metrica-chart-heading">
-        <div class="metrica-chart-heading"><h2 id="metrica-chart-heading">Динамика по дням</h2><label for="metrica-metric">Показатель <select id="metrica-metric"><option value="visits">Визиты</option><option value="users">Посетители</option><option value="pageviews">Просмотры</option></select></label></div>
+        <div class="metrica-chart-heading"><div><h2 id="metrica-chart-heading">Динамика по дням</h2><p>Значения Яндекс Метрики за выбранный период</p></div><label for="metrica-metric">Показатель <select id="metrica-metric"><option value="visits">Визиты</option><option value="users">Посетители</option><option value="pageviews">Просмотры</option><option value="avgDuration">Время на сайте</option><option value="bounceRate">Отказы</option><option value="pageDepth">Глубина</option></select></label></div>
         <svg id="metrica-chart" class="metrica-chart" viewBox="0 0 900 260" role="img" aria-label="График показателей по дням"></svg>
       </section>
-      <div class="table-scroll"><table class="metrica-table"><caption>Показатели по дням</caption><thead><tr><th scope="col">Дата</th><th scope="col">Визиты</th><th scope="col">Посетители</th><th scope="col">Просмотры</th></tr></thead><tbody id="metrica-rows"></tbody></table></div>
+      <section class="metrica-section" aria-labelledby="metrica-sources-title"><div class="metrica-section-heading"><div><h2 id="metrica-sources-title">Источники трафика</h2><p>По последнему источнику перехода</p></div><div class="organic-summary"><span>Из поиска</span><strong id="metrica-organic">—</strong><small id="metrica-organic-share"></small></div></div><p class="metrica-empty" id="metrica-sources-empty" hidden></p><div class="table-scroll"><table class="metrica-table" id="metrica-sources-table"><thead><tr><th scope="col">Источник</th><th scope="col">Визиты</th><th scope="col">Доля</th><th scope="col">Отказы</th><th scope="col">Время на сайте</th></tr></thead><tbody id="metrica-sources-rows"></tbody></table></div></section>
+      <div class="metrica-detail-grid"><section class="metrica-section" aria-labelledby="metrica-engines-title"><h2 id="metrica-engines-title">Поисковые системы</h2><p class="metrica-section-intro">Визиты из органического поиска</p><p class="metrica-empty" id="metrica-engines-empty" hidden></p><div class="table-scroll"><table class="metrica-table" id="metrica-engines-table"><thead><tr><th scope="col">Система</th><th scope="col">Визиты</th></tr></thead><tbody id="metrica-engines-rows"></tbody></table></div></section><section class="metrica-section" aria-labelledby="metrica-phrases-title"><h2 id="metrica-phrases-title">Поисковые фразы</h2><p class="metrica-section-intro">Запросы, доступные в Метрике</p><p class="metrica-empty" id="metrica-phrases-empty" hidden></p><div class="table-scroll"><table class="metrica-table" id="metrica-phrases-table"><thead><tr><th scope="col">Фраза</th><th scope="col">Визиты</th></tr></thead><tbody id="metrica-phrases-rows"></tbody></table></div></section></div>
+      <section class="metrica-section" aria-labelledby="metrica-entrances-title"><div class="metrica-section-heading"><div><h2 id="metrica-entrances-title">Страницы входа из поиска</h2><p>Страницы, с которых начался визит после перехода из поисковой системы</p></div></div><p class="metrica-empty" id="metrica-entrances-empty" hidden></p><div class="table-scroll"><table class="metrica-table" id="metrica-entrances-table"><thead><tr><th scope="col">Путь страницы</th><th scope="col">Визиты</th><th scope="col">Отказы</th><th scope="col">Время на сайте</th></tr></thead><tbody id="metrica-entrances-rows"></tbody></table></div></section>
+      <section class="metrica-section" aria-labelledby="metrica-daily-title"><h2 id="metrica-daily-title">По дням</h2><div class="table-scroll"><table class="metrica-table"><thead><tr><th scope="col">Дата</th><th scope="col">Визиты</th><th scope="col">Посетители</th><th scope="col">Просмотры</th><th scope="col">Время</th><th scope="col">Отказы</th><th scope="col">Глубина</th></tr></thead><tbody id="metrica-rows"></tbody></table></div></section>
     </section>
   </main>
 </body>

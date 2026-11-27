@@ -1,30 +1,36 @@
-.metrica-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px;margin-bottom:16px;background:#fff;border:1px solid #dfe6ea;border-radius:5px}
-.metrica-controls label,.metrica-chart-heading label{display:flex;align-items:center;gap:8px;font-size:14px}
-.metrica-controls select,.metrica-controls button,.metrica-chart-heading select{height:38px;border:1px solid #cbdce4;border-radius:4px;background:#fff;color:#253f4e;padding:0 12px}
-.metrica-controls button{font-weight:700}
-.metrica-controls button:disabled{opacity:.6}
-.metrica-controls span{margin-left:auto;color:#647884;font-size:13px}
-.metrica-status{font-size:14px;color:#526a78}
-.metrica-status[hidden],#metrica-results[hidden],.metrica-note[hidden]{display:none}
-.metrica-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 8px}
-.metrica-totals div{padding:18px;background:#fff;border:1px solid #dfe6ea;border-radius:5px}
-.metrica-totals dt{font-size:14px;color:#647884}
-.metrica-totals dd{margin:7px 0 0;font-size:28px;font-weight:700}
-.metrica-totals p{margin:12px 0 0;color:#526a78;font-size:14px;line-height:1.45}
-.metrica-definitions-source{margin:0 0 20px;color:#647884;font-size:14px}
-.metrica-note{font-size:13px;color:#647884}
-.metrica-chart-panel{padding:18px;margin-bottom:24px;background:#fff;border:1px solid #dfe6ea;border-radius:5px;overflow-x:auto}
-.metrica-chart-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.metrica-chart-heading h2{font-size:18px;line-height:1.3;margin:0}
+.metrica-counter{align-self:end;color:#607783;font-size:13px;white-space:nowrap}
+.metrica-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:13px 16px;margin:16px 0 20px;background:#fff;border:1px solid #dce6eb;border-radius:11px}
+.metrica-controls label,.metrica-chart-heading label{display:flex;align-items:center;gap:9px;font-size:13px;color:#506a78}
+.metrica-controls select,.metrica-controls button,.metrica-chart-heading select{min-height:39px;border:1px solid #cbdce4;border-radius:7px;background:#fff;color:#1b3948;padding:0 12px;font:inherit}
+.metrica-controls button{font-weight:700;color:#155d78;cursor:pointer}
+.metrica-controls button:hover{background:#eef6f8}.metrica-controls button:disabled{opacity:.55;cursor:wait}
+.metrica-controls span{margin-left:auto;color:#617885;font-size:12px}
+.metrica-status{font-size:14px;color:#526a78}.metrica-status[hidden],#metrica-results[hidden],.metrica-note[hidden],.metrica-empty[hidden],.metrica-table[hidden]{display:none}
+.metrica-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 12px}
+.metrica-totals>div{min-width:0;padding:18px 20px;background:#fff;border:1px solid #dce6eb;border-radius:11px;box-shadow:0 2px 12px rgba(18,59,79,.035)}
+.metrica-totals>div:nth-child(n+4){background:#f5fafb}
+.metrica-totals dt{font-size:13px;font-weight:600;color:#536e7b}
+.metrica-totals dd{margin:8px 0 3px;font-size:clamp(25px,3vw,34px);line-height:1.15;font-weight:750;letter-spacing:-.03em;color:#173849;font-variant-numeric:tabular-nums}
+.metrica-totals p{margin:0;color:#728793;font-size:12px;line-height:1.4}
+.metrica-definitions{margin:0 0 18px;color:#526b79;font-size:12px}.metrica-definitions summary{cursor:pointer;display:inline-block;color:#166585;text-decoration:underline;text-underline-offset:3px}.metrica-definitions>div{max-width:900px;padding:9px 0 2px;line-height:1.55}.metrica-definitions p{margin:0 0 8px}
+.metrica-note{margin:0 0 12px;font-size:12px;color:#667985}
+.metrica-chart-panel,.metrica-section{background:#fff;border:1px solid #dce6eb;border-radius:11px;box-shadow:0 2px 12px rgba(18,59,79,.035)}
+.metrica-chart-panel{padding:19px 21px 11px;margin-bottom:14px;overflow-x:auto}
+.metrica-chart-heading,.metrica-section-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.metrica-chart-heading h2,.metrica-section h2{margin:0;font-size:18px;line-height:1.3;color:#183b4d}
+.metrica-chart-heading p,.metrica-section-heading p,.metrica-section-intro{margin:4px 0 0;color:#6a808b;font-size:12px;line-height:1.45}
 .metrica-chart{display:block;width:100%;height:auto;min-height:190px;margin-top:12px;overflow:visible}
-.chart-grid{stroke:#e3eaed;stroke-width:1}
-.chart-label,.chart-empty{fill:#647884;font-size:14px;font-family:inherit}
-.chart-line{fill:none;stroke:#087f91;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-.chart-point{fill:#087f91;stroke:#fff;stroke-width:2}
-.metrica-table{border-collapse:collapse;width:100%;font-size:14px;background:#fff}
-.metrica-table caption{text-align:left;font-size:18px;font-weight:700;padding:0 0 12px;background:#f6f7f8}
-.metrica-table th,.metrica-table td{padding:11px 15px;border-bottom:1px solid #e4ebee;text-align:right}
-.metrica-table th:first-child,.metrica-table td:first-child{text-align:left}
-.metrica-table thead th{background:#e9eef1;color:#455d6a}
+.chart-grid{stroke:#e9eef1;stroke-width:1}.chart-label,.chart-empty{fill:#738792;font-size:12px;font-family:inherit}.chart-line{fill:none;stroke:#13889a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.chart-point{fill:#13889a;stroke:#fff;stroke-width:2}
+.metrica-section{padding:19px 21px 12px;margin:0 0 14px;min-width:0}.metrica-section>.table-scroll{margin-top:13px}.metrica-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.metrica-detail-grid .metrica-section{margin:0 0 14px}
+.organic-summary{display:flex;flex-direction:column;align-items:flex-end;gap:2px;padding:2px 0}.organic-summary span,.organic-summary small{font-size:12px;color:#617986}.organic-summary strong{font-size:22px;line-height:1.1;color:#13778e;font-variant-numeric:tabular-nums}
+.metrica-empty{margin:14px 0 4px;color:#718591;font-size:13px}
+.metrica-table{border-collapse:collapse;width:100%;font-size:13px;background:#fff;font-variant-numeric:tabular-nums}
+.metrica-table th,.metrica-table td{padding:10px 12px;border-bottom:1px solid #e9eef1;text-align:right;vertical-align:top}
+.metrica-table th:first-child,.metrica-table td:first-child{text-align:left;padding-left:0;overflow-wrap:anywhere}
+.metrica-table th:last-child,.metrica-table td:last-child{padding-right:0}
+.metrica-table thead th{background:#f8fafb;color:#58717e;font-size:12px;font-weight:700;white-space:nowrap}
 .metrica-table tbody tr:last-child td{border-bottom:0}
-@media(max-width:620px){.metrica-totals{grid-template-columns:1fr}.metrica-controls span{width:100%;margin-left:0}.metrica-table{min-width:470px}.metrica-chart-panel{padding:12px}.metrica-chart-heading label{width:100%;justify-content:space-between}.metrica-chart{width:760px;max-width:none}}
+.metrica-table tbody tr:hover{background:#fbfdfd}
+@media(max-width:850px){.metrica-detail-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.metrica-totals{grid-template-columns:repeat(2,minmax(0,1fr))}.metrica-counter{display:none}.metrica-controls span{width:100%;margin-left:0}.metrica-chart-panel,.metrica-section{padding:16px 14px}.metrica-chart-heading label{width:100%;justify-content:space-between}.metrica-chart{width:760px;max-width:none}.metrica-section>.table-scroll{overflow-x:auto}.metrica-section>.table-scroll .metrica-table{min-width:500px}.metrica-detail-grid .metrica-table{min-width:0!important}}
+@media(max-width:410px){.metrica-totals{grid-template-columns:1fr}.metrica-totals>div{padding:15px 17px}}
