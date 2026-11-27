@@ -12,8 +12,11 @@
   const empty = document.getElementById('news-empty');
   const remote = 'https://raw.githubusercontent.com/FEDEREGOROV/moscow-rinks-2026/main/news-data.json';
   const dateFormat = new Intl.DateTimeFormat('ru-RU', {timeZone:'Europe/Moscow',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  const timeFormat = new Intl.DateTimeFormat('ru-RU', {timeZone:'Europe/Moscow',hour:'2-digit',minute:'2-digit'});
   let items = [];
   let limit = 30;
+  let lastSnapshotAt = null;
+  let loading = false;
 
   const validUrl = value => {try {const url = new URL(value);return url.protocol === 'https:' ? url.href : null} catch {return null}};
   const formatDate = value => {const date = new Date(value);return Number.isFinite(date.getTime()) ? dateFormat.format(date) : 'Дата не указана'};
@@ -48,15 +51,14 @@
     empty.hidden = found.length !== 0;
     more.hidden = found.length <= limit;
   };
-  const setData = (data, origin) => {
+  const setData = data => {
     if (!data || !data.feeds || !Array.isArray(data.feeds[feed])) throw Error('Неверный формат ленты');
     items = data.feeds[feed].filter(item => item && typeof item.title === 'string' && typeof item.source === 'string' && validUrl(item.url));
     items.sort((a,b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+    lastSnapshotAt = data.updatedAt;
     const chosen = source.value;
     source.replaceChildren(new Option('Все издания', 'all'), ...[...new Set(items.map(item => item.source))].sort((a,b) => a.localeCompare(b,'ru')).map(name => new Option(name,name)));
     if ([...source.options].some(option => option.value === chosen)) source.value = chosen;
-    updated.textContent = `Проверено ${formatDate(data.updatedAt)} · ${origin}`;
-    limit = 30;
     render();
   };
   const getJson = async url => {
@@ -65,21 +67,32 @@
     try {const response = await fetch(url, {cache:'no-store',signal:controller.signal});if (!response.ok) throw Error(`HTTP ${response.status}`);return await response.json()}
     finally {clearTimeout(timer)}
   };
-  const load = async () => {
+  const load = async (manual = false) => {
+    if (loading) return;
+    loading = true;
+    const previousIds = new Set(items.map(item => item.id));
+    const hadData = items.length > 0;
     refresh.disabled = true;
-    try {setData(await getJson(`${remote}?t=${Date.now()}`), 'данные репозитория')}
-    catch {
-      if (!items.length) {
-        try {setData(await getJson('news-data.json'), 'резервный снимок')}
-        catch {updated.textContent = 'Не удалось загрузить новости.';render()}
-      } else updated.textContent += ' · повторная загрузка не удалась';
+    refresh.textContent = 'Проверка…';
+    if (manual) updated.textContent = 'Проверяю последнюю выгрузку новостей…';
+    try {
+      setData(await getJson(`${remote}?t=${Date.now()}`));
+      const newCount = items.filter(item => !previousIds.has(item.id)).length;
+      const checkedAt = timeFormat.format(new Date());
+      updated.textContent = `${manual ? (newCount ? `Новых публикаций: ${newCount}. ` : 'Новых публикаций нет. ') : ''}Сбор источников: ${formatDate(lastSnapshotAt)} · проверено на сайте в ${checkedAt}`;
     }
-    finally {refresh.disabled = false}
+    catch {
+      if (!hadData) {
+        try {setData(await getJson('news-data.json'));updated.textContent = `Свежая лента недоступна. Показан снимок от ${formatDate(lastSnapshotAt)}.`}
+        catch {updated.textContent = 'Не удалось загрузить новости.';render()}
+      } else updated.textContent = `Не удалось проверить обновления. Показаны данные от ${formatDate(lastSnapshotAt)}.`;
+    }
+    finally {refresh.disabled = false;refresh.textContent = 'Обновить';loading = false}
   };
   search.addEventListener('input', () => {limit = 30;render()});
   source.addEventListener('change', () => {limit = 30;render()});
   more.addEventListener('click', () => {limit += 30;render()});
-  refresh.addEventListener('click', load);
+  refresh.addEventListener('click', () => load(true));
   load();
-  setInterval(load, 5 * 60 * 1000);
+  setInterval(() => load(), 5 * 60 * 1000);
 })();
