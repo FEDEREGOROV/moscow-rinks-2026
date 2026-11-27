@@ -94,4 +94,14 @@ dialog{border:1px solid #dbe5e9;border-radius:7px;max-width:620px;width:calc(100
 @media(max-width:620px){.primary-nav{height:44px;gap:20px}.primary-nav a{font-size:13px}}
 .primary-nav .feedback-link{margin-left:auto;align-self:center;height:36px;padding:0 14px;border:0;border-radius:4px;background:#b9232a;color:#fff;font-weight:700}.primary-nav .feedback-link:hover,.primary-nav .feedback-link[aria-current=page]{background:#94171d;color:#fff}.primary-nav .feedback-link:focus-visible{outline-color:#94171d}
 @media(max-width:620px){.primary-nav .feedback-link{height:32px;padding:0 10px}}
+.primary-nav{gap:12px}
+.primary-nav a[href="index.html"]{--nav-bg:#c8f1fa;--nav-fg:#064d61;--nav-active:#087d9f}
+.primary-nav a[href="aquaparks.html"]{--nav-bg:#2858a5;--nav-fg:#fff;--nav-active:#142f65}
+.primary-nav a[href="bsa.html"]{--nav-bg:#b93645;--nav-fg:#fff;--nav-active:#76202b}
+.primary-nav a[href="tennis.html"]{--nav-bg:#f4ce50;--nav-fg:#3e3000;--nav-active:#8e6c00}
+.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"]){height:36px;align-self:center;padding:0 13px;border:2px solid transparent;border-radius:4px;background:var(--nav-bg);color:var(--nav-fg);font-weight:600}
+.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"]):hover{filter:brightness(.93)}
+.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"])[aria-current=page]{border-color:var(--nav-active);color:var(--nav-fg);font-weight:700}
+.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"]):focus-visible{outline:2px solid var(--nav-active);outline-offset:2px}
+@media(max-width:620px){.primary-nav{gap:8px}.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"]){height:32px;padding:0 10px}}
 .access-input-row{display:flex;gap:8px;align-items:stretch}.access-input-row input{min-width:0;flex:1}.access-form .access-toggle{width:auto;min-width:92px;margin:0;padding:0 10px;border:1px solid #cbdce4;border-radius:4px;background:#fff;color:#253f4e;font-weight:600;cursor:pointer}.access-form button[type=submit]{cursor:pointer}
