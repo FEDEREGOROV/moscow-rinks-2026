@@ -90,18 +90,18 @@ dialog{border:1px solid #dbe5e9;border-radius:7px;max-width:620px;width:calc(100
 .review-row-side{display:flex;align-items:center;gap:16px;flex-shrink:0}.rink-review-rating{display:block;width:170px;text-align:right}.rink-review-rating-summary{display:flex;align-items:center;justify-content:flex-end;gap:6px;line-height:1}.rink-review-rating-summary strong{font-size:19px}.rink-review-rating small{font-size:11px;white-space:nowrap}.rink-review-stars{position:relative;display:inline-block;white-space:nowrap;color:#dce3e7;letter-spacing:-1px;font-size:17px;line-height:1}.rink-review-stars-filled{position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;color:#f4b400}.rink-review-row .review-open{min-width:54px;text-align:right}
 @media(max-width:620px){.rink-review-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}.rink-review-row>span:first-child{grid-column:1/-1}.review-row-side{grid-column:1/-1;justify-content:space-between}.rink-review-rating{text-align:left}.rink-review-rating-summary{justify-content:flex-start}.rink-review-row .review-open{margin-left:auto}}
 .access-locked body{overflow:hidden}.access-locked body>:not(#access-gate){visibility:hidden}#access-gate{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:#f6f7f8}.access-form{width:min(100%,390px);padding:30px;background:#fff;border:1px solid #dfe6ea;border-radius:7px}.access-form h1{font-size:24px;margin:0 0 24px}.access-form label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}.access-form input{width:100%;padding:12px;border:1px solid #cbdce4;border-radius:4px}.access-form button{width:100%;padding:12px;margin-top:12px;border:0;border-radius:4px;background:#253f4e;color:#fff;font-weight:700}.access-error{min-height:18px;margin:8px 0 0;font-size:13px;color:#a22a2a}
-.primary-nav{height:48px;display:flex;align-items:stretch;gap:28px;border-bottom:1px solid #dbe2e6;overflow-x:auto}.primary-nav a{display:flex;align-items:center;flex:none;white-space:nowrap;color:#526a78;text-decoration:none;font-size:15px;border-bottom:3px solid transparent}.primary-nav a[aria-current=page]{color:#182a36;border-color:#182a36;font-weight:700}
-@media(max-width:620px){.primary-nav{height:44px;gap:20px}.primary-nav a{font-size:13px}}
-.primary-nav .feedback-link{margin-left:auto;align-self:center;height:36px;padding:0 14px;border:0;border-radius:4px;background:#b9232a;color:#fff;font-weight:700}.primary-nav .feedback-link:hover,.primary-nav .feedback-link[aria-current=page]{background:#94171d;color:#fff}.primary-nav .feedback-link:focus-visible{outline-color:#94171d}
-@media(max-width:620px){.primary-nav .feedback-link{height:32px;padding:0 10px}}
-.primary-nav{gap:12px}
-.primary-nav a[href="index.html"]{--nav-bg:#c8f1fa;--nav-fg:#064d61;--nav-active:#087d9f}
-.primary-nav a[href="aquaparks.html"]{--nav-bg:#2858a5;--nav-fg:#fff;--nav-active:#142f65}
-.primary-nav a[href="bsa.html"]{--nav-bg:#b93645;--nav-fg:#fff;--nav-active:#76202b}
-.primary-nav a[href="tennis.html"]{--nav-bg:#f4ce50;--nav-fg:#3e3000;--nav-active:#8e6c00}
-.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"]){height:36px;align-self:center;padding:0 13px;border:2px solid transparent;border-radius:4px;background:var(--nav-bg);color:var(--nav-fg);font-weight:600}
-.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"]):hover{filter:brightness(.93)}
-.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"])[aria-current=page]{border-color:var(--nav-active);color:var(--nav-fg);font-weight:700}
-.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"]):focus-visible{outline:2px solid var(--nav-active);outline-offset:2px}
-@media(max-width:620px){.primary-nav{gap:8px}.primary-nav a:is([href="index.html"],[href="aquaparks.html"],[href="bsa.html"],[href="tennis.html"]){height:32px;padding:0 10px}}
+.primary-nav{display:flex;align-items:center;gap:9px;min-height:58px;padding-top:8px;padding-bottom:8px;border-bottom:1px solid #dbe2e6;overflow-x:auto;scrollbar-width:none}
+.primary-nav::-webkit-scrollbar{display:none}
+.primary-nav a{display:inline-flex;align-items:center;justify-content:center;flex:none;min-height:38px;padding:0 14px;border:1px solid transparent;border-radius:9px;white-space:nowrap;text-decoration:none;font-size:14px;font-weight:600;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s}
+.primary-nav a[href="index.html"]{--nav-bg:#e4f6fb;--nav-fg:#155568;--nav-border:#b9dfe9;--nav-accent:#1689a9}
+.primary-nav a[href="aquaparks.html"]{--nav-bg:#e9efff;--nav-fg:#254789;--nav-border:#c4d2f2;--nav-accent:#4166bd}
+.primary-nav a[href="bsa.html"]{--nav-bg:#fcebee;--nav-fg:#873843;--nav-border:#edc5cb;--nav-accent:#ba4d5c}
+.primary-nav a[href="tennis.html"]{--nav-bg:#fff5d8;--nav-fg:#72520d;--nav-border:#ebd998;--nav-accent:#bd8e20}
+.primary-nav a:not(.feedback-link){background:var(--nav-bg,#edf1f3);color:var(--nav-fg,#425764);border-color:var(--nav-border,#dce4e8);box-shadow:0 1px 2px rgba(22,45,58,.06)}
+.primary-nav a:not(.feedback-link):hover{transform:translateY(-1px);box-shadow:0 3px 8px rgba(22,45,58,.1)}
+.primary-nav a:not(.feedback-link)[aria-current=page]{border-color:var(--nav-accent,#637985);box-shadow:inset 0 -3px 0 var(--nav-accent,#637985),0 2px 6px rgba(22,45,58,.08);font-weight:700}
+.primary-nav a:focus-visible{outline:2px solid var(--nav-accent,#253f4e);outline-offset:2px}
+.primary-nav .feedback-link{margin-left:auto;border-color:#a82028;background:#b9232a;color:#fff;box-shadow:0 2px 6px rgba(185,35,42,.16);font-weight:700}
+.primary-nav .feedback-link:hover,.primary-nav .feedback-link[aria-current=page]{background:#9e1d24;box-shadow:0 3px 9px rgba(185,35,42,.2)}
+@media(max-width:620px){.primary-nav{min-height:50px;gap:7px;padding-top:7px;padding-bottom:7px}.primary-nav a{min-height:34px;padding:0 11px;font-size:13px}.topbar nav{scrollbar-width:none}.topbar nav::-webkit-scrollbar{display:none}}
 .access-input-row{display:flex;gap:8px;align-items:stretch}.access-input-row input{min-width:0;flex:1}.access-form .access-toggle{width:auto;min-width:92px;margin:0;padding:0 10px;border:1px solid #cbdce4;border-radius:4px;background:#fff;color:#253f4e;font-weight:600;cursor:pointer}.access-form button[type=submit]{cursor:pointer}
