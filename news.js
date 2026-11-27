@@ -11,6 +11,8 @@
   const refresh = document.getElementById('news-refresh');
   const empty = document.getElementById('news-empty');
   const remote = 'https://raw.githubusercontent.com/FEDEREGOROV/moscow-rinks-2026/main/news-data.json';
+  const liveApi = 'https://luzhniki-feedback-api.darkvxdbxn.chatgpt.site/api/news';
+  const passwordKey = 'luzhniki-market-password-v1';
   const dateFormat = new Intl.DateTimeFormat('ru-RU', {timeZone:'Europe/Moscow',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'});
   const dayFormat = new Intl.DateTimeFormat('ru-RU', {timeZone:'UTC',day:'numeric',month:'long',year:'numeric'});
   const timeFormat = new Intl.DateTimeFormat('ru-RU', {timeZone:'Europe/Moscow',hour:'2-digit',minute:'2-digit'});
@@ -68,6 +70,23 @@
     try {const response = await fetch(url, {cache:'no-store',signal:controller.signal});if (!response.ok) throw Error(`HTTP ${response.status}`);return await response.json()}
     finally {clearTimeout(timer)}
   };
+  const getLive = async method => {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), method === 'POST' ? 90000 : 12000);
+    try {
+      const response = await fetch(liveApi, {method, headers:{'X-Luzhniki-Password':sessionStorage.getItem(passwordKey) || ''},cache:'no-store',signal:controller.signal});
+      if (!response.ok) throw Error(`HTTP ${response.status}`);
+      const body = await response.json();
+      return body.data;
+    } finally {clearTimeout(timer)}
+  };
+  const latestSnapshot = async () => {
+    const version = Date.now();
+    const [live, published] = await Promise.allSettled([getLive('GET'),getJson(`news-data.json?t=${version}`).catch(() => getJson(`${remote}?t=${version}`))]);
+    const candidates = [live,published].filter(result => result.status === 'fulfilled' && result.value?.feeds).map(result => result.value);
+    if (!candidates.length) throw Error('Нет доступной ленты');
+    return candidates.sort((a,b) => Date.parse(b.updatedAt || 0)-Date.parse(a.updatedAt || 0))[0];
+  };
   const load = async (manual = false) => {
     if (loading) return;
     loading = true;
@@ -75,18 +94,19 @@
     const hadData = items.length > 0;
     refresh.disabled = true;
     refresh.textContent = 'Проверка…';
-    if (manual) updated.textContent = 'Проверяю последнюю выгрузку новостей…';
+    if (manual) updated.textContent = 'Проверяю все 8 источников…';
     try {
-      const version = Date.now();
-      const snapshot = await getJson(`news-data.json?t=${version}`).catch(() => getJson(`${remote}?t=${version}`));
+      const snapshot = manual ? await getLive('POST') : await latestSnapshot();
       setData(snapshot);
       const newCount = items.filter(item => !previousIds.has(item.id)).length;
       const checkedAt = timeFormat.format(new Date());
-      updated.textContent = `${manual ? (newCount ? `Новых публикаций: ${newCount}. ` : 'Новых публикаций нет. ') : ''}Сбор источников: ${formatDate(lastSnapshotAt)} · проверено на сайте в ${checkedAt}`;
+      const checked = Array.isArray(snapshot.sources) ? snapshot.sources.filter(item => item.ok).length : null;
+      const failed = Array.isArray(snapshot.sources) ? snapshot.sources.filter(item => !item.ok).map(item => item.name) : [];
+      updated.textContent = `${manual ? (newCount ? `Новых публикаций: ${newCount}. ` : 'Новых публикаций нет. ') : ''}${checked === null ? '' : `Доступно источников: ${checked} из ${snapshot.sources.length}. `}${failed.length ? `Недоступны: ${failed.join(', ')}. ` : ''}Сбор: ${formatDate(lastSnapshotAt)} · открыто в ${checkedAt}`;
     }
     catch {
       if (!hadData) {updated.textContent = 'Не удалось загрузить новости.';render()}
-      else updated.textContent = `Не удалось проверить обновления. Показаны данные от ${formatDate(lastSnapshotAt)}.`;
+      else updated.textContent = `Не удалось проверить источники. Показаны данные от ${formatDate(lastSnapshotAt)}.`;
     }
     finally {refresh.disabled = false;refresh.textContent = 'Обновить';loading = false}
   };

@@ -113,3 +113,52 @@ html[data-section] .site-title{border-left:4px solid var(--section-accent);paddi
 html[data-section] .topbar nav a[aria-current=page]{border-color:var(--section-accent)}
 @media(max-width:620px){.primary-nav{min-height:50px;gap:7px;padding-top:7px;padding-bottom:7px}.primary-nav a{min-height:34px;padding:0 11px;font-size:13px}.topbar nav{scrollbar-width:none}.topbar nav::-webkit-scrollbar{display:none}}
 .access-input-row{display:flex;gap:8px;align-items:stretch}.access-input-row input{min-width:0;flex:1}.access-form .access-toggle{width:auto;min-width:92px;margin:0;padding:0 10px;border:1px solid #cbdce4;border-radius:4px;background:#fff;color:#253f4e;font-weight:600;cursor:pointer}.access-form button[type=submit]{cursor:pointer}
+
+/* Unified, compact editorial layout for every section. */
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#172d39;background:#f3f6f8;font-size:16px;line-height:1.45}
+body{min-width:320px}
+.wrap{width:min(1320px,calc(100% - 56px))}
+.primary-nav{gap:10px;min-height:66px}
+.primary-nav a{min-height:40px;border-radius:10px;padding:0 16px}
+.topbar{height:auto;min-height:68px}
+.site-title{font-size:20px;letter-spacing:-.02em}
+.topbar nav a{font-size:14px;font-weight:600}
+.page-heading{padding:34px 0 24px;align-items:end}
+.page-heading h1{font-size:clamp(27px,3vw,36px);font-weight:750;letter-spacing:-.035em;margin-bottom:7px}
+.page-heading p,.page-heading>span{font-size:14px;color:#607685}
+.filters,.table-tools,.map-tools{border-color:#d9e3e8;border-radius:12px;padding:16px;gap:12px;box-shadow:0 2px 9px rgba(27,56,72,.035)}
+.searchbox input,.sort-label select,.tennis-search input,.tennis-search select{height:42px;border-radius:8px;font-size:14px}
+.sort-label,.catalog-meta,.table-tools>span,.map-tools>span{font-size:14px}
+.sort-label select{height:42px;font-size:14px}
+.chip{border-radius:8px;font-size:14px;padding:10px 13px}
+.catalog-meta{padding:20px 0 15px}
+.cards{gap:18px}
+.card,.tennis-card{border-color:#dce5e9;border-radius:12px;box-shadow:0 3px 14px rgba(25,58,74,.05)}
+.card-visual{height:180px}
+.card-body{padding:18px}
+.card-location,.card-status-text{font-size:13px}
+.card h2{font-size:19px;margin:7px 0 9px;letter-spacing:-.015em}
+.card-desc{font-size:14px;line-height:1.55}
+.card-bottom{margin-top:17px;padding-top:14px}
+.price small,.date small{font-size:12px}
+.date{font-size:13px}
+.card-link{font-size:14px;padding-top:13px}
+.table-scroll{border-radius:12px;border-color:#dce5e9;box-shadow:0 2px 10px rgba(24,54,70,.035)}
+.market-table,.promo-table{font-size:13px;line-height:1.5}
+.market-table th,.market-table td,.promo-table th,.promo-table td{padding:14px 13px}
+.market-table thead th,.promo-table thead th{font-size:12px;background:#e9eff2;color:#395466}
+.market-table tbody th strong{font-size:14px}
+.table-note{font-size:13px;line-height:1.55}
+dialog,.aqua-dialog{border-radius:14px;padding:24px}
+.dialog-description,.dialog-detail,.facts-list dd,.tariffs dd{font-size:14px}
+.dialog-fact{border-radius:8px}
+.dialog-fact small,.facts-list dt,.tariffs dt{font-size:12px}
+.dialog-fact strong{font-size:14px}
+.dialog-actions a{font-size:13px;border-radius:7px}
+.map-layout,.aqua-map-layout,.rink-reviews-list,.reviews-list,.reviews-widget{border-radius:12px;overflow:hidden;border-color:#dce5e9}
+.rink-review-row{padding:16px 18px}
+.rink-review-row strong{font-size:15px}
+.rink-review-row small,.rink-review-row .review-open{font-size:13px}
+.access-form{border-radius:14px;box-shadow:0 12px 40px rgba(28,53,67,.09)}
+@media(max-width:900px){.wrap{width:calc(100% - 36px)}.cards{gap:14px}}
+@media(max-width:620px){.wrap{width:calc(100% - 28px)}.primary-nav{min-height:54px}.primary-nav a{min-height:36px;padding:0 12px}.topbar{min-height:60px}.site-title{font-size:18px}.topbar nav a{font-size:13px}.page-heading{padding:24px 0 17px;flex-wrap:wrap;gap:8px}.page-heading>div{min-width:0;width:100%}.page-heading h1{font-size:27px}.page-heading>span{display:block;width:100%;white-space:normal;font-size:12px}.filters,.table-tools,.map-tools{padding:12px}.chips{gap:7px}.chip{font-size:13px}.card-visual{height:180px}.card-body{padding:16px}.market-table th,.market-table td,.promo-table th,.promo-table td{padding:12px 10px}dialog,.aqua-dialog{padding:18px}.dialog-grid{gap:6px}.dialog-fact{padding:9px}}
