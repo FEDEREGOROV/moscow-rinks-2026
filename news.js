@@ -77,16 +77,16 @@
     refresh.textContent = 'Проверка…';
     if (manual) updated.textContent = 'Проверяю последнюю выгрузку новостей…';
     try {
-      setData(await getJson(`${remote}?t=${Date.now()}`));
+      const version = Date.now();
+      const snapshot = await getJson(`news-data.json?t=${version}`).catch(() => getJson(`${remote}?t=${version}`));
+      setData(snapshot);
       const newCount = items.filter(item => !previousIds.has(item.id)).length;
       const checkedAt = timeFormat.format(new Date());
       updated.textContent = `${manual ? (newCount ? `Новых публикаций: ${newCount}. ` : 'Новых публикаций нет. ') : ''}Сбор источников: ${formatDate(lastSnapshotAt)} · проверено на сайте в ${checkedAt}`;
     }
     catch {
-      if (!hadData) {
-        try {setData(await getJson('news-data.json'));updated.textContent = `Свежая лента недоступна. Показан снимок от ${formatDate(lastSnapshotAt)}.`}
-        catch {updated.textContent = 'Не удалось загрузить новости.';render()}
-      } else updated.textContent = `Не удалось проверить обновления. Показаны данные от ${formatDate(lastSnapshotAt)}.`;
+      if (!hadData) {updated.textContent = 'Не удалось загрузить новости.';render()}
+      else updated.textContent = `Не удалось проверить обновления. Показаны данные от ${formatDate(lastSnapshotAt)}.`;
     }
     finally {refresh.disabled = false;refresh.textContent = 'Обновить';loading = false}
   };
