@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-27T09:58:27Z",
+  "updatedAt": "2026-11-27T12:18:40Z",
   "feeds": {
     "luzhniki": [
       {
@@ -1035,12 +1035,84 @@
     ],
     "rinks": [
       {
+        "id": "1cb90666b804fa2d43f6",
+        "title": "В сервисе «Мосбилет» можно приобрести билеты на каток на Болотной площади / Новости города / Сайт Москвы",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB0THlMN0g0bHROd1JuU2FsODV6a1ZDdENMRUIzV0tPTDZSSjlXSjdVQTFjVHlOd0RveDdZTG90UExxb3Z5Q25xUjBTNWc4QjVR?oc=5",
+        "source": "Официальный сайт Мэра Москвы",
+        "sourceUrl": "https://www.mos.ru",
+        "publishedAt": "2026-11-27T12:00:01Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "c1c96c9a461e9e63c97c",
+        "title": "​В Белгороде готовят к открытию два городских катка",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxON050OTFVbXZjR01ZM0QxeGpDV0JQbzVGMlZDSFJDcmpmd0paNHdqNFVHQXBnLXQyNUZBYTFoU185ZG5TRTFSeVdIRkl6X1VPR3NNbi03VXQzTEtUOTJGajFNVzJQRjBVMGUtNk5CV19kN0ctQU1ZOFR6RWZyTkJveGJRX0l1aHBIUEJMemVn?oc=5",
+        "source": "Fonar.tv",
+        "sourceUrl": "https://fonar.tv",
+        "publishedAt": "2026-11-27T10:54:10Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "2e671c8a047c4eec6b15",
+        "title": "В Москве открылись первые катки с искусственным льдом",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWDVla2FRMnBSQW9TRHl3VkxZUVVqUGh2NWh6X3RtTGdWc3c0azFZQ0FjV1V3VXgtWHpOaV9BMVByb2FHVzFtOXp4Z1A5VU1lMjFzNVNzbHk2NERXWjBUd2VEZG42cS1laG5NVmNSVXM5Zk9GUkMyR3hSUUR0ZlU4QmRnNTdpWkhNM0lvX2hhX3JxOTZDWVhaekdqVUZSRm9F?oc=5",
+        "source": "Газета «Культура",
+        "sourceUrl": "https://portal-kultura.ru",
+        "publishedAt": "2026-11-27T10:34:54Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "6d40cc92f74cab760ec7",
+        "title": "Каток на стадионе «Ракета» откроется 28 ноября",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdDNURTYtZW5vWnZtckdNWktFTTF1RWF6RWxPZG5GOVZwZERxMXNUbXZlVXZTWXpJZXBIa19kdURvOENUM3VnSmltd3lPQWJDeEVUX1E2TjNDYXJlZ2IxVjM5NjBUVzhudVMyYU5tbnZGOXlaQlY2aUdsZGpHWGdyTNIBiAFBVV95cUxOTmN5ZjdOdEphWlU5RFgwMVRhT3NfZ3pybTZoa01vUUtJSTNxU0VTOVUyZTFIZFd6Z214SG96Wi1VcDZILXFzSDlTLTNjeHJTekJQdHVoSHN1TUJUYmQ0SXhpYTViU25WUEpwVnkwUVI2VDJmRjMyY2VKc0Q0OXhkdTdWUnQ4S3dS?oc=5",
+        "source": "Enter",
+        "sourceUrl": "https://entermedia.io",
+        "publishedAt": "2026-11-27T10:24:14Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "3dce3d8a24cf8a0f08d6",
+        "title": "Зеленоград - Новости - Каток открылся на площади Юности",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5uUzdfWDVfT1dDZGhxRXJFcllSRXBIWVEzMDdqSXU5Q2tuNm9fcnhFc2NmZVVvVHlRbUQ2b1ZudDlscGotSVBKYVNvV1VRQQ?oc=5",
+        "source": "Zelenograd.ru",
+        "sourceUrl": "https://www.zelenograd.ru",
+        "publishedAt": "2026-11-27T10:11:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "ee3518077aea331b8746",
+        "title": "В столичных парках открыли первые катки",
+        "url": "https://www.m24.ru/news/27112026/969585",
+        "source": "Москва 24",
+        "sourceUrl": "https://www.m24.ru/",
+        "publishedAt": "2026-11-27T10:07:00Z",
+        "via": "Москва 24 RSS"
+      },
+      {
+        "id": "98ed700196d16ed73c9a",
+        "title": "На пяти катках СВАО установят ящики для писем участникам СВО",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOelRCSGljNDdWYUNsXzJDTUl3Wk54WE5uSldsVjVZTUZ1VHRTYlpmcTh2SGcyM0tGUHFwVG1KZU9oM3ZUYTNpUjhWVnh5NVdiU3E5T1FFWXpVQWI3MVFEVkd0dzBEVXJCbml2aWV6RTNUTE1zNUY0ajk0cmZNNFBObWFlZ1hLRVNfdDhCNHB3MXQ?oc=5",
+        "source": "Звездный Бульвар",
+        "sourceUrl": "https://zbulvar.ru",
+        "publishedAt": "2026-11-27T10:06:15Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "0270e7e1ecb845a35a7c",
+        "title": "От «Сокольников» до усадьбы Воронцово: в парках Москвы открылись первые катки",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0ycDVKdUVSUC1JZzg3eXNiaFJwNUlQOUcwSFNXU0FEOG55THU3NnFzZzlDWDE4cktoQ1JQMG5hWms1ZElJMk5jWHNjSmN0dHQ0?oc=5",
+        "source": "Официальный сайт Мэра Москвы",
+        "sourceUrl": "https://www.mos.ru",
+        "publishedAt": "2026-11-27T10:02:01Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "c094cc7394ce906f1dfd",
         "title": "Монтируют каток на площади Дерунова в Рыбинске",
         "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE56UTNTNEsxcDF4U1RMSWNrY2tYOU16bzJna1Y2aDNBdDczM0l4WU9kMkhJZUhtZmtCQTJRVGQ5ZnNoeVZCT3FLWlN4SjUxeTl5NjYtaU5R?oc=5",
         "source": "Рыбинские известия",
         "sourceUrl": "https://gazeta-rybinsk.ru",
-        "publishedAt": "2026-11-27T08:46:43Z",
+        "publishedAt": "2026-11-27T08:46:56Z",
         "via": "Google News RSS"
       },
       {
@@ -1118,6 +1190,15 @@
       {
         "id": "d5bbb3bf82eb4d7af2b6",
         "title": "В Улан-Удэ заливают катки",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9DWDZHWVRaejdvaW5pdTFOQW9IN210NVMtRjNxU0xXWFY5ZGtBaDJ5Z1dGWmx1djhldWh3SUc4U0RybmlJM0RyM0luZll5SWdsTHl5MHJNU2hhaEdUdXAteTZ0X3o4N2RpbnBaZ3JR?oc=5",
+        "source": "tvatv.ru",
+        "sourceUrl": "https://tvatv.ru",
+        "publishedAt": "2026-11-27T06:30:27Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "0d47c4fe74a082feb779",
+        "title": "В Улан-Удэ заливают катки - https://tvatv.ru/",
         "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9DWDZHWVRaejdvaW5pdTFOQW9IN210NVMtRjNxU0xXWFY5ZGtBaDJ5Z1dGWmx1djhldWh3SUc4U0RybmlJM0RyM0luZll5SWdsTHl5MHJNU2hhaEdUdXAteTZ0X3o4N2RpbnBaZ3JR?oc=5",
         "source": "tvatv.ru",
         "sourceUrl": "https://tvatv.ru",
@@ -2429,6 +2510,15 @@
         "source": "mos.ru",
         "sourceUrl": "https://www.mos.ru",
         "publishedAt": "2026-11-20T08:00:04Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "2eb82a75c5434fd3d2ad",
+        "title": "На стадионе «Ракета» начали заливать каток",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5abTdmYkRaQTNZbEdRRnhhYWlLMldsWC1JQVE5LXN6eXkzSjVzZ3VTUml0UGVVbF9CME9FWFpjbWNGOGREOGpiVUVRVnk0Q3p0MnNoZkNtMnBvVGJwakNjb002cVBIcVp4MFpRYW5BdExsMjBaM0JR0gF_QVVfeXFMTkFYcjZOTjlZOHYybHhoQktuWUZXWXRkdE0yaHFVUVVZTkNoNFp6bVBpNnlKSWJDcGhhOG5MM01laF9nVlpUM012NzZtSVgxcHJJTmNsaGZxalpkLWlWeC11c2hOa3p1UkE3TG1HMlZBdjY1aXFSVDdvMDRmbVZ3cw?oc=5",
+        "source": "Enter",
+        "sourceUrl": "https://entermedia.io",
+        "publishedAt": "2026-11-20T07:40:30Z",
         "via": "Google News RSS"
       },
       {
