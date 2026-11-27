@@ -1,7 +1,9 @@
 // Экран входа для статического GitHub Pages. Это интерфейсное ограничение, не серверная авторизация.
 (() => {
   const storageKey = 'luzhniki-market-access-v1';
-  if (sessionStorage.getItem(storageKey) === 'ok') {
+  const passwordKey = 'luzhniki-market-password-v1';
+  const needsFeedbackPassword = location.pathname.endsWith('/feedback.html') && !sessionStorage.getItem(passwordKey);
+  if (sessionStorage.getItem(storageKey) === 'ok' && !needsFeedbackPassword) {
     document.documentElement.classList.remove('access-locked');
     return;
   }
@@ -62,6 +64,7 @@
       try {
         if (await digest(input.value) === expected) {
           sessionStorage.setItem(storageKey, 'ok');
+          sessionStorage.setItem(passwordKey, input.value);
           document.documentElement.classList.remove('access-locked');
           gate.remove();
         } else {

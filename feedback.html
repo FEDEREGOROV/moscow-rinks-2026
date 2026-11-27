@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru" class="access-locked">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f8">
+  <meta name="description" content="Вопросы и предложения для обзора спортивных площадок Москвы.">
+  <title>Вопросы и предложения</title>
+  <script src="access.js?v=3"></script>
+  <script src="section-nav.js?v=5" defer></script>
+  <link rel="stylesheet" href="styles.css?v=73">
+  <link rel="stylesheet" href="feedback.css?v=1">
+  <script src="feedback.js?v=2" defer></script>
+</head>
+<body>
+  <a class="skip" href="#feedback-content">К вопросам и предложениям</a>
+  <header class="topbar wrap"><span class="site-title">Вопросы и предложения</span></header>
+  <main class="wrap" id="feedback-content">
+    <div class="page-heading"><div><h1>Вопросы и предложения</h1></div><span id="feedback-count"></span></div>
+    <form id="feedback-form" class="feedback-form">
+      <label for="feedback-text">Новая запись</label>
+      <textarea id="feedback-text" name="text" rows="4" maxlength="4000" required placeholder="Напишите вопрос или предложение"></textarea>
+      <div class="feedback-form-actions"><button type="submit">Сохранить</button><p id="feedback-message" role="status" aria-live="polite"></p></div>
+    </form>
+    <ul id="feedback-list" class="feedback-list" aria-label="Вопросы и предложения"></ul>
+    <p id="feedback-empty" class="empty">Записей пока нет.</p>
+  </main>
+</body>
+</html>
