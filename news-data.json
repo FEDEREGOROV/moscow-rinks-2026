@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-27T09:01:53Z",
+  "updatedAt": "2026-11-27T09:57:38Z",
   "feeds": {
     "luzhniki": [
       {
@@ -33,20 +33,52 @@
       {
         "id": "be15c6bd0b93cb4ac598",
         "title": "Тимати и Егор Крид — совместное шоу в Лужниках",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOeWRsYkZUSV9jUnF2OEY4NjFQTTVRRjV6M2ZSbXFWbkpuUlZuX2JtLV9IYXdfcW9OMm5YT29kUVVUeXlvcjZIczlKSWdxSnJkRlhJNV9fUjhxX3Yycm5MUkVlQjFQNUMwT3ZtUUE4c0U2ODdMNnVTUjRlR0FTSjFqQkZB?oc=5",
+        "url": "https://www.luzhniki.ru/news/timati-i-egor-krid-sovmestnoe-shou-v-luzhnikah/",
         "source": "Лужники",
-        "sourceUrl": "https://www.luzhniki.ru",
-        "publishedAt": "2026-11-26T12:10:36Z",
-        "via": "Google News RSS"
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-26",
+        "sourceModifiedAt": "2026-11-26",
+        "via": "Лужники sitemap"
       },
       {
         "id": "931d2890c62277e5d112",
         "title": "Новая схема проезда и прохода в Лужники",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5qNWNBZWVsZmpTTUNwbUlWRjlTSThYUFdRcmo4T2ZoQ1BiQ1VlR2lDQk9aNkVxRGxQU0F3WVg4MnNvaFFzVkc1LTR1NzFqbmhoelFRRUZWS3FDUXZVLUpTZWxoYWlzaHNQVTAxMXlQY3lLcDBnalJtN3Z6Yw?oc=5",
+        "url": "https://www.luzhniki.ru/news/novaya-shema-proezda-i-prohoda-v-luzhniki/",
         "source": "Лужники",
-        "sourceUrl": "https://www.luzhniki.ru",
-        "publishedAt": "2026-11-26T12:10:34Z",
-        "via": "Google News RSS"
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-26",
+        "sourceModifiedAt": "2026-11-26",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "a97baa5c341e352b3faa",
+        "title": "Новые условия проезда на территорию СК Лужники",
+        "url": "https://www.luzhniki.ru/news/novye-usloviya-proezda-na-territoriyu-sk-luzhniki/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-26",
+        "sourceModifiedAt": "2026-09-01",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "789d04cfcbb7cdfa462e",
+        "title": "Новая схема проезда и прохода в Лужники",
+        "url": "https://aqua.luzhniki.ru/news/news/novaya-shema-proezda-i-prohoda-v-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-26",
+        "sourceModifiedAt": "2026-11-26",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "301e73f141be2d070fe0",
+        "title": "Изменения в расписании 50-метрового бассейна",
+        "url": "https://aqua.luzhniki.ru/news/news/izmeneniya-v-raspisanii-50-metrovogo-bassejna/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-26",
+        "sourceModifiedAt": "2026-11-26",
+        "via": "Аквакомплекс «Лужники» sitemap"
       },
       {
         "id": "b6fd5e3d73be14c0d49c",
@@ -130,15 +162,6 @@
         "via": "Google News RSS"
       },
       {
-        "id": "43861017218410052179",
-        "title": "27 ноября открывается мультимедийный каток",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9IeFRSNTdINnJvc0lHalUtSWpRUndmc3VzREloMERna2Y4WVloZWd1QjU4NlloQ28xc3EtVmh2Z01TZjFqSF9heEJKMXAzM0pJV05zbm43ZzNhQWJrTlZlUld2bExETEJGRlRFQVJIdFljellVeWdnMnpNSlNEWG8?oc=5",
-        "source": "Лужники",
-        "sourceUrl": "https://www.luzhniki.ru",
-        "publishedAt": "2026-11-25T12:15:05Z",
-        "via": "Google News RSS"
-      },
-      {
         "id": "6665d94aec1e3d73dab5",
         "title": "В «Лужниках» пройдет трехдневный лыжный фестиваль «Гонка Легкова — 2027»",
         "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdDhqV2JpUTZrQVI5ZnlVNlM3dFljR1ZCcnlUUG9Qc2x1Z1RJWndHMW5NSmR2Vy1ESUxaTGlWckJuUmxtZmVnVFhSTjRFMGI2bjVkRE5Memx1RmNYMnVPamhfazNiMkZFQllQcE9kVDE3czF4X250dE42bnNhZnNGX0huTDJSenl2OG1tLU5HWQ?oc=5",
@@ -193,6 +216,26 @@
         "via": "Google News RSS"
       },
       {
+        "id": "43861017218410052179",
+        "title": "27 ноября открывается мультимедийный каток",
+        "url": "https://www.luzhniki.ru/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-25",
+        "sourceModifiedAt": "2026-11-25",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "e2a5f3ba0138d20ed931",
+        "title": "27 ноября открывается мультимедийный каток",
+        "url": "https://aqua.luzhniki.ru/news/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-25",
+        "sourceModifiedAt": "2026-11-25",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
         "id": "7b29e6ff311050ebb862",
         "title": "«Лужники» откроют единственный в России мультимедийный каток с 3D-шоу",
         "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMWQ5X3R0RDZ2anZFT1RpX3RGX3BkNFg2YnZXQ1dMbkpZRzdnVFVmYmI0bGI4bV82NTAtcU5SVEtLUFhQemZPZG1wV0x0WnRXemdyUHlnWVVVUDVPcjlxc2ZWUTJvQktqb0VKRGJQYmhSRk80ZHRlSXhxRVdNMldJLW1hWmpKbjFBOHE1RWkwdlIxX2VqWURkSG5JcmIzVnRvUUJ3Y2FoRXJTbm1taXhoc2t5LWhCWjA?oc=5",
@@ -226,15 +269,6 @@
         "source": "irbis.spb.ru",
         "sourceUrl": "https://irbis.spb.ru",
         "publishedAt": "2026-11-24T13:38:22Z",
-        "via": "Google News RSS"
-      },
-      {
-        "id": "46a0da6106697670cce0",
-        "title": "Студенческий спорт: история в экспонатах",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBudVNVZDFKai1ITlJPeEkyVW9tQzF5N0JyaUdQa1Nxb09Ba3k2UHpNN2JLZGNTaG5Md1BfU2Z5ODFMUVpkLVhPbmV6WkhGRlFwallOZDQyejc5MHZjNkJuc1Zjb1ZZd0xZSmlVeF9CQ3pLRG54WUhuN0w2RQ?oc=5",
-        "source": "Лужники",
-        "sourceUrl": "https://www.luzhniki.ru",
-        "publishedAt": "2026-11-24T12:18:27Z",
         "via": "Google News RSS"
       },
       {
@@ -274,6 +308,16 @@
         "via": "Google News RSS"
       },
       {
+        "id": "46a0da6106697670cce0",
+        "title": "Студенческий спорт: история в экспонатах",
+        "url": "https://www.luzhniki.ru/news/studencheskij-sport-istoriya-v-eksponatah/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-24",
+        "sourceModifiedAt": "2026-11-24",
+        "via": "Лужники sitemap"
+      },
+      {
         "id": "73dd0214b6d28537e9ac",
         "title": "Волейбол: «Динамо» (Москва) — «Динамо-Ак Барс» (Казань)",
         "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1oWnRLcnU0TmhXaTAwTDhkY3Nndk5VVFRWcGdGZ0xnMUk1a1hkeXlvNHF0M05ieDZ6QzBNLXhaS0d6LWY0WGJud0NYcWNQQy1wZEVnWGprTngwLTdfZ00zaVJNNTdLVWNUSDQxUXhwTnF1b3hvX1lNcjBBMkc?oc=5",
@@ -299,6 +343,16 @@
         "sourceUrl": "https://mospravda.ru",
         "publishedAt": "2026-11-20T11:38:47Z",
         "via": "Google News RSS"
+      },
+      {
+        "id": "018c585f3a1ddd233cbf",
+        "title": "Чёрная пятница: отдыхайте со скидкой до 50%",
+        "url": "https://aqua.luzhniki.ru/news/news/chyornaya-pyatnica-otdyhajte-so-skidkoj-do-50/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-20",
+        "sourceModifiedAt": "2026-11-23",
+        "via": "Аквакомплекс «Лужники» sitemap"
       },
       {
         "id": "9ca6a5fa6e2a2950dc99",
@@ -346,6 +400,16 @@
         "via": "Google News RSS"
       },
       {
+        "id": "7014547e444fa8005a1b",
+        "title": "Аквакомплексу — 7 лет. Празднуем вместе",
+        "url": "https://aqua.luzhniki.ru/news/news/akvakompleksu-7-let-prazdnuem-vmeste/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-17",
+        "sourceModifiedAt": "2026-11-17",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
         "id": "aee77ca54c8b0f8ba609",
         "title": "В «Лужниках» строят огромный каток с 3D-шоу. Когда его откроют (и сколько стоят билеты)",
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5pWWF1VXNtSjdodGF0SmtJTzlqVnRmeGZDVXM0N21INGs4bGZwTloxWklfTTBBcU9BR1F1RWZzSHNJQmJWWDQtaVFqMVJZMWxJQmZRYm1PMWhPSG8?oc=5",
@@ -373,6 +437,26 @@
         "via": "Google News RSS"
       },
       {
+        "id": "38d18d5536ab185ac4d6",
+        "title": "День рождения с друзьями — скидка 30%",
+        "url": "https://aqua.luzhniki.ru/news/promo/den-rozhdeniya-s-druzyami-skidka-30/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-15",
+        "sourceModifiedAt": "2026-11-15",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "58f9e53395e41658d810",
+        "title": "Праздничные дни в Аквакомплексе: подарки для всех",
+        "url": "https://aqua.luzhniki.ru/news/news/prazdnichnye-dni-v-akvakomplekse-podarki-dlya-vseh/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-13",
+        "sourceModifiedAt": "2026-11-13",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
         "id": "c530e37e3d27c9c41e5a",
         "title": "В «Лужниках» проходит серия лекций о спорте и городе / Новости города / Сайт Москвы",
         "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5MaEdMQ2lCRVRyY3F0LTJRZmFUOGZkUTBIeHhYbXlrSUlZZGQzQkJ3OHQyUTZHcDctanlaVXB6RmRhSkhPY1ZSZU9rVllVQWJK?oc=5",
@@ -384,11 +468,12 @@
       {
         "id": "c01b36438a489fd91330",
         "title": "В «Дружбе» покажут финал Worlds 2026",
-        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PRjdsazJzMEIwWTdXbUhtYWFLbDFaY1RpZEUtalRiNUViRlpRcUhJVmRud0dLaDhBTTYxSEN1RTNIcGVtNHN1SEZxaHdaVC1uakpXaUs0dGpkSFplN3l2dXg2RWFCNGNxY3g1b1E3UXpyR2hO?oc=5",
+        "url": "https://www.luzhniki.ru/news/v-druzhbe-pokazhut-final-worlds-2026/",
         "source": "Лужники",
-        "sourceUrl": "https://www.luzhniki.ru",
-        "publishedAt": "2026-11-12T08:00:00Z",
-        "via": "Google News RSS"
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-12",
+        "sourceModifiedAt": "2026-11-12",
+        "via": "Лужники sitemap"
       },
       {
         "id": "716ec235f455220c13cf",
@@ -418,6 +503,16 @@
         "via": "Google News RSS"
       },
       {
+        "id": "103cb70aa37e112f6b31",
+        "title": "Семейная среда",
+        "url": "https://aqua.luzhniki.ru/news/promo/semejnaya-sreda/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-06",
+        "sourceModifiedAt": "2026-11-06",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
         "id": "4cbd27479415174ee557",
         "title": "Фотогалерея: Москва. Лужники. Финал. Франция!!!",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE44amVoTEVHb1BINXFFRWVxWTdVQUhEZ3NzN0xEbGhCRzBUTWlPYy03ckU3T056QkU0Vmc4TW4tODlsRXZSMnJ1R2w4REh2WFBBbkQwa0dLTXEwWnYz?oc=5",
@@ -434,6 +529,16 @@
         "sourceUrl": "https://moskvichmag.ru",
         "publishedAt": "2026-11-05T08:00:00Z",
         "via": "Google News RSS"
+      },
+      {
+        "id": "607c17177ea5a8d6e57a",
+        "title": "АкваПриключения: ноябрьские субботы для детей",
+        "url": "https://aqua.luzhniki.ru/news/news/akvapriklyucheniya-noyabrskie-subboty-dlya-detej/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-05",
+        "sourceModifiedAt": "2026-11-05",
+        "via": "Аквакомплекс «Лужники» sitemap"
       },
       {
         "id": "370c5816b167f3f085e4",
@@ -454,21 +559,32 @@
         "via": "Google News RSS"
       },
       {
+        "id": "c70641c30ff1d38bc3a7",
+        "title": "Аквапарк со скидкой до 27% — акции утром и вечером",
+        "url": "https://aqua.luzhniki.ru/news/promo/akvapark-so-skidkoj-do-27-akcii-utrom-i-vecherom/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-03",
+        "sourceModifiedAt": "2026-11-05",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "84501ac55b91b4825c8e",
+        "title": "Вернём 10% от стоимости билетов",
+        "url": "https://aqua.luzhniki.ru/news/news/vernyom-10-ot-stoimosti-biletov/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-02",
+        "sourceModifiedAt": "2026-11-23",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
         "id": "a684322c8eeee57e80ed",
         "title": "«Лужники» – самый большой стадион в России» в блоге «Своими глазами»",
         "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9FNGVCVWZzeUNmS0JKMV96V2VudWQzSUl0SEZwTmFhVjdreGJFcWtzUk5JQUdVYk51SHhseFB0X3Y1OVgwRWFkMWVNTU8?oc=5",
         "source": "Сделано у нас",
         "sourceUrl": "https://sdelanounas.ru",
         "publishedAt": "2026-10-30T09:16:16Z",
-        "via": "Google News RSS"
-      },
-      {
-        "id": "8cdd054943efc6aed8f7",
-        "title": "Лужники × ММОМА: выставка и события в ноябре",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfRnpvX0h2WlFLcG1yT2puNm5UeTJmdmNDSFBaQ00yaWhGaHhnWFItenVQUENuUzR6YnphY1AwdjZUck5LOWZLME9tVUN3U09Wb0xsRWc3eUdLQzFrNnVRSzBFenRlS0lDZkdJbkNob3Fwank4bmtSc3ROMGo4T2M?oc=5",
-        "source": "Лужники",
-        "sourceUrl": "https://www.luzhniki.ru",
-        "publishedAt": "2026-10-30T07:00:00Z",
         "via": "Google News RSS"
       },
       {
@@ -479,6 +595,16 @@
         "sourceUrl": "https://ngs24.ru",
         "publishedAt": "2026-10-30T07:00:00Z",
         "via": "Google News RSS"
+      },
+      {
+        "id": "8cdd054943efc6aed8f7",
+        "title": "Лужники × ММОМА: выставка и события в ноябре",
+        "url": "https://www.luzhniki.ru/news/luzhniki-mmoma-vystavka-i-sobytiya-v-noyabre/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-10-30",
+        "sourceModifiedAt": "2026-10-30",
+        "via": "Лужники sitemap"
       },
       {
         "id": "6b7b86ac7151bd9ea55f",
@@ -497,6 +623,396 @@
         "sourceUrl": "https://tolknews.ru",
         "publishedAt": "2026-10-29T07:00:00Z",
         "via": "Google News RSS"
+      },
+      {
+        "id": "8dc764b6bcd67da620f8",
+        "title": "Синхронное плавание для детей от 5 лет — открыт набор",
+        "url": "https://www.luzhniki.ru/news/sinhronnoe-plavanie-dlya-detej-ot-5-let-otkryt-nabor/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-10-28",
+        "sourceModifiedAt": "2026-10-28",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "406c80d309e2f34dc0eb",
+        "title": "Синхронное плавание для детей от 5 лет — открыт набор",
+        "url": "https://aqua.luzhniki.ru/news/news/sinhronnoe-plavanie-dlya-detej-ot-5-let-otkryt-nabor/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-10-28",
+        "sourceModifiedAt": "2026-10-28",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "89b502645e72cacac240",
+        "title": "Просто как дважды два: бонусы ×2 на каникулах",
+        "url": "https://aqua.luzhniki.ru/news/promo/prosto-kak-dvazhdy-dva-bonusy-2-na-kanikulah/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-10-23",
+        "sourceModifiedAt": "2026-10-23",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "a5592e7366d72995415b",
+        "title": "Новый беговой маршрут вокруг стадиона",
+        "url": "https://www.luzhniki.ru/news/otkryt-novyj-begovoj-marshrut-vokrug-bolshoj-sportivnoj-areny/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-10-12",
+        "sourceModifiedAt": "2026-11-03",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "adc9ee570483e5d37ce7",
+        "title": "В «Лужниках» открыли беговой маршрут вокруг Большой спортивной арены",
+        "url": "https://www.luzhniki.ru/news/press-centr/v-luzhnikah-otkryli-begovoj-marshrut-vokrug-bolshoj-sportivnoj-areny/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-10-11",
+        "sourceModifiedAt": "2026-11-23",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "0066b356168fae4c7a85",
+        "title": "Большая перемена в Аквапарке «Лужники»!",
+        "url": "https://aqua.luzhniki.ru/news/promo/bolshaya-peremena-v-akvaparke-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-10-09",
+        "sourceModifiedAt": "2026-10-12",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "465e08851fb9a33a6a4b",
+        "title": "«Лужники» в движении: перформативная прогулка с Дашей Плоховой",
+        "url": "https://www.luzhniki.ru/news/luzhniki-v-dvizhenii-performativnaya-progulka-s-dashej-plohovoj/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-10-06",
+        "sourceModifiedAt": "2026-10-06",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "06176c56626e2ba62a96",
+        "title": "Открытый чемпионат Москвы по флоубордингу в Аквакомплексе «Лужники»!",
+        "url": "https://aqua.luzhniki.ru/news/news/otkrytyj-chempionat-moskvy-po-floubordingu-v-akvakomplekse-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-10-05",
+        "sourceModifiedAt": "2026-10-06",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "3654334af1738b7873c6",
+        "title": "Фонтан на Центральной площади «Лужники» завершил работу в этом сезоне!",
+        "url": "https://www.luzhniki.ru/news/fontan-na-centralnoj-ploshadi-luzhniki-zavershil-rabotu-v-etom-sezone/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-10-02",
+        "sourceModifiedAt": "2026-10-02",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "6fa781fef0a94171de83",
+        "title": "Весь октябрь детская анимация в Аквапарке «Лужники»!",
+        "url": "https://aqua.luzhniki.ru/news/news/ves-oktyabr-detskaya-animaciya-v-akvaparke-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-10-01",
+        "sourceModifiedAt": "2026-10-01",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "914a3a852c9c8c3db732",
+        "title": "26–27 сентября СберПрайм Московский Марафон",
+        "url": "https://www.luzhniki.ru/news/26-27-sentyabrya-sberprajm-moskovskij-marafon/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-09-23",
+        "sourceModifiedAt": "2026-09-23",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "ab76d40819bc8a496fcf",
+        "title": "«АкваОтрыв»: вырывайтесь из привычного ритма и проведите 4 часа в Аквапарке и Термальном комплексе со скидкой до 27%",
+        "url": "https://aqua.luzhniki.ru/news/promo/akvaotryv-vyryvajtes-iz-privychnogo-ritma-i-provedite-4-chasa-v-akvaparke-i-termalnom-komplekse-so-skidkoj-do-27/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-09-22",
+        "sourceModifiedAt": "2026-09-25",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "354a13bb3bba1e951bcf",
+        "title": "АкваМаксимум: максимум отдыха в Аквакомплексе «Лужники»!",
+        "url": "https://aqua.luzhniki.ru/news/promo/akvamaksimum-maksimum-otdyha-v-akvakomplekse-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-09-18",
+        "sourceModifiedAt": "2026-09-25",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "3691b7f9e99da3ae5d55",
+        "title": "Пляж «Лужники» завершает сезон",
+        "url": "https://aqua.luzhniki.ru/news/news/plyazh-luzhniki-zavershaet-sezon/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-09-15",
+        "sourceModifiedAt": "2026-09-17",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "6f9e20de128fb2251f0a",
+        "title": "В Лужниках пройдёт Фестиваль видеомэппинга «Сила в месте»",
+        "url": "https://www.luzhniki.ru/news/press-centr/v-luzhnikah-projdyot-festival-videomeppinga-sila-v-meste/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-09-12",
+        "sourceModifiedAt": "2026-11-23",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "a22cc172a3f78b4b68a7",
+        "title": "Фестиваль видеомэппинга «Сила в месте»",
+        "url": "https://www.luzhniki.ru/news/festival-videomeppinga-sila-v-meste-/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-09-10",
+        "sourceModifiedAt": "2026-09-13",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "02b32f9b9dfb246812e9",
+        "title": "Академия хоккея «Лужники» открыла сезон: приглашаем на пробную тренировку",
+        "url": "https://www.luzhniki.ru/news/akademiya-hokkeya-luzhniki-otkryla-sezon-priglashaem-na-probnuyu-trenirovku/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-09-10",
+        "sourceModifiedAt": "2026-09-10",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "ecbbb042576c45c060b7",
+        "title": "Коллективные парения — с чаем и травами",
+        "url": "https://aqua.luzhniki.ru/news/news/kollektivnye-pareniya-v-akvakomplekse-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-09-09",
+        "sourceModifiedAt": "2026-11-10",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "2a04ee2cc520f421ba8f",
+        "title": "Благоустройство Лужнецкой набережной",
+        "url": "https://www.luzhniki.ru/news/blagoustrojstvo-luzhneckoj-naberezhnoj/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-09-07",
+        "sourceModifiedAt": "2026-09-08",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "03250688a9d1e9e147c8",
+        "title": "Вы просили — мы вернули! «Семейная среда» снова с нами!",
+        "url": "https://aqua.luzhniki.ru/news/promo/vy-prosili-my-vernuli-semejnaya-sreda-snova-s-nami/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-09-07",
+        "sourceModifiedAt": "2026-09-28",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "c7fdb80618fbbbab2328",
+        "title": "«Аквалайт»: билет в лето со скидкой 27%",
+        "url": "https://aqua.luzhniki.ru/news/news/akvalajt-bilet-v-leto-so-skidkoj-27/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-09-04",
+        "sourceModifiedAt": "2026-09-04",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "aaa0c65b33f8d46df27e",
+        "title": "Начинаем сентябрь с приятных бонусов ✨",
+        "url": "https://aqua.luzhniki.ru/news/news/nachinaem-sentyabr-s-priyatnyh-bonusov/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-09-01",
+        "sourceModifiedAt": "2026-09-01",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "c5c418abb33fadb58ff3",
+        "title": "Выгодный отдых на Пляже «Лужники»",
+        "url": "https://aqua.luzhniki.ru/news/vygodnyj-otdyh-na-plyazhe-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-09-01",
+        "sourceModifiedAt": "2026-09-01",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "40115a1f7c7a9a483551",
+        "title": "Программа лояльности в Аквакомплексе «Лужники»",
+        "url": "https://aqua.luzhniki.ru/news/news/programma-loyalnosti-v-akvakomplekse-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-08-31",
+        "sourceModifiedAt": "2026-09-01",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "f38e06da9f561c3dc90c",
+        "title": "«Аквастарт» — продлеваем лето детям",
+        "url": "https://aqua.luzhniki.ru/news/news/akvastart-prodlevaem-leto-detyam/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-08-30",
+        "sourceModifiedAt": "2026-08-31",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "568e0003d386709362b2",
+        "title": "Каждую субботу сентября — новое «АкваПриключение»",
+        "url": "https://aqua.luzhniki.ru/news/news/animaciya-dlya-detej-v-akvaparke-luzhniki1/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-08-29",
+        "sourceModifiedAt": "2026-09-03",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "09d972e3edad1f6eb215",
+        "title": "Футбольная школа «Лужники» открывает набор: просмотры детей 27 и 31 августа",
+        "url": "https://www.luzhniki.ru/news/futbolnaya-shkola-luzhniki-otkryvaet-nabor-prosmotry-detej-27-i-31-avgusta/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-08-26",
+        "sourceModifiedAt": "2026-08-26",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "be99ae9a8de9e24a5340",
+        "title": "Анимация для детей в Аквапарке «Лужники»",
+        "url": "https://aqua.luzhniki.ru/news/news/animaciya-dlya-detej-v-akvaparke-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-08-26",
+        "sourceModifiedAt": "2026-08-26",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "6fa39c4b40a7820c6ebb",
+        "title": "АкваПриключения возвращаются!",
+        "url": "https://aqua.luzhniki.ru/news/news/akvapriklyucheniya-vozvr/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-08-21",
+        "sourceModifiedAt": "2026-08-21",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "ce1224273fac78c02091",
+        "title": "Фестиваль DROP IT Friends & Family на Пляже «Лужники»",
+        "url": "https://aqua.luzhniki.ru/news/news/festival-drop-it-friends-family-na-plyazhe-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-08-21",
+        "sourceModifiedAt": "2026-08-22",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "0b557f2d587fff642e38",
+        "title": "Продлеваем лето: специальные цены на билеты на Пляже «Лужники»!",
+        "url": "https://aqua.luzhniki.ru/news/promo/prodlevaem-leto-specialnye-ceny-na-bilety-na-plyazhe-luzhniki/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-08-21",
+        "sourceModifiedAt": "2026-08-21",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
+        "id": "a8393b69fe1b08e21785",
+        "title": "Футбольный квест в Лужниках",
+        "url": "https://www.luzhniki.ru/news/futbolnyj-kvest-v-luzhnikah/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-08-12",
+        "sourceModifiedAt": "2026-08-12",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "9dde21cb40a71842dcd4",
+        "title": "Лекция на электросудне Синичка по маршруту Киевская-Лужники",
+        "url": "https://www.luzhniki.ru/news/lekciya-na-elektrosudne-sinichka-po-marshrutu-kievskaya-luzhniki/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-08-10",
+        "sourceModifiedAt": "2026-08-10",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "f8a458178e3e4aaa6f63",
+        "title": "Технические работы на Центральной площади 6 августа",
+        "url": "https://www.luzhniki.ru/news/tehnicheskie-raboty-na-centralnoj-ploshadi/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-08-06",
+        "sourceModifiedAt": "2026-08-06",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "e949a5aa7c8312b4c191",
+        "title": "70 лет спортивной истории — выставка в вестибюле станции «Воробьёвы горы»",
+        "url": "https://www.luzhniki.ru/news/vystavka-na-stancii-vorobyovy-gory/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-08-04",
+        "sourceModifiedAt": "2026-08-04",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "549d48a3b390a252c77b",
+        "title": "Первые шаги в хоккее — в Лужниках",
+        "url": "https://www.luzhniki.ru/news/otkryt-nabor-v-akademiyu-hokkeya-luzhniki/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-07-31",
+        "sourceModifiedAt": "2026-11-03",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "69431b640d9d82d62398",
+        "title": "Лужникам — 70 лет",
+        "url": "https://www.luzhniki.ru/news/segodnya-luzhniki-otmechayut-svoj-yubilej/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-07-31",
+        "sourceModifiedAt": "2026-11-06",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "03a2f2d48761903e2c60",
+        "title": "Выставка MOMMA к 70-летию Лужников",
+        "url": "https://www.luzhniki.ru/news/v-mmoma-otkroetsya-vystavka-luzhniki-est-mesto-istorii/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-07-30",
+        "sourceModifiedAt": "2026-07-31",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "d0c5e30521f067b6e33b",
+        "title": "Лужники и Азбука вкуса подготовили особенный торт к 70-летию Олимпийского комплекса",
+        "url": "https://www.luzhniki.ru/news/press-centr/luzhniki-i-azbuka-vkusa-podgotovili-osobennyj-tort-k-70-letiyu-olimpijskogo-kompleksa/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-07-30",
+        "sourceModifiedAt": "2026-11-23",
+        "via": "Лужники sitemap"
       }
     ],
     "rinks": [
@@ -660,6 +1176,15 @@
         "source": "Официальный сайт ВДНХ",
         "sourceUrl": "https://vdnh.ru",
         "publishedAt": "2026-11-27T00:07:48Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "3751eaf80db78e8a37ec",
+        "title": "В Рыбинске монтируют ледовый каток на площади Дерунова- Яррег - новости Ярославской области",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcjNrWTZ1dDh4Z21wWUMxY184ZHRNUGs3SE5CSTdWNkdMMTVBcjRCZVg4cV9GSWItNDdnVVNaWnM1bkJrTVFkc2xvTm1fM0c5TE9mVTExV3FtM2VIWHlKNHFSU0dpUXhzSVkxSmpzNXJtSkplckJXMURBbXYwMzhEa29OTmx6SGFLeFRvY1ZaVQ?oc=5",
+        "source": "Ярославский регион",
+        "sourceUrl": "https://yarreg.ru",
+        "publishedAt": "2026-11-26T22:00:05Z",
         "via": "Google News RSS"
       },
       {
@@ -1068,15 +1593,6 @@
         "via": "Google News RSS"
       },
       {
-        "id": "43861017218410052179",
-        "title": "27 ноября открывается мультимедийный каток",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9IeFRSNTdINnJvc0lHalUtSWpRUndmc3VzREloMERna2Y4WVloZWd1QjU4NlloQ28xc3EtVmh2Z01TZjFqSF9heEJKMXAzM0pJV05zbm43ZzNhQWJrTlZlUld2bExETEJGRlRFQVJIdFljellVeWdnMnpNSlNEWG8?oc=5",
-        "source": "Лужники",
-        "sourceUrl": "https://www.luzhniki.ru",
-        "publishedAt": "2026-11-25T12:15:05Z",
-        "via": "Google News RSS"
-      },
-      {
         "id": "5afeaa35f69b5496c4ce",
         "title": "Обновлённая ель, увеличенный каток и многое другое удивят новгородцев в новогодние праздники",
         "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQVHhETDl6NmlnRy1JTWpubkFiLWs3UFZpT1dMZE5acWJ0MzRlNzRISG5YYW9iTG5RaUxvM1R0X1pRTGxQbkVoZVdhQ1RDcUVGSUp4UVgxbWtPak5INjZZQllWX0xwRkVma3hxekM2cXh1SnN0ZGFrUDA0Q1hkTEo2MExXSWR0N3IxZHNhQmJYa1R1RjMybXlGWFI2OXQwTVpKZGhiT0VkNV9mN2twTUlFN1ZlUm1fZXBZVldQWGFEbWhmSWZUWmhlUVBYTUNRVFU?oc=5",
@@ -1219,6 +1735,26 @@
         "sourceUrl": "https://vdnh.ru",
         "publishedAt": "2026-11-25T01:23:31Z",
         "via": "Google News RSS"
+      },
+      {
+        "id": "43861017218410052179",
+        "title": "27 ноября открывается мультимедийный каток",
+        "url": "https://www.luzhniki.ru/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-25",
+        "sourceModifiedAt": "2026-11-25",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "e2a5f3ba0138d20ed931",
+        "title": "27 ноября открывается мультимедийный каток",
+        "url": "https://aqua.luzhniki.ru/news/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-25",
+        "sourceModifiedAt": "2026-11-25",
+        "via": "Аквакомплекс «Лужники» sitemap"
       },
       {
         "id": "7b29e6ff311050ebb862",
@@ -2211,6 +2747,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "25c06e6b083a530c5f87",
+        "title": "Этой зимой в Новосибирске зальют больше 70 катков",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcDdGa1NRbTRja2RZYk8tdnd4VUhtQUZRdkZ4STJaWmdlaTNjTnR6N0dOeWNLVzFUSzhsQzBGcTE4aGN5M21KZjllcTNPOUZUcExIRTBJUlVXR18xNExNQ1ZyVzRNb1ZmMTMxT3pDR21hbFUzckF4WS03aW9EWUxsTFptNUpSQ2tzWUVkODA3NWNTdw?oc=5",
+        "source": "газета Навигатор",
+        "sourceUrl": "https://navigato.ru",
+        "publishedAt": "2026-11-17T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "3e4ac58e923c8a46fcb0",
         "title": "Катки, лыжные трассы и спортивные соревнования: Бурятия готовится к зимнему сезону",
         "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE13SFFUR1Mxak1Kb3pDNjZjYUZiTkwzUVh6ZURtLUU3VHJ2ckE2N1ZWakp1d3AwTm1scGdWTXg5ZnQ1bzhuSVBxZ1RnVktUWUg0UFZXOGZPYXF2ODRNd3dWTlZScUx3WndzY2JsVnY1MGk?oc=5",
@@ -2220,12 +2765,12 @@
         "via": "Google News RSS"
       },
       {
-        "id": "25c06e6b083a530c5f87",
-        "title": "Этой зимой в Новосибирске зальют больше 70 катков",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcDdGa1NRbTRja2RZYk8tdnd4VUhtQUZRdkZ4STJaWmdlaTNjTnR6N0dOeWNLVzFUSzhsQzBGcTE4aGN5M21KZjllcTNPOUZUcExIRTBJUlVXR18xNExNQ1ZyVzRNb1ZmMTMxT3pDR21hbFUzckF4WS03aW9EWUxsTFptNUpSQ2tzWUVkODA3NWNTdw?oc=5",
-        "source": "газета Навигатор",
-        "sourceUrl": "https://navigato.ru",
-        "publishedAt": "2026-11-17T05:10:55Z",
+        "id": "1d2d245e604a0d3a3170",
+        "title": "Больше 20 катков откроют для горожан в Благовещенске (адреса)",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPbWVmbjRSd0RvUTZId2pHTGNYd2lIY0d1TEpWcHY4U0NwMWg3X1JyY1NCaUtfZGlOY2Z6SW5lV2dBUEw1MFlNb04xXzVnWnZRVXhTZkh0b0NSUmh5SkZic0RDTjlyTGZablZRLVQ1Q0N1czZldDJkOWxXNE5sT01sZ3ZhVEZjRVFvY0V5Z2N0aGFNblpxSXcyYU1zVkRGUQ?oc=5",
+        "source": "Amur.life",
+        "sourceUrl": "https://www.amur.life",
+        "publishedAt": "2026-11-17T05:57:35Z",
         "via": "Google News RSS"
       },
       {

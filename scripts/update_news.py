@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Собирает метаданные публикаций из открытых RSS-лент для раздела новостей."""
+"""Собирает новости с сайтов «Лужников» и из открытых RSS-лент."""
 
 from __future__ import annotations
 
@@ -13,8 +13,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+from html.parser import HTMLParser
 from pathlib import Path
 
 
@@ -28,6 +30,10 @@ PUBLISHER_FEEDS = (
     ("Российская газета", "https://rg.ru/", "https://rg.ru/xml/index.xml"),
 )
 NON_NEWS_HOSTS = {"kudamoscow.ru"}
+OFFICIAL_SITEMAPS = (
+    ("Лужники", "https://www.luzhniki.ru/", "https://www.luzhniki.ru/sitemap.xml"),
+    ("Аквакомплекс «Лужники»", "https://aqua.luzhniki.ru/", "https://aqua.luzhniki.ru/sitemap.xml"),
+)
 
 
 def clean_text(value: str | None) -> str:
@@ -97,11 +103,122 @@ def google_url(query: str) -> str:
     return GOOGLE_RSS + "?" + urllib.parse.urlencode({"q": query, "hl": "ru", "gl": "RU", "ceid": "RU:ru"})
 
 
-def collect(now: datetime) -> tuple[dict[str, list[dict]], int]:
+def parse_sitemap(xml_data: bytes, site: str, cutoff_date: str) -> list[tuple[str, str]]:
+    root = ET.fromstring(xml_data)
+    host = urllib.parse.urlparse(site).netloc
+    rows = []
+    for node in root.findall(".//{*}url"):
+        url = https_url(node.findtext("{*}loc"))
+        modified = (node.findtext("{*}lastmod") or "")[:10]
+        if not url or urllib.parse.urlparse(url).netloc != host or modified < cutoff_date:
+            continue
+        path = urllib.parse.urlparse(url).path.rstrip("/")
+        if not path.startswith("/news/") or path in {"/news/news", "/news/promo", "/news/press-centr"}:
+            continue
+        rows.append((url, modified))
+    return rows
+
+
+class OfficialArticleParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.title_parts: list[str] = []
+        self.fallback_parts: list[str] = []
+        self.in_heading = False
+        self.in_title = False
+        self.published: str | None = None
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attributes = dict(attrs)
+        if tag == "h1" and "article__title" in (attributes.get("class") or ""):
+            self.in_heading = True
+        elif tag == "title":
+            self.in_title = True
+        elif tag == "time" and not self.published:
+            candidate = (attributes.get("datetime") or "")[:10]
+            try:
+                datetime.fromisoformat(candidate)
+                self.published = candidate
+            except ValueError:
+                pass
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "h1":
+            self.in_heading = False
+        elif tag == "title":
+            self.in_title = False
+
+    def handle_data(self, data: str) -> None:
+        if self.in_heading:
+            self.title_parts.append(data)
+        if self.in_title:
+            self.fallback_parts.append(data)
+
+
+def parse_official_article(html_data: bytes, url: str, label: str, site: str, modified: str) -> dict | None:
+    parser = OfficialArticleParser()
+    parser.feed(html_data.decode("utf-8", "replace"))
+    title = clean_text("".join(parser.title_parts) or "".join(parser.fallback_parts).split(" | ")[0])
+    if not title or not parser.published:
+        return None
+    publisher = urllib.parse.urlparse(site).netloc.removeprefix("www.")
+    identity = publisher + "\n" + title.casefold()
+    return {
+        "id": hashlib.sha256(identity.encode()).hexdigest()[:20],
+        "title": title,
+        "url": url,
+        "source": label,
+        "sourceUrl": site,
+        "publishedAt": parser.published,
+        "sourceModifiedAt": modified,
+        "via": label + " sitemap",
+    }
+
+
+def collect_official(existing: dict, cutoff_date: str) -> tuple[list[dict], int]:
+    cached = {
+        item.get("url"): item
+        for item in existing.get("feeds", {}).get("luzhniki", [])
+        if isinstance(item, dict) and str(item.get("via", "")).endswith(" sitemap")
+    }
+    articles = []
+    success = 0
+    for label, site, sitemap in OFFICIAL_SITEMAPS:
+        try:
+            rows = parse_sitemap(fetch(sitemap), site, cutoff_date)
+            success += 1
+        except (OSError, ET.ParseError, ValueError) as error:
+            print(f"Не удалось получить sitemap {site}: {error}", file=sys.stderr)
+            continue
+        to_fetch = []
+        for url, modified in rows:
+            previous = cached.get(url)
+            if previous and previous.get("sourceModifiedAt") == modified:
+                articles.append(previous)
+            else:
+                to_fetch.append((url, modified))
+
+        def read_article(row: tuple[str, str]) -> dict | None:
+            url, modified = row
+            try:
+                return parse_official_article(fetch(url), url, label, site, modified)
+            except (OSError, ValueError) as error:
+                print(f"Не удалось прочитать {url}: {error}", file=sys.stderr)
+                return None
+
+        with ThreadPoolExecutor(max_workers=3) as pool:
+            articles.extend(article for article in pool.map(read_article, to_fetch) if article)
+        print(f"{label}: {len(rows)} страниц в sitemap, новых или изменённых: {len(to_fetch)}", file=sys.stderr)
+    return [article for article in articles if article["publishedAt"][:10] >= cutoff_date], success
+
+
+def collect(now: datetime, existing: dict) -> tuple[dict[str, list[dict]], int]:
     queries = (("Лужники when:30d", "luzhniki"), ("каток when:30d", "rinks"), ("катки when:30d", "rinks"))
     cutoff = (now - timedelta(days=120)).isoformat(timespec="seconds").replace("+00:00", "Z")
     feeds: dict[str, list[dict]] = {"luzhniki": [], "rinks": []}
-    success = 0
+    official, success = collect_official(existing, cutoff[:10])
+    feeds["luzhniki"].extend(official)
+    feeds["rinks"].extend(article for article in official if RINK_WORD.search(article["title"]))
     for query, category in queries:
         try:
             found = parse_feed(fetch(google_url(query)), via="Google News RSS")
@@ -129,27 +246,33 @@ def collect(now: datetime) -> tuple[dict[str, list[dict]], int]:
 
 
 def merge(old: list[dict], new: list[dict], cutoff: str) -> list[dict]:
-    by_id: dict[str, dict] = {}
+    by_story: dict[tuple[str, str], dict] = {}
     for article in old + new:
-        if not isinstance(article, dict) or article.get("publishedAt", "") < cutoff or not https_url(article.get("url")):
+        if not isinstance(article, dict) or article.get("publishedAt", "")[:10] < cutoff[:10] or not https_url(article.get("url")):
             continue
-        if urllib.parse.urlparse(article.get("sourceUrl", "")).netloc.removeprefix("www.") in NON_NEWS_HOSTS:
+        publisher = urllib.parse.urlparse(article.get("sourceUrl", "")).netloc.removeprefix("www.")
+        if publisher in NON_NEWS_HOSTS:
             continue
-        key = article.get("id")
-        if not key:
+        title = re.sub(r"\W+", " ", article.get("title", "").casefold()).strip()
+        if not title:
             continue
-        previous = by_id.get(key)
-        if previous is None or (previous.get("via") == "Google News RSS" and article.get("via") != "Google News RSS"):
-            by_id[key] = article
-    return sorted(by_id.values(), key=lambda article: article["publishedAt"], reverse=True)[:1500]
+        key = publisher, title
+        previous = by_story.get(key)
+        priority = lambda item: 2 if str(item.get("via", "")).endswith(" sitemap") else 1 if item.get("via") != "Google News RSS" else 0
+        if previous is None or priority(article) > priority(previous) or (priority(article) == priority(previous) and article["publishedAt"] > previous["publishedAt"]):
+            chosen = article.copy()
+            if previous:
+                chosen["id"] = previous.get("id", chosen.get("id"))
+            by_story[key] = chosen
+    return sorted(by_story.values(), key=lambda article: article["publishedAt"], reverse=True)[:1500]
 
 
 def main() -> None:
     now = datetime.now(timezone.utc)
     existing = json.loads(OUTPUT.read_text()) if OUTPUT.exists() else {"feeds": {"luzhniki": [], "rinks": []}}
-    new, success = collect(now)
+    new, success = collect(now, existing)
     if success == 0:
-        raise SystemExit("Все RSS-источники недоступны; текущий снимок сохранён")
+        raise SystemExit("Все источники недоступны; текущий снимок сохранён")
     cutoff = (now - timedelta(days=120)).isoformat(timespec="seconds").replace("+00:00", "Z")
     feeds = {name: merge(existing.get("feeds", {}).get(name, []), new[name], cutoff) for name in ("luzhniki", "rinks")}
     data = {
@@ -158,7 +281,7 @@ def main() -> None:
         "feeds": feeds,
     }
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
-    print(f"Лужники: {len(feeds['luzhniki'])}; катки: {len(feeds['rinks'])}; доступных RSS: {success}")
+    print(f"Лужники: {len(feeds['luzhniki'])}; катки: {len(feeds['rinks'])}; доступных источников: {success}")
 
 
 if __name__ == "__main__":

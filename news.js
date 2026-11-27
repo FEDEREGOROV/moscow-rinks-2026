@@ -12,6 +12,7 @@
   const empty = document.getElementById('news-empty');
   const remote = 'https://raw.githubusercontent.com/FEDEREGOROV/moscow-rinks-2026/main/news-data.json';
   const dateFormat = new Intl.DateTimeFormat('ru-RU', {timeZone:'Europe/Moscow',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  const dayFormat = new Intl.DateTimeFormat('ru-RU', {timeZone:'UTC',day:'numeric',month:'long',year:'numeric'});
   const timeFormat = new Intl.DateTimeFormat('ru-RU', {timeZone:'Europe/Moscow',hour:'2-digit',minute:'2-digit'});
   let items = [];
   let limit = 30;
@@ -19,7 +20,7 @@
   let loading = false;
 
   const validUrl = value => {try {const url = new URL(value);return url.protocol === 'https:' ? url.href : null} catch {return null}};
-  const formatDate = value => {const date = new Date(value);return Number.isFinite(date.getTime()) ? dateFormat.format(date) : 'Дата не указана'};
+  const formatDate = value => {const date = new Date(value);return Number.isFinite(date.getTime()) ? (/^\d{4}-\d{2}-\d{2}$/.test(value) ? dayFormat : dateFormat).format(date) : 'Дата не указана'};
   const render = () => {
     const term = search.value.toLocaleLowerCase('ru').trim();
     const found = items.filter(item => (source.value === 'all' || item.source === source.value) && item.title.toLocaleLowerCase('ru').includes(term));
