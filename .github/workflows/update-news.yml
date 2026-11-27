@@ -1,0 +1,41 @@
+name: Update news
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/update-news.yml
+      - scripts/update_news.py
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-news
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Check RSS parser
+        run: python3 -m unittest discover -s tests -p 'test_update_news.py'
+      - name: Fetch public RSS feeds
+        run: python3 scripts/update_news.py
+      - name: Save news snapshot
+        run: |
+          if git diff --quiet -- news-data.json; then
+            echo 'No data changes'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add news-data.json
+          git commit -m 'Refresh news feeds'
+          git push origin HEAD:main || { git pull --rebase origin main && git push origin HEAD:main; }
