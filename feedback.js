@@ -97,6 +97,10 @@
     }
   });
   empty.hidden = true;
-  message.textContent = 'Загрузка записей…';
-  load().then(() => { message.textContent = ''; }).catch(error => { message.textContent = error.message; });
+  const start = () => {
+    message.textContent = 'Загрузка записей…';
+    load().then(() => { message.textContent = ''; }).catch(error => { message.textContent = error.message; });
+  };
+  if (sessionStorage.getItem(passwordKey)) start();
+  else document.addEventListener('access-unlocked', start, {once:true});
 })();

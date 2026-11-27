@@ -67,6 +67,7 @@
           sessionStorage.setItem(passwordKey, input.value);
           document.documentElement.classList.remove('access-locked');
           gate.remove();
+          document.dispatchEvent(new Event('access-unlocked'));
         } else {
           error.textContent = 'Неверный пароль';
           input.select();
