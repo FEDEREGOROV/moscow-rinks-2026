@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-27T09:57:38Z",
+  "updatedAt": "2026-11-27T09:58:27Z",
   "feeds": {
     "luzhniki": [
       {
@@ -28,6 +28,15 @@
         "source": "Газета",
         "sourceUrl": "https://www.gazeta.press",
         "publishedAt": "2026-11-26T14:36:19Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "01ff18591a620cbe9014",
+        "title": "Куда сходить с 3 по 9 августа: выставка к 70‑летию «Лужников», концерт к 25-летию группы «Звери», спектакль к 10-летию «Особняка Дашков 5»",
+        "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQVGFWZDg1V0JhbTBwUG9SWE1uSXV6SGhNRjFlYWQ5V2dkUFNjbFZEM0dYc3Nmb1VSVlhmaUxKRGFxMlNiUmdDb2NDWTdXMThlalBBci1MbWpvMFdwSE5hejZxTVV1dmx5NHRXaERfblF3R1VYdG9tMy1xSXVoQmw1eUlIMktKYktuVjZRUW0ycTJnOGprU1ZBY3ozTWZIWmhXd0pNZnd1SjhhdjIxb0d6NjF5UEY2UHUtWi1pS1VSc1ExWlJaWVVCRkVMX2VXRk9BREJZRFd4bWFXb0lpMDRXeXlHUHZGNV9sS1h4WUpnckVWQ05TUndrcjMzc0UycFJ1ck9yUnlXQS0?oc=5",
+        "source": "TimeOut Москва",
+        "sourceUrl": "https://www.timeout.ru",
+        "publishedAt": "2026-11-26T09:31:21Z",
         "via": "Google News RSS"
       },
       {
@@ -388,6 +397,15 @@
         "source": "Лужники",
         "sourceUrl": "https://www.luzhniki.ru",
         "publishedAt": "2026-11-18T09:12:49Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "8b75f961f9f0bf2d8db6",
+        "title": "\"Лужники\" заплатят 770 тысяч за травму ребенка из Зубцова",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPOGRpd0R1ZTY4YlRxMFhwVXd0ckxkVkJabVhRSDVBUUtaNm5KeEVtZG1sVWVTNVhuYVNESW5fZWp6TWVPMHJYTE03ejY4cURqamo5M2gyaWRqVVB6akNnQk1KcE5kaHl0ZzhidzZoVDFfN1Q3N1FwUjBtYlhoazRPblRJMDZGNC10UW1mQnJvc0RzcWc?oc=5",
+        "source": "TVTver.ru",
+        "sourceUrl": "https://tvtver.ru",
+        "publishedAt": "2026-11-17T12:25:57Z",
         "via": "Google News RSS"
       },
       {
@@ -2015,6 +2033,15 @@
         "source": "Официальный сайт Правительства и Губернатора Московской области",
         "sourceUrl": "https://mosreg.ru",
         "publishedAt": "2026-11-23T11:34:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "30bf174c19c997d7f1ff",
+        "title": "Новый год близко. Где в Златоусте появятся ледовые городки и открытые катки",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQ0tHeEpRT3k5MFI4T0tBY3NNckc3bG9vRmxHOVpIM0Jjd0o5SmpsRkFvWUo0c1oxY2Q3NU1veFF3Z3h5dFVHV2t2aWpOWjNYT044WFp3cWRNc0s4NUxtT0dXQ0p0c3JuZUE0Q3NoXzAzQXg5Qm5xa19aTllieWlwcGRsUVo0MFNkMUp5U3dCQTdBQjE1ZEpCcl9ZOVVmVHA0X3Z4ZU9KeDltemY1ZnV3M0hKbGdBNG5kQXRBeUd3?oc=5",
+        "source": "Златоустовский рабочий",
+        "sourceUrl": "https://zrg74.ru",
+        "publishedAt": "2026-11-23T10:56:03Z",
         "via": "Google News RSS"
       },
       {
