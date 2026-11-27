@@ -2,8 +2,8 @@
 (() => {
   const storageKey = 'luzhniki-market-access-v1';
   const passwordKey = 'luzhniki-market-password-v1';
-  const needsFeedbackPassword = location.pathname.endsWith('/feedback.html') && !sessionStorage.getItem(passwordKey);
-  if (sessionStorage.getItem(storageKey) === 'ok' && !needsFeedbackPassword) {
+  const needsApiPassword = /\/(feedback|rinks-metrica)\.html$/.test(location.pathname) && !sessionStorage.getItem(passwordKey);
+  if (sessionStorage.getItem(storageKey) === 'ok' && !needsApiPassword) {
     document.documentElement.classList.remove('access-locked');
     return;
   }
