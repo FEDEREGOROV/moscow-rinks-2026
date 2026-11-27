@@ -50,7 +50,8 @@
       return row;
     }));
     count.textContent = `${found.length} публикаций`;
-    total.textContent = `${items.length} в ленте`;
+    const publishers = new Set(items.map(item => item.source)).size;
+    total.textContent = `${items.length} публикаций · ${publishers} изданий и сайтов`;
     empty.hidden = found.length !== 0;
     more.hidden = found.length <= limit;
   };
@@ -107,7 +108,7 @@
     const hadData = items.length > 0;
     refresh.disabled = true;
     refresh.textContent = 'Проверка…';
-    if (manual) updated.textContent = 'Проверяю все 8 источников…';
+    if (manual) updated.textContent = 'Проверяю 8 каналов сбора…';
     try {
       const snapshot = manual ? await getLive('POST') : await latestSnapshot();
       setData(snapshot);
@@ -116,7 +117,7 @@
       const checked = Array.isArray(snapshot.sources) ? snapshot.sources.filter(item => item.ok).length : null;
       const failed = Array.isArray(snapshot.sources) ? snapshot.sources.filter(item => !item.ok).map(item => item.name) : [];
       const fullSyncMessage = ['started','pending'].includes(snapshot.fullSync) ? ' Полная проверка запущена в GitHub Actions; ожидаю новую выгрузку.' : '';
-      updated.textContent = `${manual ? (newCount ? `Новых публикаций: ${newCount}. ` : 'Новых публикаций нет. ') : ''}${checked === null ? '' : `Доступно источников: ${checked} из ${snapshot.sources.length}. `}${failed.length ? `Недоступны: ${failed.join(', ')}. ` : ''}Сбор: ${formatDate(lastSnapshotAt)} · открыто в ${checkedAt}.${fullSyncMessage}`;
+      updated.textContent = `${manual ? (newCount ? `Новых публикаций: ${newCount}. ` : 'Новых публикаций нет. ') : ''}${checked === null ? '' : `Доступно каналов сбора: ${checked} из ${snapshot.sources.length}. `}${failed.length ? `Недоступны: ${failed.join(', ')}. ` : ''}Сбор: ${formatDate(lastSnapshotAt)} · открыто в ${checkedAt}.${fullSyncMessage}`;
       if (manual && fullSyncMessage) void waitForFullSync(snapshot.updatedAt);
     }
     catch {
