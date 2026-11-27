@@ -6,6 +6,7 @@
     const tennis = page.startsWith('tennis');
     const news = page.startsWith('news');
     const feedback = page === 'feedback.html';
+    document.documentElement.dataset.section = aqua ? 'aquaparks' : bsa ? 'bsa' : tennis ? 'tennis' : news ? 'news' : feedback ? 'feedback' : 'rinks';
     const header = document.querySelector('.topbar');
     if (!header) return;
     const primary = document.createElement('nav');
@@ -31,5 +32,10 @@
     if (feedback) feedbackLink.setAttribute('aria-current', 'page');
     primary.append(feedbackLink);
     header.before(primary);
+    for (const nav of [primary, header.querySelector('nav')]) {
+      const current = nav?.querySelector('[aria-current="page"]');
+      if (!current || nav.scrollWidth <= nav.clientWidth) continue;
+      nav.scrollLeft += current.getBoundingClientRect().left - nav.getBoundingClientRect().left - (nav.clientWidth - current.clientWidth) / 2;
+    }
   });
 })();
