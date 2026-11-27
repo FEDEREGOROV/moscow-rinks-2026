@@ -10,6 +10,8 @@
   const more = document.getElementById('news-more');
   const refresh = document.getElementById('news-refresh');
   const empty = document.getElementById('news-empty');
+  const healthList = document.getElementById('news-health-list');
+  const healthSummary = document.getElementById('news-health-summary');
   const remote = 'https://raw.githubusercontent.com/FEDEREGOROV/moscow-rinks-2026/main/news-data.json';
   const liveApi = 'https://luzhniki-feedback-api.darkvxdbxn.chatgpt.site/api/news';
   const passwordKey = 'luzhniki-market-password-v1';
@@ -20,6 +22,7 @@
   let limit = 30;
   let lastSnapshotAt = null;
   let loading = false;
+  let sourceCount = 0;
 
   const validUrl = value => {try {const url = new URL(value);return url.protocol === 'https:' ? url.href : null} catch {return null}};
   const formatDate = value => {const date = new Date(value);return Number.isFinite(date.getTime()) ? (/^\d{4}-\d{2}-\d{2}$/.test(value) ? dayFormat : dateFormat).format(date) : 'Дата не указана'};
@@ -60,6 +63,26 @@
     items = data.feeds[feed].filter(item => item && typeof item.title === 'string' && typeof item.source === 'string' && validUrl(item.url));
     items.sort((a,b) => new Date(b.publishedAt) - new Date(a.publishedAt));
     lastSnapshotAt = data.updatedAt;
+    if (Array.isArray(data.sources) && healthList) {
+      sourceCount = data.sources.length;
+      const available = data.sources.filter(item => item.ok).length;
+      healthSummary.textContent = `· ${available} из ${sourceCount} доступны`;
+      healthList.replaceChildren(...data.sources.map(item => {
+        const row = document.createElement('div');
+        row.className = `news-health-row ${item.ok ? 'is-ok' : 'is-failed'}`;
+        const link = document.createElement('a');
+        link.href = validUrl(item.url) || '#';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = item.name;
+        const result = document.createElement('span');
+        result.textContent = item.ok ? `Доступен · ${item.count ?? 0} записей` : `Недоступен${item.error ? ` · ${item.error}` : ''}`;
+        const checked = document.createElement('time');
+        if (item.checkedAt) {checked.dateTime = item.checkedAt;checked.textContent = formatDate(item.checkedAt)}
+        row.append(link,result,checked);
+        return row;
+      }));
+    }
     const chosen = source.value;
     source.replaceChildren(new Option('Все издания', 'all'), ...[...new Set(items.map(item => item.source))].sort((a,b) => a.localeCompare(b,'ru')).map(name => new Option(name,name)));
     if ([...source.options].some(option => option.value === chosen)) source.value = chosen;
@@ -108,7 +131,7 @@
     const hadData = items.length > 0;
     refresh.disabled = true;
     refresh.textContent = 'Проверка…';
-    if (manual) updated.textContent = 'Проверяю 8 каналов сбора…';
+    if (manual) updated.textContent = `Проверяю ${sourceCount || 'все'} каналы сбора…`;
     try {
       const snapshot = manual ? await getLive('POST') : await latestSnapshot();
       setData(snapshot);

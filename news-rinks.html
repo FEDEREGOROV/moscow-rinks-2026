@@ -9,8 +9,8 @@
   <script src="access.js?v=6"></script>
   <script src="section-nav.js?v=6" defer></script>
   <link rel="stylesheet" href="styles.css?v=77">
-  <link rel="stylesheet" href="news.css?v=2">
-  <script src="news.js?v=7" defer></script>
+  <link rel="stylesheet" href="news.css?v=3">
+  <script src="news.js?v=8" defer></script>
 </head>
 <body data-news-feed="rinks">
   <a class="skip" href="#news-content">К новостям</a>
@@ -19,10 +19,11 @@
     <div class="page-heading"><div><h1>Катки в новостях</h1><p>Публикации о катках — независимо от площадки</p></div><span id="news-total"></span></div>
     <div class="table-tools news-tools"><label class="searchbox"><span class="sr-only">Поиск по заголовкам</span><input id="news-search" type="search" placeholder="Найти публикацию"></label><label class="sort-label">Источник <select id="news-source"><option value="all">Все издания</option></select></label><button id="news-refresh" type="button">Обновить</button><span id="news-count" aria-live="polite"></span></div>
     <p id="news-updated" class="news-updated" role="status">Загрузка новостей…</p>
+    <details class="news-health"><summary>Проверка источников <span id="news-health-summary"></span></summary><div id="news-health-list"></div></details>
     <ul id="news-list" class="news-list" aria-label="Публикации о катках"></ul>
     <p id="news-empty" class="empty" hidden>Публикаций по заданным условиям нет.</p>
     <button id="news-more" class="news-more" type="button" hidden>Показать ещё</button>
-    <p class="table-note">Плановый сбор источников настроен каждые три часа; кнопка проверяет все восемь каналов сбора. Издания в фильтре найдены через эти каналы и по отдельности не опрашиваются. Поиск в публичных RSS-лентах по словам «каток» и «катки» за последние 30 дней; ранее найденные записи сохраняются. Полный текст открывается по ссылке.</p>
+    <p class="table-note">Плановый сбор настроен каждый час; кнопка проверяет все перечисленные каналы. Издания в фильтре найдены через эти каналы. Поиск по словам «каток» и «катки» в открытых RSS за последние 30 дней; ранее найденные записи сохраняются. Полный текст открывается по ссылке.</p>
   </main>
 </body>
 </html>

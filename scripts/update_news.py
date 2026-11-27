@@ -28,6 +28,26 @@ PUBLISHER_FEEDS = (
     ("Москва 24", "https://www.m24.ru/", "https://www.m24.ru/rss.xml"),
     ("РИА Новости", "https://ria.ru/", "https://ria.ru/export/rss2/index.xml"),
     ("Российская газета", "https://rg.ru/", "https://rg.ru/xml/index.xml"),
+    ("Агентство «Москва»", "https://www.mskagency.ru/", "https://www.mskagency.ru/rss/index.rss"),
+    ("Агентство «Москва»: общество", "https://www.mskagency.ru/", "https://www.mskagency.ru/rss/society.rss"),
+    ("Агентство «Москва»: культура", "https://www.mskagency.ru/", "https://www.mskagency.ru/rss/culture.rss"),
+    ("Ведомости", "https://www.vedomosti.ru/", "https://www.vedomosti.ru/rss/news"),
+    ("Коммерсантъ", "https://www.kommersant.ru/", "https://www.kommersant.ru/rss/news.xml"),
+    ("РБК", "https://www.rbc.ru/", "https://rssexport.rbc.ru/rbcnews/news/30/full.rss"),
+    ("Вечерняя Москва", "https://vm.ru/", "https://vm.ru/rss"),
+    ("РИАМО", "https://riamo.ru/", "https://riamo.ru/rss/"),
+    ("Московский комсомолец", "https://www.mk.ru/", "https://www.mk.ru/rss/index.xml"),
+    ("360.ru", "https://360.ru/", "https://360.ru/rss/"),
+    ("Известия", "https://iz.ru/", "https://iz.ru/xml/rss/all.xml"),
+)
+GOOGLE_QUERIES = (
+    ("Лужники when:30d", "luzhniki"),
+    ("каток when:30d", "rinks"),
+    ("катки when:30d", "rinks"),
+    ("каток Москва when:30d", "rinks"),
+    ("катки Москва when:30d", "rinks"),
+    ("ледовая площадка Москва when:30d", "rinks"),
+    ("ГУМ-каток when:30d", "rinks"),
 )
 NON_NEWS_HOSTS = {"kudamoscow.ru"}
 OFFICIAL_SITEMAPS = (
@@ -175,19 +195,20 @@ def parse_official_article(html_data: bytes, url: str, label: str, site: str, mo
     }
 
 
-def collect_official(existing: dict, cutoff_date: str) -> tuple[list[dict], int]:
+def collect_official(existing: dict, cutoff_date: str) -> tuple[list[dict], list[dict]]:
     cached = {
         item.get("url"): item
         for item in existing.get("feeds", {}).get("luzhniki", [])
         if isinstance(item, dict) and str(item.get("via", "")).endswith(" sitemap")
     }
     articles = []
-    success = 0
+    sources = []
     for label, site, sitemap in OFFICIAL_SITEMAPS:
         try:
             rows = parse_sitemap(fetch(sitemap), site, cutoff_date)
-            success += 1
+            sources.append({"name": label, "url": sitemap, "ok": True, "count": len(rows), "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")})
         except (OSError, ET.ParseError, ValueError) as error:
+            sources.append({"name": label, "url": sitemap, "ok": False, "count": 0, "error": str(error), "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")})
             print(f"Не удалось получить sitemap {site}: {error}", file=sys.stderr)
             continue
         to_fetch = []
@@ -209,23 +230,25 @@ def collect_official(existing: dict, cutoff_date: str) -> tuple[list[dict], int]
         with ThreadPoolExecutor(max_workers=3) as pool:
             articles.extend(article for article in pool.map(read_article, to_fetch) if article)
         print(f"{label}: {len(rows)} страниц в sitemap, новых или изменённых: {len(to_fetch)}", file=sys.stderr)
-    return [article for article in articles if article["publishedAt"][:10] >= cutoff_date], success
+    return [article for article in articles if article["publishedAt"][:10] >= cutoff_date], sources
 
 
-def collect(now: datetime, existing: dict) -> tuple[dict[str, list[dict]], int]:
-    queries = (("Лужники when:30d", "luzhniki"), ("каток when:30d", "rinks"), ("катки when:30d", "rinks"))
+def collect(now: datetime, existing: dict) -> tuple[dict[str, list[dict]], list[dict]]:
     cutoff = (now - timedelta(days=120)).isoformat(timespec="seconds").replace("+00:00", "Z")
     feeds: dict[str, list[dict]] = {"luzhniki": [], "rinks": []}
-    official, success = collect_official(existing, cutoff[:10])
+    official, sources = collect_official(existing, cutoff[:10])
     feeds["luzhniki"].extend(official)
     feeds["rinks"].extend(article for article in official if RINK_WORD.search(article["title"]))
-    for query, category in queries:
+    for query, category in GOOGLE_QUERIES:
+        url = google_url(query)
         try:
-            found = parse_feed(fetch(google_url(query)), via="Google News RSS")
-            feeds[category].extend(article for article in found if article["publishedAt"] >= cutoff)
-            success += 1
+            found = parse_feed(fetch(url), via="Google News RSS")
+            keyword = LUZHNIKI_WORD if category == "luzhniki" else RINK_WORD
+            feeds[category].extend(article for article in found if article["publishedAt"] >= cutoff and keyword.search(article["title"]))
+            sources.append({"name": f"Google News: {query}", "url": url, "ok": True, "count": len(found), "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")})
             print(f"Google News RSS {query}: {len(found)}", file=sys.stderr)
         except (OSError, ET.ParseError, ValueError) as error:
+            sources.append({"name": f"Google News: {query}", "url": url, "ok": False, "count": 0, "error": str(error), "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")})
             print(f"Не удалось получить Google News RSS {query}: {error}", file=sys.stderr)
         time.sleep(1)
     for label, site, url in PUBLISHER_FEEDS:
@@ -238,11 +261,12 @@ def collect(now: datetime, existing: dict) -> tuple[dict[str, list[dict]], int]:
                     feeds["luzhniki"].append(article)
                 if RINK_WORD.search(article["title"]):
                     feeds["rinks"].append(article)
-            success += 1
+            sources.append({"name": label, "url": url, "ok": True, "count": len(found), "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")})
             print(f"{label} RSS: {len(found)}", file=sys.stderr)
         except (OSError, ET.ParseError, ValueError) as error:
+            sources.append({"name": label, "url": url, "ok": False, "count": 0, "error": str(error), "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")})
             print(f"Не удалось получить {label} RSS: {error}", file=sys.stderr)
-    return feeds, success
+    return feeds, sources
 
 
 def merge(old: list[dict], new: list[dict], cutoff: str) -> list[dict]:
@@ -270,7 +294,8 @@ def merge(old: list[dict], new: list[dict], cutoff: str) -> list[dict]:
 def main() -> None:
     now = datetime.now(timezone.utc)
     existing = json.loads(OUTPUT.read_text()) if OUTPUT.exists() else {"feeds": {"luzhniki": [], "rinks": []}}
-    new, success = collect(now, existing)
+    new, sources = collect(now, existing)
+    success = sum(source["ok"] for source in sources)
     if success == 0:
         raise SystemExit("Все источники недоступны; текущий снимок сохранён")
     cutoff = (now - timedelta(days=120)).isoformat(timespec="seconds").replace("+00:00", "Z")
@@ -278,6 +303,7 @@ def main() -> None:
     data = {
         "schemaVersion": 1,
         "updatedAt": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "sources": sources,
         "feeds": feeds,
     }
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")

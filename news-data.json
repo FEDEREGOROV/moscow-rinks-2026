@@ -1,8 +1,216 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-27T12:21:54Z",
+  "updatedAt": "2026-11-27T12:57:47Z",
+  "sources": [
+    {
+      "name": "Лужники",
+      "url": "https://www.luzhniki.ru/sitemap.xml",
+      "ok": true,
+      "count": 30,
+      "checkedAt": "2026-11-27T12:57:48Z"
+    },
+    {
+      "name": "Аквакомплекс «Лужники»",
+      "url": "https://aqua.luzhniki.ru/sitemap.xml",
+      "ok": true,
+      "count": 35,
+      "checkedAt": "2026-11-27T12:57:51Z"
+    },
+    {
+      "name": "Google News: Лужники when:30d",
+      "url": "https://news.google.com/rss/search?q=%D0%9B%D1%83%D0%B6%D0%BD%D0%B8%D0%BA%D0%B8+when%3A30d&hl=ru&gl=RU&ceid=RU%3Aru",
+      "ok": true,
+      "count": 46,
+      "checkedAt": "2026-11-27T12:57:52Z"
+    },
+    {
+      "name": "Google News: каток when:30d",
+      "url": "https://news.google.com/rss/search?q=%D0%BA%D0%B0%D1%82%D0%BE%D0%BA+when%3A30d&hl=ru&gl=RU&ceid=RU%3Aru",
+      "ok": true,
+      "count": 90,
+      "checkedAt": "2026-11-27T12:57:55Z"
+    },
+    {
+      "name": "Google News: катки when:30d",
+      "url": "https://news.google.com/rss/search?q=%D0%BA%D0%B0%D1%82%D0%BA%D0%B8+when%3A30d&hl=ru&gl=RU&ceid=RU%3Aru",
+      "ok": true,
+      "count": 99,
+      "checkedAt": "2026-11-27T12:57:57Z"
+    },
+    {
+      "name": "Google News: каток Москва when:30d",
+      "url": "https://news.google.com/rss/search?q=%D0%BA%D0%B0%D1%82%D0%BE%D0%BA+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0+when%3A30d&hl=ru&gl=RU&ceid=RU%3Aru",
+      "ok": true,
+      "count": 57,
+      "checkedAt": "2026-11-27T12:57:58Z"
+    },
+    {
+      "name": "Google News: катки Москва when:30d",
+      "url": "https://news.google.com/rss/search?q=%D0%BA%D0%B0%D1%82%D0%BA%D0%B8+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0+when%3A30d&hl=ru&gl=RU&ceid=RU%3Aru",
+      "ok": true,
+      "count": 50,
+      "checkedAt": "2026-11-27T12:58:00Z"
+    },
+    {
+      "name": "Google News: ледовая площадка Москва when:30d",
+      "url": "https://news.google.com/rss/search?q=%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%8F+%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%BA%D0%B0+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0+when%3A30d&hl=ru&gl=RU&ceid=RU%3Aru",
+      "ok": true,
+      "count": 26,
+      "checkedAt": "2026-11-27T12:58:02Z"
+    },
+    {
+      "name": "Google News: ГУМ-каток when:30d",
+      "url": "https://news.google.com/rss/search?q=%D0%93%D0%A3%D0%9C-%D0%BA%D0%B0%D1%82%D0%BE%D0%BA+when%3A30d&hl=ru&gl=RU&ceid=RU%3Aru",
+      "ok": true,
+      "count": 21,
+      "checkedAt": "2026-11-27T12:58:03Z"
+    },
+    {
+      "name": "Москва 24",
+      "url": "https://www.m24.ru/rss.xml",
+      "ok": true,
+      "count": 100,
+      "checkedAt": "2026-11-27T12:58:04Z"
+    },
+    {
+      "name": "РИА Новости",
+      "url": "https://ria.ru/export/rss2/index.xml",
+      "ok": true,
+      "count": 20,
+      "checkedAt": "2026-11-27T12:58:05Z"
+    },
+    {
+      "name": "Российская газета",
+      "url": "https://rg.ru/xml/index.xml",
+      "ok": true,
+      "count": 100,
+      "checkedAt": "2026-11-27T12:58:05Z"
+    },
+    {
+      "name": "Агентство «Москва»",
+      "url": "https://www.mskagency.ru/rss/index.rss",
+      "ok": true,
+      "count": 50,
+      "checkedAt": "2026-11-27T12:58:05Z"
+    },
+    {
+      "name": "Агентство «Москва»: общество",
+      "url": "https://www.mskagency.ru/rss/society.rss",
+      "ok": true,
+      "count": 50,
+      "checkedAt": "2026-11-27T12:58:05Z"
+    },
+    {
+      "name": "Агентство «Москва»: культура",
+      "url": "https://www.mskagency.ru/rss/culture.rss",
+      "ok": true,
+      "count": 50,
+      "checkedAt": "2026-11-27T12:58:06Z"
+    },
+    {
+      "name": "Ведомости",
+      "url": "https://www.vedomosti.ru/rss/news",
+      "ok": true,
+      "count": 200,
+      "checkedAt": "2026-11-27T12:58:06Z"
+    },
+    {
+      "name": "Коммерсантъ",
+      "url": "https://www.kommersant.ru/rss/news.xml",
+      "ok": true,
+      "count": 631,
+      "checkedAt": "2026-11-27T12:58:06Z"
+    },
+    {
+      "name": "РБК",
+      "url": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss",
+      "ok": true,
+      "count": 30,
+      "checkedAt": "2026-11-27T12:58:06Z"
+    },
+    {
+      "name": "Вечерняя Москва",
+      "url": "https://vm.ru/rss",
+      "ok": true,
+      "count": 60,
+      "checkedAt": "2026-11-27T12:58:07Z"
+    },
+    {
+      "name": "РИАМО",
+      "url": "https://riamo.ru/rss/",
+      "ok": true,
+      "count": 100,
+      "checkedAt": "2026-11-27T12:58:07Z"
+    },
+    {
+      "name": "Московский комсомолец",
+      "url": "https://www.mk.ru/rss/index.xml",
+      "ok": true,
+      "count": 75,
+      "checkedAt": "2026-11-27T12:58:07Z"
+    },
+    {
+      "name": "360.ru",
+      "url": "https://360.ru/rss/",
+      "ok": true,
+      "count": 100,
+      "checkedAt": "2026-11-27T12:58:08Z"
+    },
+    {
+      "name": "Известия",
+      "url": "https://iz.ru/xml/rss/all.xml",
+      "ok": true,
+      "count": 50,
+      "checkedAt": "2026-11-27T12:58:08Z"
+    }
+  ],
   "feeds": {
     "luzhniki": [
+      {
+        "id": "ca9a926dc6dd73fc1936",
+        "title": "4 человека пострадали в «огненной» аварии у Лужников в Москве",
+        "url": "https://riamo.ru/news/proisshestviya/4-cheloveka-postradali-v-ognennoj-avarii-u-luzhnikov-v-moskve/",
+        "source": "РИАМО",
+        "sourceUrl": "https://riamo.ru/",
+        "publishedAt": "2026-11-27T12:52:00Z",
+        "via": "РИАМО RSS"
+      },
+      {
+        "id": "f2c8c0e9f53dff50ae82",
+        "title": "Массовая авария в районе Лужников в Москве",
+        "url": "https://iz.ru/2209406/video/massovaia-avariia-v-raione-luzhnikov-v-moskve",
+        "source": "Известия",
+        "sourceUrl": "https://iz.ru/",
+        "publishedAt": "2026-11-27T12:38:14Z",
+        "via": "Известия RSS"
+      },
+      {
+        "id": "fc90dc39007180fc898e",
+        "title": "Машина сгорела после массового ДТП у Лужников в Москве",
+        "url": "https://riamo.ru/news/proisshestviya/mashina-sgorela-posle-massovogo-dtp-u-luzhnikov-v-moskve/",
+        "source": "РИАМО",
+        "sourceUrl": "https://riamo.ru/",
+        "publishedAt": "2026-11-27T12:28:00Z",
+        "via": "РИАМО RSS"
+      },
+      {
+        "id": "d494f6957c32839bb8dd",
+        "title": "Массовое ДТП произошло в районе Лужников в Москве, одна машина загорелась",
+        "url": "https://360.ru/news/proisshestviya/massovoe-dtp-proizoshlo-v-rajone-luzhnikov-v-moskve-odna-mashina-zagorelas/",
+        "source": "360.ru",
+        "sourceUrl": "https://360.ru/",
+        "publishedAt": "2026-11-27T12:23:00Z",
+        "via": "360.ru RSS"
+      },
+      {
+        "id": "9f6a975fc11e76cbebf7",
+        "title": "Массовое столкновение автомобилей произошло в районе стадиона «Лужники» в Москве",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBVazd4TjB4bDlmeVV1eXFJdUtJaVhDZU9oRE5pVG5KYW1zMXFuT0lncjVqWjV4UmY2bmpkenVROVB6OGI3TUFF?oc=5",
+        "source": "URA.RU",
+        "sourceUrl": "https://ura.news",
+        "publishedAt": "2026-11-27T12:19:00Z",
+        "via": "Google News RSS"
+      },
       {
         "id": "260bd40b7fc3560f2ed1",
         "title": "Фестиваль детского триатлона «Магия триатлона»",
@@ -11,6 +219,36 @@
         "sourceUrl": "https://www.luzhniki.ru",
         "publishedAt": "2026-11-27T07:10:26Z",
         "via": "Google News RSS"
+      },
+      {
+        "id": "59eb262fdb248b0021a4",
+        "title": "Мультимедийный каток «Лужники» открылся",
+        "url": "https://www.luzhniki.ru/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-27",
+        "sourceModifiedAt": "2026-11-27",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "a599c82844358dc27c7a",
+        "title": "«Сборная Деда Мороза»: новогодняя квест-ёлка в «Лужниках»",
+        "url": "https://www.luzhniki.ru/news/sbornaya-deda-moroza-novogodnyaya-kvest-yolka-v-luzhnikah/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-27",
+        "sourceModifiedAt": "2026-11-27",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "ee09d4e97ced2189ea60",
+        "title": "Мультимедийный каток «Лужники» открылся",
+        "url": "https://aqua.luzhniki.ru/news/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-27",
+        "sourceModifiedAt": "2026-11-27",
+        "via": "Аквакомплекс «Лужники» sitemap"
       },
       {
         "id": "38a8297b99761f4b0b32",
@@ -1035,12 +1273,30 @@
     ],
     "rinks": [
       {
+        "id": "9c444f7be41a90f595e3",
+        "title": "В парках Москвы открылись первые катки с искусственным льдом",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNeE1JWVNyQms2NHJBRmFKNFJWV1dLQmRjZS1RZ0dLc1ZCcHVpbS1FQkU1LVFXNzB5eUdvM1FabHpQVFFETVgyOTk3aFZXWWhIUE1SNHJLLTV4MGx4Q2FCa0ljUmNRbUZIQlJISlliSUdHaUJTVVF5NDNESE5TY0xNNVl3YVRVYVlnaFFqWXR4b2ZONklQT0Uzblc1Z1dxNGM?oc=5",
+        "source": "The World Inform",
+        "sourceUrl": "https://worldinform.ru",
+        "publishedAt": "2026-11-27T12:05:34Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "1cb90666b804fa2d43f6",
         "title": "В сервисе «Мосбилет» можно приобрести билеты на каток на Болотной площади / Новости города / Сайт Москвы",
         "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB0THlMN0g0bHROd1JuU2FsODV6a1ZDdENMRUIzV0tPTDZSSjlXSjdVQTFjVHlOd0RveDdZTG90UExxb3Z5Q25xUjBTNWc4QjVR?oc=5",
         "source": "Официальный сайт Мэра Москвы",
         "sourceUrl": "https://www.mos.ru",
         "publishedAt": "2026-11-27T12:00:01Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "8cc4a7dab8f1e4707ca4",
+        "title": "Семнадцать катков с искусственным льдом открылись в парках Москвы",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB2Z1UwbkxvWVE3R3BoSlhtTGhENmdzcUV6bHJVZEpQTXJOQ2lBNmk2NmFUOFFVb1dtc2hpajZHbHF2cGk4dDlTdFJDazdSOTBodU5YdE1FVWhpeTQ4bVBlck9BTHViNHlP?oc=5",
+        "source": "Newsroom24",
+        "sourceUrl": "https://newsroom24.ru",
+        "publishedAt": "2026-11-27T11:19:51Z",
         "via": "Google News RSS"
       },
       {
@@ -1062,6 +1318,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "2423da12c417b3a40b4e",
+        "title": "Выступления фигуристов, спектакли и мастер-классы: что ждет посетителей катков в парках Москвы",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNNTRrQ2NNUE9NMXkwUElvZmRnUGVRc1g2YkpLMGUzX05HZGZPRXpTaGNRbHZGVmMyZVZqVTZ6UXlYUVV4RGxLZUpFQ3lQdENDRHcwUWpGOFdGS3JjVmo3SG1GOG5Gb242RXc5bGJaaGFiMG9hblFqT3lVcktyZWFCQ0QteHNFNXkwQjMxY1BjbGVySlJXSkxpOW0xVnBQaEdVZng1YU5QRndTX2l2OHBoc1A4RjJZWE9CdUluWmp3VQ?oc=5",
+        "source": "Типичная Москва",
+        "sourceUrl": "https://typical-moscow.ru",
+        "publishedAt": "2026-11-27T10:32:17Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "6d40cc92f74cab760ec7",
         "title": "Каток на стадионе «Ракета» откроется 28 ноября",
         "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdDNURTYtZW5vWnZtckdNWktFTTF1RWF6RWxPZG5GOVZwZERxMXNUbXZlVXZTWXpJZXBIa19kdURvOENUM3VnSmltd3lPQWJDeEVUX1E2TjNDYXJlZ2IxVjM5NjBUVzhudVMyYU5tbnZGOXlaQlY2aUdsZGpHWGdyTNIBiAFBVV95cUxOTmN5ZjdOdEphWlU5RFgwMVRhT3NfZ3pybTZoa01vUUtJSTNxU0VTOVUyZTFIZFd6Z214SG96Wi1VcDZILXFzSDlTLTNjeHJTekJQdHVoSHN1TUJUYmQ0SXhpYTViU25WUEpwVnkwUVI2VDJmRjMyY2VKc0Q0OXhkdTdWUnQ4S3dS?oc=5",
@@ -1071,6 +1336,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "78d46b83258c983974c6",
+        "title": "Сергунина: В столичных парках открыли первые катки",
+        "url": "https://vm.ru/news/1377410-sergunina-v-stolichnyh-parkah-otkryli-pervye-katki",
+        "source": "Вечерняя Москва",
+        "sourceUrl": "https://vm.ru/",
+        "publishedAt": "2026-11-27T10:15:00Z",
+        "via": "Вечерняя Москва RSS"
+      },
+      {
         "id": "3dce3d8a24cf8a0f08d6",
         "title": "Зеленоград - Новости - Каток открылся на площади Юности",
         "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5uUzdfWDVfT1dDZGhxRXJFcllSRXBIWVEzMDdqSXU5Q2tuNm9fcnhFc2NmZVVvVHlRbUQ2b1ZudDlscGotSVBKYVNvV1VRQQ?oc=5",
@@ -1078,6 +1352,15 @@
         "sourceUrl": "https://www.zelenograd.ru",
         "publishedAt": "2026-11-27T10:11:00Z",
         "via": "Google News RSS"
+      },
+      {
+        "id": "850ac8ec6d053e056ba7",
+        "title": "Сергунина: Зимой в столичных парках будет работать 35 катков",
+        "url": "https://www.mskagency.ru/materials/3576544",
+        "source": "Агентство «Москва»",
+        "sourceUrl": "https://www.mskagency.ru/",
+        "publishedAt": "2026-11-27T10:10:03Z",
+        "via": "Агентство «Москва» RSS"
       },
       {
         "id": "ee3518077aea331b8746",
@@ -1104,6 +1387,24 @@
         "source": "Официальный сайт Мэра Москвы",
         "sourceUrl": "https://www.mos.ru",
         "publishedAt": "2026-11-27T10:02:01Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "2a0e8798a1f737d30747",
+        "title": "ГУМ-Каток откроется 30 ноября | Главное | Time Out",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8yMzVMUklfQ21TMm5zVFlLT0FKRDlGc19BdXlWeGMxMHpnMEZWY1E4ODh4eDBsOF92cEVJYXBBMTlyWFkyQ09nZERQR1hDYVRnRDI3aC1FVE9uQi1CdDBLazlnU19od2RCSTByZWdkUEJnU0tTbWc?oc=5",
+        "source": "TimeOut Москва",
+        "sourceUrl": "https://www.timeout.ru",
+        "publishedAt": "2026-11-27T09:58:45Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "cbc87bfebba669ca4806",
+        "title": "Катки Москвы зимой 2026–2027: где покататься на коньках, цены, расписание и бесплатные площадки",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMXplUjU2OXRvQlJFRjlFeWl2N3RtdTllWE5zQlI2dy1aWmo4NHRTdjQ5SlZFMW5aeF9DVjJlWDRFejZBbXliaFRoYm9Eb3JMMkJpNDFFU3c0aTJ5Tno2ZmRxZTFQUzZyWkRoeDltUy1RQkpCMFBtOHhOU0dFc1h2S0wzSEtZcXlXMVljREkwbFc0a1Rk?oc=5",
+        "source": "Life.ru",
+        "sourceUrl": "https://life.ru",
+        "publishedAt": "2026-11-27T09:20:15Z",
         "via": "Google News RSS"
       },
       {
@@ -1278,6 +1579,26 @@
         "via": "Google News RSS"
       },
       {
+        "id": "59eb262fdb248b0021a4",
+        "title": "Мультимедийный каток «Лужники» открылся",
+        "url": "https://www.luzhniki.ru/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/",
+        "source": "Лужники",
+        "sourceUrl": "https://www.luzhniki.ru/",
+        "publishedAt": "2026-11-27",
+        "sourceModifiedAt": "2026-11-27",
+        "via": "Лужники sitemap"
+      },
+      {
+        "id": "ee09d4e97ced2189ea60",
+        "title": "Мультимедийный каток «Лужники» открылся",
+        "url": "https://aqua.luzhniki.ru/news/news/27-noyabrya-otkryvaetsya-multimedijnyj-katok/",
+        "source": "Аквакомплекс «Лужники»",
+        "sourceUrl": "https://aqua.luzhniki.ru/",
+        "publishedAt": "2026-11-27",
+        "sourceModifiedAt": "2026-11-27",
+        "via": "Аквакомплекс «Лужники» sitemap"
+      },
+      {
         "id": "3751eaf80db78e8a37ec",
         "title": "В Рыбинске монтируют ледовый каток на площади Дерунова- Яррег - новости Ярославской области",
         "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcjNrWTZ1dDh4Z21wWUMxY184ZHRNUGs3SE5CSTdWNkdMMTVBcjRCZVg4cV9GSWItNDdnVVNaWnM1bkJrTVFkc2xvTm1fM0c5TE9mVTExV3FtM2VIWHlKNHFSU0dpUXhzSVkxSmpzNXJtSkplckJXMURBbXYwMzhEa29OTmx6SGFLeFRvY1ZaVQ?oc=5",
@@ -1305,6 +1626,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "9077312cbd24c00a1530",
+        "title": "Зимой в Москве откроют 1,3 тысяч катков",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMzlRQ1NCU3ZMQ1VPMzhia0VIZl9uXzNVSUNCY2tTZloyRW54UXBrV0h5RVh0RTBGVkJwREZFNVFYWkE4aVpQMTJQVVNsek1pTGMwTGVpWkF0R1Z2ZXQ5WFRBVGJhTWlzdlA5eG01Qm44WG90bFpKN2pwLU8tRzdvWlVrd2NvS3M1UU84?oc=5",
+        "source": "prospect.com.ru",
+        "sourceUrl": "https://prospect.com.ru",
+        "publishedAt": "2026-11-26T18:41:42Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "b1a51aa59e9807200d67",
         "title": "Стала известна дата открытия бесплатного катка на Адмиралтейской площади Воронежа",
         "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNUnltYXFPQXFsd0FTYlRWYnJKZmZ0ZG5ia2Y0aEYzTG81WFhlOTQzWHRJQzFBdWlwMUx5QzNPT2s2eWZGODRhMmthYl9EME1HX2hXZDFRNE1OVW1GYlh3NEJXOGRQdVk2MFQtcGRTczBnYU1Yd2NZbVZ6SV9USXBoLVh6X1l4YWdGeXNhQUlSMlhraHVEanZiSVpPVjhuUnpRS1JHeDBOVUFVZTlka09WMjZYWEJiYTRxUU9GWllsWDJxVkR3?oc=5",
@@ -1323,6 +1653,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "dbc55ef059844ab9f570",
+        "title": "Где в Москве покататься на коньках: 12 красивых катков столицы",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUFVyc05kalloRHp4VEpDdnZwNEVRNUFWWjJmeHE1Y0xORmxLZGJONmxLVldpelY3SDhOZ09IUENuN3hBWU9tUTBzcGhIdE5WLTAySU4ybXprVTJ1YzI4aExCQU9MOFhOTTc4d3Rqc0NveHk0LTdReDAyWndyUzBpTmZ4R2dCWTlGZW5HektQd0l4R19teVdMQXpOT1dYYkNDTFp5UXRzVzRFUXlINnc?oc=5",
+        "source": "Счастливые родители",
+        "sourceUrl": "https://www.parents.ru",
+        "publishedAt": "2026-11-26T16:00:41Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "030aa252b99a710bac55",
         "title": "Инфраструктуру для зимнего отдыха подготовили в Москве",
         "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS1lqSl9mTS1lcjlWd0lnLS1paURQWUZCRExyb1FmbDMyV2hUZ0JSOUMweDdCMG1xZ0h1TkJmcFNGb2Y1OV9sdzZ0Tzl1Q1lxU2RuWnZZeDBjRVppMHZLVVBIS1JpSnJvZkwtWk9SUUNaSWtuR0RYWTZnM2xDMXBYVmhJei1PVnc?oc=5",
@@ -1338,6 +1677,15 @@
         "source": "Bnkomi.ru",
         "sourceUrl": "https://www.bnkomi.ru",
         "publishedAt": "2026-11-26T15:14:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "5c014ac2cfa61a91b69d",
+        "title": "Новогодняя ночь в Bosco Café",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4zOThLYmN2N1NjMnFnVDQ4QlNDYWRaNjFJOGV6N1VWQlBEb0ZJVGhtcmRNT1NWWHlvNGR5ejg5TmRvSlNwN1hmcXA1MzNpMzVNSkE?oc=5",
+        "source": "Gum.ru",
+        "sourceUrl": "https://gum.ru",
+        "publishedAt": "2026-11-26T14:57:16Z",
         "via": "Google News RSS"
       },
       {
@@ -1521,12 +1869,39 @@
         "via": "Google News RSS"
       },
       {
+        "id": "0cf823245e2368099a47",
+        "title": "Отель миллиардера Михаила Куснировича, владельца ГУМа и Bosco, оказался в центре коррупционного расследования в Италии",
+        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPWmdjeFh4elMydWlBeGRNUmlxUDNRRTFMdzRaY3U5cy1lVkxuWE5lM3RMT21jUGxpMURhUmswVnc3RHQ5RDdwMGhMV3pGNzlZVlByRXh2M0NlT05TeWxKaXN5QTlEU0tDOXlWRElsUGlfZWgtMTdkT203bWpYZWpvNDJ4eGhEYUhlQnUwZkx3a2FPdEVGZDc2UTM3aXU4bkV1ZW9ZUUNaUFIyOWtYYkhhNVZ4ak1wa0ZlUzFtaVZfVFI0VE5HdGQyMEFLQWx3NXlUMGZKcXNqU2ZCcGdkWTJURWY3cHdEVC0xQ2FURDB0ZTJJdVZLd2c?oc=5",
+        "source": "Твоя Свободная трибуна",
+        "sourceUrl": "https://triboona.ru",
+        "publishedAt": "2026-11-26T07:53:48Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "14453d9731af456cc497",
         "title": "Катки Подмосковья 2026–2027: полный список 48 площадок по городам, открытие 1 декабря и запись онлайн",
         "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPM1o5bXdpclYyeEpVTFd5THpHQ05oeGd1cWd2VTlGeGFqQW5pT3d1clFKdjBwZjdUdDN5MkVleVkxMHpnWlpXQ0htUm4zWkRzNlJIaWJwR1lZOFVTXzYxQXFKZGhWOXhNb2lKRlRkekNYeVU5ZzNmRUJCSGZ2UXV4eGdjalVSUkZkM0ZmbDdhNTNqU0txTnVjbENLSDgxZmk1am5ZVzNqeFUzWkk5TlBSd0x0OVBOSjI2VE5DR05CTzlyd193bklFS2NUOFRveGZyd3FTY3FlM1RMX0Z6VHN3RGNfOHhJS3ZzVVE?oc=5",
         "source": "Официальный сайт Правительства и Губернатора Московской области",
         "sourceUrl": "https://mosreg.ru",
         "publishedAt": "2026-11-26T07:51:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "aa8d851a7882526ee218",
+        "title": "Праздничные программы проведут в рамках открытия ледового сезона на западе Москвы - https://saomos.news/",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbDF4SUstcGxoSXhIeXRudGw1VGdRQXU0eHZXdURfMXJQTHU5Y1BJNlRYRGZnanFzOFNBMER6ZUh5Z0o1UTBFT3B2VFpSbl9LYmU5LXJ2MXJCNGZxWFRzREgyVUp4clRxOUZuenNwYWFPUFktS1ZtNWd6SHVVOTMycGwyY0ViLTlXUi1jc0RHUnp5cVhWdGZldGdIWWlvSll2RkhaQl9pcFhzRUE5XzVpdndxWnlpWEhlWnc?oc=5",
+        "source": "saomos.news",
+        "sourceUrl": "https://saomos.news",
+        "publishedAt": "2026-11-26T07:39:50Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "3fa8b7b5a8be2597ff82",
+        "title": "Около 1,3 тысячи катков заработают в Москве зимой",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVW1hRGhhenVLLW41bjJOVGNjVFpRemQ3Snk3R2FzeG9mazdvQnI4eXVIdm82TFNqaFhhUmk3cDFpV2ZFZm5QZ1JXSXZfdTFZUWxXSzVxLVE4dXBLdUZpSEdXQXRjSW9fWC1WbTc0MFM1WjJwYi1fdUhZOEdmNXVUNkhRLWlCTFpuLWlUMDZBSdIBlAFBVV95cUxOSWJHZFlPci1zT2M1N2RqaVRvSlRIMEthSG01NlBQS3lzcTNGT3ZKbnFILXJRa0d6Q1FlVVNiUUxDNmdaREd1Zm4xVWN5cUJBdkVpVkRkM1ZBSnFldGROTG50dzdhWUg0UkFhWFJ4LWwxZVdEdkE4bU5FTzdyeGk1eXY3d29xeFlCV1RZd0dLd0lDRHJ4?oc=5",
+        "source": "moydom.moscow",
+        "sourceUrl": "https://moydom.moscow",
+        "publishedAt": "2026-11-26T07:28:54Z",
         "via": "Google News RSS"
       },
       {
@@ -1620,6 +1995,42 @@
         "via": "Google News RSS"
       },
       {
+        "id": "40c1cf44e5c9cc2da8cb",
+        "title": "720 километров лыжни и 1280 катков: Москва готовит масштабный зимний сезон",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSTRaLXdGQ3ZOUDJVRTVCblFLUUtOb1BhYzBfdkVjZ0VFSUpRR2hrd0JxVGtQZEx5YU15b2N3SkVrYktVeE42RjhMaDM2bTdoRk42MlBubm5Idk1fMnphbjJ1bnV2UFBDUEdlal9jRFg0MmNPdDJGSGVKaUQwa3BXMHk5czg0YTd6TWd6bVk3VllCRUFNbDhzUEk0TDJ4ZllHRzhfLVZ1SlhMSm5EZldTdzZSODJjeFU?oc=5",
+        "source": "prospect.com.ru",
+        "sourceUrl": "https://prospect.com.ru",
+        "publishedAt": "2026-11-25T23:14:29Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "da4cb47897846735366a",
+        "title": "Список катков — с ценами. Где покататься на коньках в Москве уже сейчас (и в эти выходные)",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1BMHQ5WUJLQkY3S3RxdEc4MG02dVdOQU5iaXF6WEMzekdja0VZYkd2c19kakg0MnNhMGk5eGplaWFVZ1haN29qbFl5SlA0RjQzNHp2czlFc0xwb3c?oc=5",
+        "source": "MSK1.RU",
+        "sourceUrl": "https://msk1.ru",
+        "publishedAt": "2026-11-25T22:59:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "1bafd4a0a54791f1e475",
+        "title": "Москва готова к сезону зимнего отдыха",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZUEzVFJoQ0ptcjctX3FEV1ozd093cGhSSDZXNXRzQjVRNTVHV0R3b2xUVlBBam9iT1hhcmVoemhscFhJNkxaQk5YU1pKdlE1cDFzZmtqWG9DV012V1dCUkNBcWxwdTY4MEgxbHJIUzlQajFXRnI2RkswTkpYNlZOYU1ERQ?oc=5",
+        "source": "The World Inform",
+        "sourceUrl": "https://worldinform.ru",
+        "publishedAt": "2026-11-25T22:05:28Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "cc0b808c53e8c65c4f76",
+        "title": "Главное в Москве 25 ноября: переразметка проезда, подсветка башни и открытие катка",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84NmhSSUVXSTBxcVk3UDNJTGVhcHNlXzZ1enRYMnV6TUxqQk9Ybk56Qy1lYWRvM1YwVlUtYjVuc2RWWktZWnRnM2hWM2Vzd2gwalRhSHJObUtlUUs1NUZGWExDaVE4dUlYZ3Vn?oc=5",
+        "source": "Newsroom24",
+        "sourceUrl": "https://newsroom24.ru",
+        "publishedAt": "2026-11-25T19:19:07Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "7c52b7f876bab820533b",
         "title": "Стали известны возрастные ограничения на бесплатном катке в Твери",
         "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE12c2s0N3o0bXVvU2pNRWVtak9LTUh4My1LU1hkOHNlbkdOaDB1QXpWMG82cjE5TmRtWHk3RU5lWHh1YU9INl9n?oc=5",
@@ -1647,12 +2058,39 @@
         "via": "Google News RSS"
       },
       {
+        "id": "23989e919570e3001fc0",
+        "title": "Сергей Собянин: 1280 катков будет работать в Москве этой зимой",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPX2s2UGo3MVllRW93UFZfODBLVzBnNDNGbndncXJvTGt2T0tBX1NGbG13cTRhbEZXZlh1R3JJUHdFbk1lTXFnaEU5R2RKeW40TFViWkRrY09reDZJcUFabjhnOEdtZmYwLVpWbEJ5NlkxTTJwSHM0WVVDNHhvZlo2MWh1YVFQZkk5aVYzdVl2YlloLWxZeG1KazJZX1FEX1k?oc=5",
+        "source": "Аргументы Недели",
+        "sourceUrl": "https://argumenti.ru",
+        "publishedAt": "2026-11-25T16:03:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "df041e8137eb5a7d6b38",
+        "title": "В Москве к открытию готовят каток на Царской набережной Коломенского",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBIQUFFaTFzZlVyX25TQ1paTUl4SV9weEE0b1NIUXZPTUJHVW54cTFISV8ta09xWU5WdEFEUjFfZGMxbEx2SDZtU1JyTExfLVJrLWg0cUd4azU4NUI5T0pqNDlHbklFZw?oc=5",
+        "source": "Newsroom24",
+        "sourceUrl": "https://newsroom24.ru",
+        "publishedAt": "2026-11-25T16:02:21Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "128ee6c036aa71713249",
         "title": "Виталий Королев и Алена Аршина проконтролировали подготовку нового бесплатного катка в Твери",
         "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPeC10eG1kbkltVkZpazZlUEV5Vi1MN3ZUdXNTRFItTXhDS1JzbGc4MXVTWEZWOE9ZZnNvNDRmUXE1dF9rY0ZleHJaMkVxdjVtWGZzVEJ6WkF2TkF0MU1kQTF5REtQdDVEQ1lRRzJaQnhyVWxwRnY4R2lBQUtCQTBET1Jkb2JTTjEwYnVBaFhIUWplQ0JkN0hTVTd2ZGRWZU5fRG1xVW5BZmFSMnNyUUJ2N0NEWlR1Z0hJ?oc=5",
         "source": "Панорама ПРО",
         "sourceUrl": "https://panoramapro.ru",
         "publishedAt": "2026-11-25T16:00:35Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "7e1932f66fb9d53f328a",
+        "title": "Сергей Собянин: Москва готова к сезону зимнего отдыха",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9jSWJvLTFIdGZZWVR3OTRLVS00UFdoN3NPTTVuT2pkSE1qZENncUJrTGVxOHhWekxyLUdEcUhDYUpuaGR4YU14ZUlR?oc=5",
+        "source": "Независимая газета",
+        "sourceUrl": "https://www.ng.ru",
+        "publishedAt": "2026-11-25T15:30:37Z",
         "via": "Google News RSS"
       },
       {
@@ -1701,6 +2139,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "1ccced762edf9eb6202d",
+        "title": "Дворец спорта с двумя ледовыми аренами появится в Хамовниках / Новости города / Сайт Москвы",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE13TXg4dVB6LXdkejBWbnlHNnpfZV84OG9FNk9OazQ0dTFDYVR1S2VObjJkWXRCY000NmNFSE0xaVZVQUpvMzN0ZmNHc252bDdv?oc=5",
+        "source": "mos.ru",
+        "sourceUrl": "https://www.mos.ru",
+        "publishedAt": "2026-11-25T11:01:01Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "af342a92f89314e0e731",
         "title": "Звезды фигурного катания проведут мастер-классы в «Лужниках» / Новости города / Сайт Москвы",
         "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE53WTJPdk4xUTVZaE5YQklWdWlpTnQwOXdUWWFhX2tYVlRuWlNnQ1p2MS05VUNzd3FNT0h0NjBLUlBSOGFza2V2Ri1hRHVLd3Mw?oc=5",
@@ -1734,6 +2181,15 @@
         "source": "TimeOut Москва",
         "sourceUrl": "https://www.timeout.ru",
         "publishedAt": "2026-11-25T09:04:34Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "a943582abfc6b049199b",
+        "title": "Торжественное открытие катка в Центральном парке",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSGFYaElIN1JfMHlGa0xaUDZUVVhLcy1jSkY1OVVSakQwZGFUUmtabXdVZUM3Z0FVaVZRRXVJQWNoTzdVTVhYNDlwdlNQUEg5UFFQOHpNSE9IWjhLV0dsdGEyRE1XWmVyeWFBWXp1N2c0a1NCZjVMZ2p2QXdTdDNZaVdGMzRxR3hn?oc=5",
+        "source": "Балаковские вести",
+        "sourceUrl": "https://balvesti.ru",
+        "publishedAt": "2026-11-25T08:45:09Z",
         "via": "Google News RSS"
       },
       {
@@ -1771,6 +2227,15 @@
         "sourceUrl": "https://www.mos.ru",
         "publishedAt": "2026-11-25T06:01:03Z",
         "via": "Google News RSS"
+      },
+      {
+        "id": "203f00f6df4e576a3f4f",
+        "title": "Ракова сообщила о первых церемониях бракосочетания на катке Парка Горького",
+        "url": "https://www.mskagency.ru/materials/3576182",
+        "source": "Агентство «Москва»: культура",
+        "sourceUrl": "https://www.mskagency.ru/",
+        "publishedAt": "2026-11-25T06:00:04Z",
+        "via": "Агентство «Москва»: культура RSS"
       },
       {
         "id": "8d8614a519e530cdee8c",
@@ -1883,6 +2348,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "f8b538cc4a8d61ccb17e",
+        "title": "В Москве заработает единственный в России мультимедийный каток",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB6RjV6dV9udjBNS3dzSGRzWFpMTWJzMDE5VFlWdXB0TWtWWV95LUFSbG9naTJVZzF1NmJXUXNkdWZWVmRpSnQ3bEZlaVB3dWZGWmZZ0gFYQVVfeXFMTjcxMEk1X2QtVDcxR2JtOVR3SmRlaFVNZjRXR0ZEMHVKelpEM2hlYjF2YUZEQnpyWDJCWHUySmhjWjQ2ZnkyMjhsdVdXQ25mUVdSQ1NtYTFReQ?oc=5",
+        "source": "Lenta News",
+        "sourceUrl": "https://lenta.news",
+        "publishedAt": "2026-11-24T15:24:41Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "2116e2c56d6804885953",
         "title": "В Смоленске на площади Ленина 11 декабря откроется каток",
         "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOaVdfbVA2MnRHZ2ZjT1lFdnN0REtkeFpHYXlwcEdTTUFsSGtSR3h2RkVhU0VCZkp4QkJZMTI0OTU5STVZeVJJT19KYXZibG16UU9FSUFZRU1SRU43S1hjeXNKc3ZWVlk2MTFiN2w4MlNYQ2FMeENQU2RrQkpaNk13QkxMQlpUak9RSE91ZmxHY0FtQjBCcDBFWndfdExBVXZIZlA5LVFXdTVGNlhFYU9ucjNSUQ?oc=5",
@@ -1979,6 +2453,15 @@
         "source": "Onlinevologda.ru",
         "sourceUrl": "https://onlinevologda.ru",
         "publishedAt": "2026-11-24T08:31:01Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "508392b6d094e44294ce",
+        "title": "«Х5 Медиа» приглашает на благотворительный праздник в поддержку фонда Х5 «Выручаем»",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZ0stRnlvcUZsck90Q1N5eGNhWV85RmZlRkFxX1F3bmFwelF5TUh2eE5TTWs5Nlg3SnMtTmRnb0RnVVRrcVJpZ2I4eVlTTm9LWTBaVjN2TmN1S21IcTd3UzVYTkUyelVFTV9xMEUxUU5POUh3ZzREUWYtbDNZcUxodVliMHdTYmNUMXpOQi1XUW9zb05Da3p1aWdVcXJHNWY4Tko4bEc0OVFfQnpVVXdLcXlyb3RNSzRDSXNsNmxaSHN0akl4MTBmNzFlTVE2OHhDSmtLTVQ2TTU?oc=5",
+        "source": "Sostav.ru",
+        "sourceUrl": "https://www.sostav.ru",
+        "publishedAt": "2026-11-24T08:00:00Z",
         "via": "Google News RSS"
       },
       {
@@ -2081,12 +2564,30 @@
         "via": "Google News RSS"
       },
       {
+        "id": "aa5109cb7ed0680b9ec8",
+        "title": "В Подмосковье 1 декабря откроют 48 катков с искусственным льдом",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9yaURXLW5ldHc3M182enVEN0YyT2tlWkpmOXZ6TFNmTC04QWloTVpZMnBFVlVEaWdCRHZBVnRZUzVsOVB6Y3kxMTJHaGprQ1ZmQnp6c3NlNkdla1U2WG42dUJlMW1WWGVG?oc=5",
+        "source": "Newsroom24",
+        "sourceUrl": "https://newsroom24.ru",
+        "publishedAt": "2026-11-23T21:31:11Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "6d82c959a00d9fcc55ee",
         "title": "Каток на «Локомотиве» в Вологде для массового катания откроют 6 декабря",
         "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZ0RXZ0l3QUYzcWxJcjl4TmZFSDhSdzE5T0lZS3JOQ2pob0REcnVDV25LTkh1ek1TTmRuTEZFS1h4OEFFR3pmTDFHSG1MQlhYNnRaTDBnRXJtTnFjdEZQbFhfb2NNb29Sc1dWODhjTF9LU3Z6Sm5JRHp3bEFfUEF4dmw1Q3dMUXZFU0NRUklIcGY5S1pC?oc=5",
         "source": "Новости | Вологда регион",
         "sourceUrl": "https://vologdaregion.ru",
         "publishedAt": "2026-11-23T20:43:38Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "5ff750f7af32c29c9cb2",
+        "title": "На ВДНХ откроется каток площадью более 20 тысяч квадратных метров",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQR2V2RFZiaW5qUEJBR3BncEdKM0RBaHVlYXdZMVIzNWNYQ3J1YUpxSE1NUUxpWkdYR1ctallqa0VCSkk3SU5qQk1wTnQ4OGU4YnM2Sy1KdGFULS12NlRfMkRMWnJkNlZEYmRJYVRIQk5XdmtmU1FyQ1ZtcS1VQUFoV3FMMTBaLWJoMk94VFR3X1JLanJB?oc=5",
+        "source": "http://foxtime.ru",
+        "sourceUrl": "https://foxtime.ru",
+        "publishedAt": "2026-11-23T15:03:19Z",
         "via": "Google News RSS"
       },
       {
@@ -2204,6 +2705,15 @@
         "source": "Новости Хабаровска",
         "sourceUrl": "https://www.dvnovosti.ru",
         "publishedAt": "2026-11-22T23:01:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "66ed2713163e0eb9345d",
+        "title": "ПЛАТНЫЙ КАТОК СДЕЛАЛ ЖИЗНЬ НЕВЫНОСИМОЙ",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LR2tCekF2bjkzakotUUJGakRsMHJQdFBDQkx0Z0FUTlJBX3EzQ2VUS1lod0drTFdTbzVFRGNLZENsX21qeWtmUndiUlJxblIzMHdVN2dBd1FHaWhuN3FkeUxpLUJGWEhROHVR?oc=5",
+        "source": "Экооборона Московской области",
+        "sourceUrl": "https://ecmo.ru",
+        "publishedAt": "2026-11-22T21:09:49Z",
         "via": "Google News RSS"
       },
       {
@@ -2423,6 +2933,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "adb7dbb2717b11eada25",
+        "title": "Катки с искусственным льдом подготовили к открытию сезона на юго-западе Москвы",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTHQ4cGxkM3U3dnZpYzI5WW5ZVVo1RTF1MUkxQmQtYjVrR0Izb01uY3E3d0J5TWxwcFVDSmpSZ3Z5N1pESEJtdWYxYzZnVFF5WVNlTmM5NmlKT3FhV0l4U0lYUF9mbmhhai13YkZPTWJHMS01TG1UOXZvTFNyUlk2S0ZUcUUxNlRqR0FaaWlIVXBjdS11MW5Pa2NFX0VzbzQ?oc=5",
+        "source": "мой райon",
+        "sourceUrl": "https://mr.moscow",
+        "publishedAt": "2026-11-20T13:19:22Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "50c1a26afbd4d41245fe",
         "title": "Губернатор ХМАО получил «Золотой каток». Фото",
         "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE03cmUtSjJzSE1YSlNPQXF5ZlJ3VlZKdlI2U3VrWjFUZFFMTFVJNjNqSjRlNFprbURUWVRacVg0eFBZVlBaU05r?oc=5",
@@ -2585,6 +3104,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "12e873701ef9a4a5013b",
+        "title": "Потребовалось более 4 миллионов литров воды. На ВДНХ залили самый большой каток Москвы",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uTWJudXNmRVMzLS1ZemxzUW9SMUxtbzUxRlVGbUZFdGtuNU0wYkZrOWF5T29nTlRYSjhiaHFSbElRdzNTaXJxd1VJUk52YXNtVkJNeWpjamFjcGs?oc=5",
+        "source": "MSK1.RU",
+        "sourceUrl": "https://msk1.ru",
+        "publishedAt": "2026-11-19T13:15:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "696e2637e11c9fea775d",
         "title": "Дагестан получил «Золотой каток» за высокие результаты в дорожном строительстве",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNHhDQkgyMThhWDFzUkpHNXRpY3JWVlNkOF9wc1M2UkhsM3Q4UGlJTHc4TGJmdWhmZGZidTNWdjQtckx3VzFjd0pqa3QyYmVrczRRNFEyUEREUG4yUEctV2dWR2ZaMkhvWWJuQzlMMFdDaHF5NXhJa3BJYzVyR0tGNXIzRnhJclRCbTREWHY2TmxPZGY5ejhKUDNQTkxzQUc4ZzV2RHNNVUhrQQ?oc=5",
@@ -2603,12 +3131,30 @@
         "via": "Google News RSS"
       },
       {
+        "id": "184a7a20403ce169c162",
+        "title": "В 13 парках Москвы катки предложат 9,6 тыс. пар коньков в прокат",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0zcUJsTXFRMUZNbWJiOWRFY0lPSG1MV1pBRlJmX1AwN2RyMUh3ZEJjd2JUQnhDZ1U5ZGxPTDNjdVFKN2pQQ1UtdGFJWE00ZGdqSWNHTjlJd0dkMlB4eWE3a0NWWjg5S215?oc=5",
+        "source": "Newsroom24",
+        "sourceUrl": "https://newsroom24.ru",
+        "publishedAt": "2026-11-19T12:24:42Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "efbb2d76c23932be886d",
         "title": "Руслан Кухарук получил федеральную награду «Золотой каток» за достижения в дорожных стройках",
         "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObmtON0ZwM2N3em9rdll0UVNsSkxjUDVVZDhuSXFxUTZzTktCSmkzbFhiM0hjWUR0UVA2U1Z4X3QwY2c4Z2V3djBkNk1PMmhyWjBtRDVJNGJGV2ZVMEgzTy05czk0clhWZ19pRDRJMmhOYVdJSmxSdVUzQUQtNkRtdmRlRzE3SjRIWm9IRk1BN0ZscnlZcGNlbF9HdUkycFlhZ2RkdmZBdDZkUHQycUN2NXdyMmRrMjdaUld6VmZIOHJnX09MNlBQMXBoUGRKSEE?oc=5",
         "source": "РИЦ «Югра",
         "sourceUrl": "https://informugra.ru",
         "publishedAt": "2026-11-19T12:23:41Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "d008ead57f2bb7f08c40",
+        "title": "ГУМ-каток на Красной площади откроется 28 ноября",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUHFPQnFCeW1WWDF3VzRCWm9XRjVjZ1c2a05ob1FJNjdWZWF2M21lQ2pieXhiSUpwbmhfTDJjMC1DZjBDeXIxb2tvb19CMGFRUnktdVp2WmVnMjJwTkF3NndoNXhqaGxuekIxLXBHbnBOVlI5cDZlQnJveXRQN21MSWpmSzF3bU9FaFZUQlFBNDRwZjFIc2k5cnZGZlI1UzA?oc=5",
+        "source": "Новости Менделеевска",
+        "sourceUrl": "https://mendeleevskyi.ru",
+        "publishedAt": "2026-11-19T11:49:49Z",
         "via": "Google News RSS"
       },
       {
@@ -2645,6 +3191,15 @@
         "source": "Новгородские ведомости",
         "sourceUrl": "https://novvedomosti.ru",
         "publishedAt": "2026-11-19T07:16:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "c70d818aa0aa134cd008",
+        "title": "Собянин: В Мневниковской пойме началось строительство Дворца спорта / Новости города / Сайт Москвы",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAyRlItMXZ1UjRhMlE0cGI4Zkd3Nl8xZWxDdE82RUxMU29HbW9IMVd1cVhCWnZNUGRxNUY2bmRIZVFhQ3d0QzZGUFVyVjNLRl9HT3k4?oc=5",
+        "source": "mos.ru",
+        "sourceUrl": "https://www.mos.ru",
+        "publishedAt": "2026-11-19T07:03:01Z",
         "via": "Google News RSS"
       },
       {
@@ -2738,6 +3293,15 @@
         "via": "Google News RSS"
       },
       {
+        "id": "fa91e02b4ddd6abe0125",
+        "title": "Названа дата открытия ГУМ-катка на Красной площади",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPYUttWTAxSkFYa1FJWllaREdvRElrQTVOTjZFUnY2RXh0TU01RFZYbkQ5dXktUWFJTTVIMDhYZFhpQzlPNXo0dDRqcHY3QnBVemwybmZvQkxpa0Ixd1JfTGRadUxpbTYxSi1idm01dkg3Y0k1Y3BEMzY3TE56dW5ITkRKbkhLQUM3YWRYNlgtOWhUZ9IBlwFBVV95cUxOUVlWTnk2MVJyU1RHWHRySGNZUGhaNkxzdmZqUGxDbmpxU1lTVkozZEtxS0FnTGJHZzI3MGZtSnNSa3lqLXctdFo1TnpSaUFaWmlzTkpzOFp1aVUzSmgwTXlKMGhIUmlqdGpTeHVfVl9IcGZrZHp1Sl9aWGxldy0xMGlnSlpyNE9ITERfSFoyejBfRHZIbDBB?oc=5",
+        "source": "OKA.FM",
+        "sourceUrl": "https://www.oka.fm",
+        "publishedAt": "2026-11-18T12:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "4b284fa0ce1a2ae10709",
         "title": "Каток в парке «Никулино» готовят к зимнему сезону",
         "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSWtiRDVHWG1YQl9pbkxTVXFSVDRfUHdvWG1Dc2RMUnlLY3dYTEk1dTJaMG5ZMlU5eHJna1pzeWU4MzJicHZ4bm9EZndqOS15YktiRVczRmVjY0JoLXBDUGVocF9yUkc5Tnd4eFNEOVROUXlidXhWNjJkT3d2RjdPcl9BTTdYNDVVREhJ?oc=5",
@@ -2753,6 +3317,15 @@
         "source": "Газета Metro Москва",
         "sourceUrl": "https://www.gazetametro.ru",
         "publishedAt": "2026-11-18T10:57:45Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "75af2dc3bd2613c7c234",
+        "title": "Красная площадь готовится к зиме: Стало известно, когда откроется знаменитый ГУМ-каток",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbDl1RDJqSkV1OE12VU9XOGFhZTBwNUZ1YUw5eVVWVkhSSU5lbEZMX2VFNldIN1dER2RGTlVHUUp5UWpkWHhlQ3lVbTQ3WGNWZ25iRm5BMF9JSnF5OURaZXlQWGtublBSTlNyMzl3emdfLVZIOU5aY1BSVXlVVFRxS2hqYzRsRFFvZ01oNlA0Z1czS1d6SHZjY080dDA?oc=5",
+        "source": "Life.ru",
+        "sourceUrl": "https://life.ru",
+        "publishedAt": "2026-11-18T10:12:39Z",
         "via": "Google News RSS"
       },
       {
@@ -2837,6 +3410,60 @@
         "via": "Google News RSS"
       },
       {
+        "id": "96195eb2e582196833f5",
+        "title": "Стало известно, когда в Парке Горького и на Красной площади откроют катки",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9GSDlBUG14NVF3VWFMbGtCaFVNRldkYjk5bWotTnI5bkJOU3lkVnMzSkF6YWtOZkRuYnpJMFFpNU13eUVUam5mbGZENy10WWpySzJHUlF2WlpCQnM?oc=5",
+        "source": "MSK1.RU",
+        "sourceUrl": "https://msk1.ru",
+        "publishedAt": "2026-11-18T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "ae4bb4ea2ebea73d147d",
+        "title": "С этого года вход платный. Как на Северном речном вокзале залили каток: фото",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5RNV8ydnNLUFpiY3lfMzhfNjhxeENzRUxoV2dPakhFMWJhSUktY05ZMlNKS0RfUDFmdFMtWm1aR20tWWNUczR5QUFDRFZmdFhvSGtFX3NPWk9XZlU?oc=5",
+        "source": "MSK1.RU",
+        "sourceUrl": "https://msk1.ru",
+        "publishedAt": "2026-11-18T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "28d4f3e1044cf4e28e08",
+        "title": "ГУМ‑Каток на Красной площади открывает сезон",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE02ckpsLUZsN0NJcTlJVUVaQVZpTnEzS3JucU5OZGt6VWRVMjVRMUNDUXo2UmVONTVOR0pWc1JfZ0lsUjJFN1d6ZVRIMko1SzA?oc=5",
+        "source": "Московская правда",
+        "sourceUrl": "https://mospravda.ru",
+        "publishedAt": "2026-11-18T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "07694e368ef262b4d488",
+        "title": "Мэр Москвы провел личный прием граждан по поручению Президента России",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5DQnRVYWhfSXhMME13bmZkdktIS2ZpTDY1cHZlcnhKdFh6RHF0TzRkUEZRTjc4YjhzSGlVVnhfbV8wdWgwT3V2NGViY2Y2QkpQekVr?oc=5",
+        "source": "mos.ru",
+        "sourceUrl": "https://www.mos.ru",
+        "publishedAt": "2026-11-18T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "0a25595727ab297b6715",
+        "title": "Каток на Северном речном вокзале Москвы откроется 20 ноября",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOd05CbmJQMDNnMTFYcHVuRXoyY0JGdHhIbjF3RjVaWmxOcGc4cXh0eGI3Y3YzUF9hcVFidm4wMF9rbGZWM2R3YURwR2YzbUV2OG9VUWF6WERKLWdrRjRoSjVVcUNNbW5ZcnRPeFdfblpKT0IwRzNEUWo3OTBrUHk2UW5PajN1ZVR3bmppU1pCQy1FQ1Rob2M1Nmp4ZXotYzFv?oc=5",
+        "source": "MSK News",
+        "sourceUrl": "https://msknovosti.ru",
+        "publishedAt": "2026-11-18T07:42:03Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "f1e19f1c2911b7e92a3b",
+        "title": "Лед, огни и Кремль: главный каток страны открывается для москвичей и туристов",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPS2NMTWVUc0NFWEJEX2Q4bGZ2WGduTWdZX2FtSnlYTE1haVV0dGQwMGY3LWpsNjdIUFBPako2b1dTVlBmbmlnb2tId0JhSm9aR3p1Qk52NW1VWDdKSXB3d1ZBX2NFZWE5VUt3U3Jhak5yQUZadW9ENWUwZ1gtNFUxWUpEUVRKNlNLTmU3a2hKLWFuLVdiMGFUV2t5NDlaa1RxUzJya3FjZlplQWxjR1ppMFhOZXA?oc=5",
+        "source": "Аргументы Недели",
+        "sourceUrl": "https://argumenti.ru",
+        "publishedAt": "2026-11-18T07:20:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "4d70f0a72a855d360d88",
         "title": "Каток с искусственным льдом в центре Рыбинска в этом сезоне будет платным",
         "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWEwxNXRuQXFVX0tmeGRndGVvNTBScHBNdmxwYnhvWk1mNXVzZnBJZHZZNWpiUVZrUzlJeEZNU3NvQ1N0b09fX0txbndvQzQ0QXFkTnhwOTZOT3BWVkgtMEt0MWs4WmVtTWUyaUpJZGJwcHlHMEphZGhVc3dzVXFCOEY2SUpfMXhEVE9rOC1FQkhLVkZfLVZhVzl6QkhhMHVEckN6Mjk4ZHI3Q2lrQnNR?oc=5",
@@ -2869,6 +3496,15 @@
         "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcDdGa1NRbTRja2RZYk8tdnd4VUhtQUZRdkZ4STJaWmdlaTNjTnR6N0dOeWNLVzFUSzhsQzBGcTE4aGN5M21KZjllcTNPOUZUcExIRTBJUlVXR18xNExNQ1ZyVzRNb1ZmMTMxT3pDR21hbFUzckF4WS03aW9EWUxsTFptNUpSQ2tzWUVkODA3NWNTdw?oc=5",
         "source": "газета Навигатор",
         "sourceUrl": "https://navigato.ru",
+        "publishedAt": "2026-11-17T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "411f6ad6e628e93dfb1b",
+        "title": "До 8000 рублей за сеанс: на ВДНХ открыли продажу билетов на главный каток страны — цены и расписание на 2026/2027 год",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA1aGh5S3Rpb2VNRHhtN1R2SjVWLUlIS0tKLU45bVpqbzRrTFFWWWtWZEgyZkhlN3A1X09adTRYUjk3M0NaNlJfbkFkckZaSmlLTU1vLWJpZUdISmtr?oc=5",
+        "source": "MSK1.RU",
+        "sourceUrl": "https://msk1.ru",
         "publishedAt": "2026-11-17T08:00:00Z",
         "via": "Google News RSS"
       },
@@ -2936,6 +3572,33 @@
         "via": "Google News RSS"
       },
       {
+        "id": "2d3a24728a8a9400a79c",
+        "title": "Когда откроются катки в Москве зимой 2026–2027 года: даты, цены и бесплатные сеансы",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5sRDVsSFIwUGtEM1laN2ZZNmVwbENMM0gzVExZZG5QTWk2QVhCSEtreHJPZ3VxOU94TUxFMlVTemxYVXkwRmlhM1VJdw?oc=5",
+        "source": "ФедералПресс",
+        "sourceUrl": "https://fedpress.ru",
+        "publishedAt": "2026-11-16T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "e19de6daec24367f9f1c",
+        "title": "В СЗАО откроют четыре катка в рамках проекта «Зима в Москве»",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUEkybjdvQUhLMHdlUzZvbl9OOXBqTWlZZXhCT1k4ZXhDYi1PTG9SSWtCT2IwWXI2SkhCSkJUajVvVUpqRXZMcGsxS25rNHh3SzVLNWFzODlrOVM0YlJ3eGRFa1pybHJySWtXc2Z4THowU25BVHVoQ0RjZll1Mkc0a0NlMFF3dw?oc=5",
+        "source": "мой райon",
+        "sourceUrl": "https://mr.moscow",
+        "publishedAt": "2026-11-15T09:54:28Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "c27162cc424348e92285",
+        "title": "Подготовка к открытию ГУМ-катка и ярмарки на Красной площади",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5tNjBjT2ZXYW1DSkFOZExvSDdUSmV1c0xsUk9HYW16WlBWYkl0TGt0XzB4NVhuZ0FZWVg1Zkw2WnRqLU9pUzYwTWhCanZpYkVpNUZ4Wg?oc=5",
+        "source": "Агентство городских новостей «Москва»",
+        "sourceUrl": "https://www.mskagency.ru",
+        "publishedAt": "2026-11-15T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "636d68f89b3040f16436",
         "title": "Все катки Петербурга сезона 2026/27: даты открытия, цены, прокат",
         "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9HdWVEOUNwWXBqYUZyNThvWFVSV2V5a2o5b3VPWGR2clV1dXdDZkdLcVdwaGQ4VExfUVNweE9TaGwzRktSTDgwTm1aT1BlWXpjNHp4QkhYdzRxVDl1T2c?oc=5",
@@ -2990,6 +3653,24 @@
         "via": "Google News RSS"
       },
       {
+        "id": "eb0c59ba13ac4f2d0d06",
+        "title": "Катки Москвы 2026/27: какие открыты сегодня, бесплатные и с прокатом",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB3bGMzaERLQ2hWUWFiY3NkRG5nUHdjdS1qZmN4RlZYMlhQMkVwT2MwT1pDMF9ZQ2Y5VHBNMHJQbF9IRXVEdnFveFJmVmlxeTU5ZmpCVzdRNFotTS1mWmxaeVYtNHhIYUNO?oc=5",
+        "source": "Newsroom24",
+        "sourceUrl": "https://newsroom24.ru",
+        "publishedAt": "2026-11-12T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "ccf8f4f5e15255ca7de1",
+        "title": "Когда откроются катки в Москве в сезоне 2026/2027",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE11WVNENnl3Wk5xd0tfZHBnS3F1RFVleHpPcDhSZkhwTTRFbkFtcFVTUWExaHNTYnZkY1NWSHBCcEtqOHgtRzA4X0xpS21pYzZMM3ZZNzg0a0NBck1ldTZuS3Aya3pNYXlk?oc=5",
+        "source": "Newsroom24",
+        "sourceUrl": "https://newsroom24.ru",
+        "publishedAt": "2026-11-12T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "b6e0b2a3143a6e2ac13f",
         "title": "В Тарко-Сале на набережной построят ледовый каток за 26 млн рублей. Скрин",
         "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1Tb1ZQbGJ4SVpKWWtzVWFOV0wxb2EyOGNYWWVvRlBOTUROX2JnM18zSDJWbWRWeDBGQWRMaEtURmdTUmY3aVZR?oc=5",
@@ -3005,6 +3686,15 @@
         "source": "Рыбинские известия",
         "sourceUrl": "https://gazeta-rybinsk.ru",
         "publishedAt": "2026-11-10T12:07:08Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "b14ed9686f035015fb97",
+        "title": "ГУМ-Каток на Красной площади начнет работу 30 ноября",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOFhvOFZGbnAwQzhwUDZzLVZhZzh1WUNlMVgzNnpDWGRtT0xHT3VEYUYwbUFrdzFIVzBUUUR5VlNvb3B3cHE3dTJVSzJLZ3p4SUdpX3ppUkZNUDVqUFhpcjV5aE96YXlRZHVtRTctZWdNaUg4ZmhRQzBHWWV0QjRQT1hTcEtFcGo0SGtuMmVybnRlLUNDcEw3TGRKQzRGeXRLT2RhWWpYVDliNjFvOGF6bDY2NGVPRGkwVEFENkc2TTFFbEU?oc=5",
+        "source": "МосИнформ",
+        "sourceUrl": "https://xn--h1ahbddcoe3a.xn--p1ai",
+        "publishedAt": "2026-11-10T12:05:00Z",
         "via": "Google News RSS"
       },
       {
@@ -3026,6 +3716,42 @@
         "via": "Google News RSS"
       },
       {
+        "id": "143ac3c33e5ad33ec791",
+        "title": "Каток на Красной площади откроется 30 ноября | Город | Time Out",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNR1JzdWNTaWsyeWt5Nm1tVnJmel9qaEVmSDRMbkV3TXFxX1lJVXdsaFZpTFFGZzdUeFk2Um9wZ2xlbHVXaWpoQURVUFItTWZuSklSRm1TT3hOR2haYWxWZVY4SlAxRHZJdkQ5VFBJUExlVlJxTmhvUnhsREFib1ZqQXlBZ1FVdHpNei1hbA?oc=5",
+        "source": "TimeOut Москва",
+        "sourceUrl": "https://www.timeout.ru",
+        "publishedAt": "2026-11-09T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "56e5b2e5338c640479ec",
+        "title": "Красная площадь снова перекрыта — начался монтаж ГУМ-катка и ярмарки. Когда они откроются",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBMVU5nYm9yRG9Lc3VRdHB4dmFES2d3djROR0Y4Q2ktdUhpdlFzckpLbTc2YTc4WDJROXMxWmZTT1pqV3VqMUQwbnRyUjdWV1M0SnRPWHl3Q09wdkk?oc=5",
+        "source": "MSK1.RU",
+        "sourceUrl": "https://msk1.ru",
+        "publishedAt": "2026-11-09T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "eb8f30a8e042f864c797",
+        "title": "Каток на Красной площади откроют 30 ноября",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZHlOckVhTlpOOHBFd0NpUWhiV0xidmtHamEyOTNIOXJ6N1pPY29yVHJZNmxJNWpQOVl3cFBidmp6SUxKSURZOHo0Sm5VempUVkhiZGdJQzIwVUdiU3ZGQmRWSndtSUVKUm51Y0RRNGhOb0hyelRhcW1yQ2NfcjZzRTgzeDk0S0U?oc=5",
+        "source": "Московская перспектива",
+        "sourceUrl": "https://mperspektiva.ru",
+        "publishedAt": "2026-11-09T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "e3129c3c008447bf81d1",
+        "title": "ГУМ-Каток на Красной площади будет работать с 30 ноября по 28 февраля Кататься можно будет ежедневно с 09:00 до 23:30.... 2026",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9XS19salJoZ3Q0THlwOTh4MFlGOTdOQU95YjI3al9ZYkQ5aWFzRDQybEhRQUQ0QVNzMnp2X0lNRi1kZXZuNGU3R2pFbw?oc=5",
+        "source": "ВКонтакте",
+        "sourceUrl": "https://vk.ru",
+        "publishedAt": "2026-11-07T19:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "527e57ee66d7322ea348",
         "title": "Катки и хоккейные коробки начали готовить к заливке льда в Абакане",
         "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxOOTJrNlJVa0lRUDJxMUUyVDZDaUVQeHhCbjRxVEtXYVliVDVVSGRwODJSQUJsbEpwTFpGNWtDTXBtTUs0MkxFMTFsUGVRWUtkNlpCMDNRUUVUeVF0bXg0WG00OThGSUY3Ui1aOXNPQXhKZ0U0eFgxU0l2OHBTdTNUUk1nVlhVaUhFYmZyUHc2b21lRlZnT0tpNW9iSW5NOHgyeUY1b2xZWldlSjVIQW9OUUdjQl9Za0txZmEwcXh5RUlqaVRRMzZERmMyZlB2U0hjdG43cmtTMW9jNTRBcGVCRVV1UU1xWDNERV9sdVRDd1pocms3OTBPVTRrc1hNM1F4WEE2aC1HTlVNbnd6WVN2NEhmYzd4QkNoeGg1VEI2Y1JwUkpOQ1ZDSVpsZm9saUpIUkg4b0k2c3Z5WDlPRmUwMEZDUQ?oc=5",
@@ -3040,6 +3766,15 @@
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBjOTM1NGRCR2FDNUxKUUJfMldfSmN1XzJWV19tYjVrOHN0YTN4dXVEYXl6ZzJGbFlLS3RZTGdHaTh3NFZ2MUc3cXlfWV9pU1l3T0IxM2c3ZjVmOGM?oc=5",
         "source": "Дальневосточное обозрение -",
         "sourceUrl": "https://dvobozrenie.ru",
+        "publishedAt": "2026-11-07T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "ccc1521c9802727311c9",
+        "title": "Ледовые шоу в Москве: куда сходить детям и взрослым в сезоне 2026-2027",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAycTZic3lPc1ROTDdUejA3T3kzX0pVM2t2SG50Uk5BXy1qdldfdXQ3MU5ZWGh5ZHNzdXR6MkFDNzJQWlRJUFBDaENxZzMxaDUwSERJZzllTkRIVUlRVjM0U3dlYTl2RF9VY2dj?oc=5",
+        "source": "Авиасейлс",
+        "sourceUrl": "https://www.aviasales.ru",
         "publishedAt": "2026-11-07T08:00:00Z",
         "via": "Google News RSS"
       },
@@ -3098,12 +3833,30 @@
         "via": "Google News RSS"
       },
       {
+        "id": "eab4de420b313ff3bea3",
+        "title": "Стало известно, когда на Красной площади откроют «ГУМ-Каток»",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5OaE13UHFKb2RBd0t5dllsSG44NzBmcXJncnE0SUoySU8xbEV1ZkFqUlRHMjVQSzhGc1lQWTU2Y2NrMGM5X1FqUG1oazM0MWN2SmtiaEVDNWIzMG8?oc=5",
+        "source": "MSK1.RU",
+        "sourceUrl": "https://msk1.ru",
+        "publishedAt": "2026-11-03T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "edd9da5e9585c34fda9e",
         "title": "Каток в Парке Горького готовят к открытию",
         "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4zWHJEdXhqSGI1WUQyY2VFZDlId09kZ1oxb0hSaXlKaEFwb3lqOV9ZdWUwZGtjQ3ZzYVhjY1lndDFEdTBhSnFPZm41aEdMQ3dCUjlHRFhhX3dKT0g3U1pMT2Zna1l3S0N6c3BJUjg1LUNVeVdzQkhENEY5Zw?oc=5",
         "source": "Парк Горького",
         "sourceUrl": "https://parkgorkogo.ru",
         "publishedAt": "2026-11-02T13:41:02Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "8c41d77229650e3d9537",
+        "title": "Каток в Парке Горького готовят к открытию",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4wbzRqelZGaS11SGtsNXFueXZ4YjNTakVZR3lwYTVvRlpoNVEzcXM2QVhRSE9lbFRsOVB6eWVZeXdXT0VZb1JWQW82ZlpaUUVldGpHZWluZUpia19YQUFRV09NRGtmMjRZOW5VdDRfTDVOYTNr?oc=5",
+        "source": "Комплекс городского хозяйства Москвы",
+        "sourceUrl": "https://kgh.moscow",
+        "publishedAt": "2026-11-02T12:44:55Z",
         "via": "Google News RSS"
       },
       {
@@ -3143,6 +3896,24 @@
         "via": "Google News RSS"
       },
       {
+        "id": "23c5895e8886924b5baf",
+        "title": "Каток в столичном Парке Горького готовят к открытию",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOeUg2X3hmLTZMcEc3MGJDMFJuQTA1QzA4V1hlSkpwOFZjcEZ0b3JwSTZIUnpOSWxDak1RcEVmY2JSODRlYUJ0VkZNWjF4bl9sc2RqVi0wbG1uUjd6c09DLThxdm8tZ1c3QjNCNzVzZXo0QjNVNVJLa0VjYkY5bWhPd0pHMVRwYm8?oc=5",
+        "source": "Типичная Москва",
+        "sourceUrl": "https://typical-moscow.ru",
+        "publishedAt": "2026-11-02T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "e8d769fd34868817119b",
+        "title": "Каток в Парке Горького будет в 10 раз больше прошлогоднего",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5VV2NNUTMzZ05rNmprVzM0QkNOQnBhdG1adlQ5ZHM4TXlTYWtyaEVvYndQYVRwUk16YndNLUJOaDRZYzBzMEpJQnZKUWx4SmxOZmM0RFJGVG9FdVgxWldWaHNvRmE5SmRsXzlzSmtSa1nSAXZBVV95cUxOeElYMlR3bVBiVExINVhTVy1wb0RuN09LdUF6STRQYnJqX2lJTVBKckhzYklBSG5wbkN6Ym9fSVNudzItSUNFLW00WUVVUEJzS2FxblRiXy1GejROR3NTSEpIdTREblRpUWcybDFTZ2hldTNvV2xR?oc=5",
+        "source": "Газета",
+        "sourceUrl": "https://www.gazeta.press",
+        "publishedAt": "2026-11-02T08:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
         "id": "1cfe4ba33c931b704c3b",
         "title": "Каток на площади Дерунова в Рыбинске, вероятно, станет ещё больше. И затратнее",
         "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNXFJaWtaamxWVktmNThfOGVxNDRuRHhCRTRoTjBVSjhTdzZaaC02RUpMakRBck9OVllJSFpnRFpsMEVnZ0NyTFo3aE1kUXpmancySjRKZGdoQnVBckZiaVc3eE14bkcxOVV2MkxlMkpjdGg1a2VqbjNMQWFfN3k5aHo2ZzRUdmo1Qjh3YlF4UWsyc2pJdXprUnBKb0Y5VU9hMXVlZmRITUF3T3I3N0c1TkJ2dWVsbDBSWXZv?oc=5",
@@ -3157,6 +3928,15 @@
         "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBMaVJHS2VEZWJLRmU0Q0hBZVgxcmdWYkNsc0V3QmRKUmJDZFo5ejVYNjE5UkFjMkdTMGZWUGFfWjRGY2NjT3Rz?oc=5",
         "source": "URA.RU",
         "sourceUrl": "https://ura.news",
+        "publishedAt": "2026-10-30T07:00:00Z",
+        "via": "Google News RSS"
+      },
+      {
+        "id": "a4e070ad16a26f898beb",
+        "title": "Кубок Первого канала по хоккею возвращается в Москву",
+        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1laG44OHV2c2RRQUlCMF93QlVUMUt2eUtDSldJVlV0OUJiQnk0T1FhWUdVa2txNVVjX196NnRDU1FJeFJUajU0?oc=5",
+        "source": "сайт Федерации хоккея России",
+        "sourceUrl": "https://fhr.ru",
         "publishedAt": "2026-10-30T07:00:00Z",
         "via": "Google News RSS"
       },
