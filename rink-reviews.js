@@ -3,9 +3,11 @@
   const luzhniki = rinks.find(rink => rink.name === 'Каток «Лужники»');
   const otherRinks = rinks.map((rink, index) => ({ rink, index })).filter(({ rink }) => rink !== luzhniki);
   const stored = new Map();
+  let ratings = {};
   const directory = document.getElementById('rink-reviews-list');
   const search = document.getElementById('rink-reviews-search');
   const directoryCount = document.getElementById('other-rinks-count');
+  const ratingsDate = document.getElementById('ratings-date');
   const dialog = document.getElementById('rink-reviews-dialog');
   const title = document.getElementById('rink-reviews-title');
   const address = document.getElementById('rink-reviews-address');
@@ -104,7 +106,35 @@
       const action = document.createElement('span');
       action.className = 'review-open';
       action.textContent = 'Открыть';
-      button.append(info, action);
+      const side = document.createElement('span');
+      side.className = 'review-row-side';
+      const rating = ratings[rink.name];
+      if (rating) {
+        const badge = document.createElement('span');
+        badge.className = 'rink-review-rating';
+        badge.title = 'Яндекс Карты · проверено ' + rating.checkedAt;
+        badge.setAttribute('aria-label', 'Рейтинг Яндекс Карт: ' + rating.scoreText + ' из 5; ' + rating.countsText);
+        const summary = document.createElement('span');
+        summary.className = 'rink-review-rating-summary';
+        const score = document.createElement('strong');
+        score.textContent = rating.scoreText;
+        const stars = document.createElement('span');
+        stars.className = 'rink-review-stars';
+        stars.setAttribute('aria-hidden', 'true');
+        stars.textContent = '★★★★★';
+        const filled = document.createElement('span');
+        filled.className = 'rink-review-stars-filled';
+        filled.textContent = '★★★★★';
+        filled.style.width = Math.max(0, Math.min(100, rating.score / 5 * 100)) + '%';
+        stars.append(filled);
+        summary.append(score, stars);
+        const counts = document.createElement('small');
+        counts.textContent = rating.countsText;
+        badge.append(summary, counts);
+        side.append(badge);
+      }
+      side.append(action);
+      button.append(info, side);
       fragment.append(button);
     });
     directory.replaceChildren(fragment);
@@ -158,6 +188,17 @@
   search.addEventListener('input', renderDirectory);
   renderDirectory();
   renderLuzhniki2Gis();
+
+  fetch('rink-review-ratings.json').then(response => response.ok ? response.json() : null).then(data => {
+    if (!data?.ratings || typeof data.ratings !== 'object') return;
+    ratings = data.ratings;
+    const dates = [...new Set(Object.values(ratings).map(rating => rating.checkedAt))];
+    if (dates.length === 1 && /^\d{4}-\d{2}-\d{2}$/.test(dates[0])) {
+      const date = new Date(dates[0] + 'T12:00:00');
+      ratingsDate.textContent = 'Оценки Яндекс Карт на ' + new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
+    }
+    renderDirectory();
+  }).catch(() => {});
 
   fetch('rink-reviews-data.json').then(response => response.ok ? response.json() : null).then(data => {
     if (!Array.isArray(data?.reviews)) return;
